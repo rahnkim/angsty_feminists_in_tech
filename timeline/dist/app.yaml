@@ -11,8 +11,7 @@ handlers:
 #  static_files: images/fav.png
 #  upload: image/fav\.png
 
-# Given url path 'name', the static directory can be set as below.
- - url: /css
+- url: /css
   static_dir: css
 
 - url: .*
