@@ -1,0 +1,23 @@
+application: tafiti-timeline
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+
+# Given favicon icon at images/fav.png, the site favicon can be set as below.
+# - url: /favicon\.ico
+#  static_files: images/fav.png
+#  upload: image/fav\.png
+
+# Given url path 'name', the static directory can be set as below.
+# - url: /name
+#  static_dir: name
+
+- url: .*
+  script: app.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
