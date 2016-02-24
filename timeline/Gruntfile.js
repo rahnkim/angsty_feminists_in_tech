@@ -22,10 +22,10 @@ module.exports = function(grunt) {
         },
 
         concat: {
-            //scripts: {
-            //    src: ['src/js/vendor/modernizr-2.6.2.min.js', 'src/js/plugins.js', 'src/js/isotope-settings.js', 'src/js/fixed-sidebar.js', 'src/js/vendor/picturefill.min.js', 'src/js/vendor/lightbox.js'],
-            //    dest: 'src/js/scripts.js',
-            //},
+            scripts: {
+                src: ['src/js/vendor/modernizr-2.6.2.min.js', 'src/js/main.js'],
+                dest: 'src/js/scripts.js',
+            },
             css: {
                 src: ['src/css/normalize.css', 'src/css/main.css'],
                 dest: 'src/css/styles.css'
@@ -69,6 +69,9 @@ module.exports = function(grunt) {
                     cwd: 'src',
                     src: ['**/*',
                           // JavaScript
+                          '!**/main.js',
+                          '!**/modernizr-2.6.2.min.js',
+                          '!**/scripts.js',
                           // CSS
                           '!**/styles.css',
                           '!**/main.css',
@@ -76,7 +79,8 @@ module.exports = function(grunt) {
                           '!**/main.min.css',
                           '!**/normalize.css',
                           '!**/normalize.min.css',
-                          '!**/sass/**'],
+                          '!**/sass/**',
+                          '!**/partials/**'],
                     dest: 'dist/'
                 }]
             },
@@ -93,9 +97,17 @@ module.exports = function(grunt) {
                             pattern: 'normalize.css',
                             replacement: 'styles.min.css'
                         },
+                        {
+                            pattern: 'main.js',
+                            replacement: 'scripts.min.js'
+                        },
                         // Get rid of un-concatenated files
                         {
-                            pattern: '<link rel="stylesheet" href="/css/main.css">',
+                            pattern: '<link rel="stylesheet" href="css/main.css">',
+                            replacement: ''
+                        },
+                        {
+                            pattern: '<script src="js/vendor/modernizr-2.6.2.min.js"></script>',
                             replacement: ''
                         }
                     ]
