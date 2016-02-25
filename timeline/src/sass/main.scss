@@ -26,6 +26,7 @@ body {
 		size: 100%;
 		family: $primary-font; // variables inside partials > _variables.scss
 	}
+    line-height: 160%;
 	color: $black;
 	background-color: $background;
 }
@@ -200,17 +201,19 @@ header {
 	box-shadow: 0 3px 0 darken($background, 5%);
 	@include clearfix;
 
-	p, .cd-read-more, .cd-date {
-		@include font-size(13px);
-	}
+    .cd-name {
+        margin: 0;
+    }
 
-	.cd-read-more, .cd-date {
+    .cd-lifespan {
+        margin-top: 0;
+        font-size: 80%;
+        font-weight: bold;
+    }
+
+	.cd-read-more,
+    .cd-date {
 		display: inline-block;
-	}
-
-	p {
-		margin: 1em 0;
-		line-height: 1.6;
 	}
 
 	.cd-read-more {

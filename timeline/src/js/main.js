@@ -31,49 +31,25 @@ jQuery(document).ready(function($){
 	/********************
 	 * Data Handling
 	 ********************/
-	// Dummy data
-	var dummyData = {
-		data: [
-			{
-				name: 'Test Person 1',
-				start: 1800,
-				end: 1900,
-				bio: 'Known for the Turing Machine, a hypothetical device capable of simulating any algorithm, Alan helped break German ciphers during WWII. He was prosecuted for “homosexual acts” by the UK.'
-			},
-			{
-				name: 'Test Person 2',
-				start: 1800,
-				end: 1900,
-				bio: 'Known for the Turing Machine, a hypothetical device capable of simulating any algorithm, Alan helped break German ciphers during WWII. He was prosecuted for “homosexual acts” by the UK.'
-			},
-			{
-				name: 'Test Person 3',
-				start: 1800,
-				end: 1900,
-				bio: 'Known for the Turing Machine, a hypothetical device capable of simulating any algorithm, Alan helped break German ciphers during WWII. He was prosecuted for “homosexual acts” by the UK.'
-			},
-			{
-				name: 'Test Person 4',
-				start: 1800,
-				end: 1900,
-				bio: 'Known for the Turing Machine, a hypothetical device capable of simulating any algorithm, Alan helped break German ciphers during WWII. He was prosecuted for “homosexual acts” by the UK.'
-			},
-		]
-	};
-
-	// Controller
-	var controller = {
-		getData: function() {
-			return dummyData.data;
-		}
-	};
-
 	// Create View Model
 	function ViewModel() {
         // Map 'self' to ViewModel
         var self = this;
 
-		this.dataList = controller.getData();
+		// Push JSON data into observable array
+		self.dataList = ko.observableArray([]);
+
+		$.ajax({
+			url: 'http://tafiti-timeline-service.appspot.com',
+			dataType: 'jsonp',
+			success: function(result) {
+				self.dataList(result);
+				console.log(result);
+			},
+			error: function() {
+				console.log('error');
+			}
+		});
 	};
 
 	// Activate knockout.js

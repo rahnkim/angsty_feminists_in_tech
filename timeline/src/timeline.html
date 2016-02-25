@@ -32,11 +32,12 @@
                     </div> <!-- cd-timeline-img -->
 
                     <div class="cd-timeline-content">
+                        <img data-bind="attr: {src: 'data:image/png;charset=utf8;base64,' + picture}">
                         <h2 class="cd-name" data-bind="text: name"></h2>
-                        <p class="cd-life"><span data-bind="text: start"></span> - <span  data-bind="text: end"></span></p>
-                        <p class="cd-bio" data-bind="text: bio"></p>
+                        <p class="cd-lifespan"><span data-bind="text: birth_year"></span> - <span  data-bind="text: death_year"></span></p>
+                        <p class="cd-bio" data-bind="text: blurb"></p>
                         <a href="#0" class="cd-read-more">Read more</a>
-                        <span class="cd-date" data-bind="text: start"></span>
+                        <span class="cd-date" data-bind="text: birth_year"></span>
                     </div> <!-- cd-timeline-content -->
 
                 </div> <!-- cd-timeline-block -->
