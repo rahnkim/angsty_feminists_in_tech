@@ -16,42 +16,45 @@ html * {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
-*, *:after, *:before {
+*,
+*:after,
+*:before {
 	box-sizing: border-box;
 }
-
 body {
 	font: {
 		size: 100%;
 		family: $primary-font; // variables inside partials > _variables.scss
 	}
-	color: $main-text;
+	color: $black;
 	background-color: $background;
 }
-
 a {
-	color: $link;
+	color: $red;
 	text-decoration: none;
 	font-family: $secondary-font;
 }
-
 img {
 	max-width: 100%;
 }
-
-h1, h2 {
+h1,
+h2 {
 	font-family: $secondary-font;
-	font-weight: bold;
+}
+h1 {
+    font-size: 3em;
+}
+h2 {
+    font-size: 2em;
 }
 
 /* --------------------------------
 
-Modules - reusable parts of our design
+Modules
 
 -------------------------------- */
 
-.cd-container { /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+.cd-container {
 	width: 90%;
 	max-width: $L; // breakpoints inside partials > _layout.scss
 	margin: 0 auto;
@@ -62,6 +65,11 @@ Modules - reusable parts of our design
 		clear: both;
 	}
 }
+.inner {
+	width: 90%;
+	max-width: $L; // breakpoints inside partials > _layout.scss
+	margin: 0 auto;
+}
 
 /* --------------------------------
 
@@ -70,26 +78,8 @@ Main components
 -------------------------------- */
 
 header {
-	height: 200px;
-	line-height: 200px;
-	text-align: center;
-	background: $color-1;
-
-	h1 {
-		color: $color-3;
-		@include font-size(18px);
-	}
-
-	@include MQ(L) {
-		height: 300px;
-		line-height: 300px;
-
-		h1 {
-			@include font-size(24px);
-		}
-	}
+	background: $background;
 }
-
 #cd-timeline {
 	position: relative;
 	padding: 2em 0;
@@ -155,7 +145,7 @@ header {
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
-	box-shadow: 0 0 0 4px $color-3, inset 0 2px 0 rgba(#000, .08), 0 3px 0 4px rgba(#000, .05) ;
+	box-shadow: 0 0 0 4px #ffffff, inset 0 2px 0 rgba(#000, .08), 0 3px 0 4px rgba(#000, .05) ;
 
 	img {
 		display: block;
@@ -169,15 +159,15 @@ header {
 	}
 
 	&.cd-picture {
-		background: $color-4;
+		background: $green;
 	}
 
 	&.cd-movie {
-		background: $color-2;
+		background: $red;
 	}
 
 	&.cd-location {
-		background: $color-5;
+		background: $yellow;
 	}
 
 	@include MQ(L) {
@@ -204,15 +194,11 @@ header {
 .cd-timeline-content {
 	position: relative;
 	margin-left: 60px;
-	background: $color-3;
+	background: #ffffff;
 	@include border-radius;
 	padding: 1em;
 	box-shadow: 0 3px 0 darken($background, 5%);
 	@include clearfix;
-
-	h2 {
-		color: $color-1;
-	}
 
 	p, .cd-read-more, .cd-date {
 		@include font-size(13px);
@@ -228,14 +214,15 @@ header {
 	}
 
 	.cd-read-more {
+        display: none;
 		float: right;
 		padding: .8em 1em;
-		background: $link;
-		color: $color-3;
+		background: $red;
+		color: #ffffff;
 		@include border-radius;
 
 		.no-touch &:hover {
-			background-color: lighten($link, 5%);
+			background-color: lighten($red, 5%);
 		}
 	}
 
@@ -253,11 +240,11 @@ header {
 		height: 0;
 		width: 0;
 		border: 7px solid transparent;
-		border-right: 7px solid $color-3;
+		border-right: 7px solid #ffffff;
 	}
 
 	@include MQ(M) {
-		h2 {
+		/*h2 {
 			@include font-size(20px);
 		}
 
@@ -267,7 +254,7 @@ header {
 
 		.cd-read-more, .cd-date {
 			@include font-size(14px);
-		}
+		}*/
 	}
 
 	@include MQ(L) {
@@ -279,7 +266,7 @@ header {
 			top: 24px;
 			left: 100%;
 			border-color: transparent;
-			border-left-color: $color-3;
+			border-left-color: #ffffff;
 		}
 
 		.cd-read-more {
@@ -302,7 +289,7 @@ header {
 				left: auto;
 				right: 100%;
 				border-color: transparent;
-				border-right-color: $color-3;
+				border-right-color: #ffffff;
 			}
 
 			.cd-read-more {
