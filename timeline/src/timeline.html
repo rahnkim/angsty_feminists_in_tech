@@ -1,51 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:image" content="http://rahnkim.com/images/rahndoodle.jpg">
-    <meta property="og:title" content="The Angsty Feminists in Tech Project - The Timeline">
-    <meta property="og:description"
-        content="Angsty!">
-    <meta property="og:url" content="http://angstyfeministsintech.org/">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <title>The Angsty Feminists in Tech Project - The Timeline</title>
-  </head>
-  <body>
-    <section id="cd-timeline" class="cd-container">
-      <div class="cd-timeline-block">
-        <div class="cd-timeline-img cd-picture">
-          <img src="img/cd-icon-picture.svg" alt="Picture">
-        </div> <!-- cd-timeline-img -->
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:image" content="http://rahnkim.com/images/rahndoodle.jpg">
+        <meta property="og:title" content="The Angsty Feminists in Tech Project - The Timeline">
+        <meta property="og:description"
+            content="Angsty!">
+        <meta property="og:url" content="http://angstyfeministsintech.org/">
+        <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <title>The Angsty Feminists in Tech Project - The Timeline</title>
+    </head>
+    <body>
+        <header>
+            <div class="inner">
+                <h1>Angsty Timeline</h1>
+            </div>
+        </header>
+        <section id="cd-timeline" class="cd-container">
 
-        <div class="cd-timeline-content">
-          <h2>Title of section 1</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-          <a href="#0" class="cd-read-more">Read more</a>
-          <span class="cd-date">Jan 14</span>
-        </div> <!-- cd-timeline-content -->
-      </div> <!-- cd-timeline-block -->
+            <div data-bind="foreach: dataList">
 
-      <div class="cd-timeline-block">
-        <div class="cd-timeline-img cd-movie">
-          <img src="img/cd-icon-movie.svg" alt="Movie">
-        </div> <!-- cd-timeline-img -->
+                <div class="cd-timeline-block">
 
-        <div class="cd-timeline-content">
-          <h2>Title of section 2</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
-          <a href="#0" class="cd-read-more">Read more</a>
-          <span class="cd-date">Jan 18</span>
-        </div> <!-- cd-timeline-content -->
-      </div> <!-- cd-timeline-block -->
-    </section>
+                    <div class="cd-timeline-img cd-picture">
+                        <span>&nbsp;</span>
+                    </div> <!-- cd-timeline-img -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-    <script src="js/main.js"></script>
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+                    <div class="cd-timeline-content">
+                        <img data-bind="attr: {src: 'data:image/png;charset=utf8;base64,' + picture}">
+                        <h2 class="cd-name" data-bind="text: name"></h2>
+                        <p class="cd-lifespan"><span data-bind="text: birth_year"></span> - <span  data-bind="text: death_year"></span></p>
+                        <p class="cd-bio" data-bind="text: blurb"></p>
+                        <a href="#0" class="cd-read-more">Read more</a>
+                        <span class="cd-date" data-bind="text: birth_year"></span>
+                    </div> <!-- cd-timeline-content -->
 
-  </body>
+                </div> <!-- cd-timeline-block -->
+
+            </div><!-- div iterating through list -->
+
+        </section>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+    </body>
 </html>
