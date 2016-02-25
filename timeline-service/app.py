@@ -30,8 +30,8 @@ class BioHandler(webapp2.RequestHandler):
     bios = Bio.query_bios()
     for i, bio in enumerate(bios):
       bios[i] = bio.to_dict()
-      bios[i]["picture"] = base64.b64encode(bio.picture)
-    self.response.write(json.dumps(bios))
+    callback = self.request.get("callback")
+    self.response.write("{0}({1})".format(callback, json.dumps(bios)))
 
   def post(self):
     bio = Bio()
@@ -41,7 +41,7 @@ class BioHandler(webapp2.RequestHandler):
     if death_year_raw_input:
       bio.death_year = int(death_year_raw_input)
     bio.blurb = self.request.get("blurb")
-    bio.picture = self.request.get("picture")
+    bio.picture = base64.b64encode(self.request.get("picture"))
     bio.put()
     self.redirect('/new')
 
