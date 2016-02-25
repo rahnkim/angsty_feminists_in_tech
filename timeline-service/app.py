@@ -21,7 +21,7 @@ class Bio(ndb.Model):
 
   @classmethod
   def query_bios(cls):
-    return cls.query().fetch()
+    return cls.query().order(cls.birth_year).fetch()
 
 
 class BioHandler(webapp2.RequestHandler):
