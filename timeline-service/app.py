@@ -4,6 +4,7 @@ import base64
 import json
 import urllib
 
+from google.appengine.api import users
 from google.appengine.ext import ndb
 
 import webapp2
@@ -21,7 +22,7 @@ class Bio(ndb.Model):
 
   @classmethod
   def query_bios(cls):
-    return cls.query().fetch()
+    return cls.query().order(cls.birth_year).fetch()
 
 
 class BioHandler(webapp2.RequestHandler):
@@ -42,15 +43,18 @@ class BioHandler(webapp2.RequestHandler):
     bio.blurb = self.request.get("blurb")
     bio.picture = self.request.get("picture")
     bio.put()
-    self.redirect('/form')
+    self.redirect('/new')
 
 
 class BioSubmissionHandler(webapp2.RequestHandler):
   def get(self):
     self.response.out.write('<html><body>')
-    self.response.out.write('<h1>New bio entry</h1>')
-    self.response.out.write("""
-		  <form action="/bio"
+    user = users.get_current_user()
+    if user:
+      if users.is_current_user_admin():
+        self.response.out.write('<h1>New bio entry</h1>')
+        self.response.out.write("""
+		  <form action="/"
 				enctype="multipart/form-data"
 				method="post">
 			<div><label>Name:</label></div>
@@ -72,19 +76,16 @@ class BioSubmissionHandler(webapp2.RequestHandler):
 			<div><label>Picture:</label></div>
 			<div><input type="file" name="picture"/></div>
 			<div><input type="submit" value="Upload new bio"></div>
-		  </form>
-		</body>
-	  </html>""")
-
-
-class MainHandler(webapp2.RequestHandler):
-  def get(self):
-    self.response.out.write("Nothing here.")
+		  </form>""")
+      self.response.out.write('<p><a href="%s">Sign out</a>.</p></body></html>' %
+                                  users.create_logout_url('/new'))
+    else:
+      self.response.out.write('<p><a href="%s">Sign in</a>.</p></body></html>' %
+                                  users.create_login_url('/new'))
 
 
 app = webapp2.WSGIApplication(
     [
-        ("/", MainHandler), ("/form", BioSubmissionHandler),
-        ("/bio", BioHandler)
+        ("/", BioHandler), ("/new", BioSubmissionHandler)
     ],
     debug=True)
