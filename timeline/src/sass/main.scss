@@ -33,7 +33,14 @@ body {
 a {
 	color: $red;
 	text-decoration: none;
-	font-family: $secondary-font;
+
+    &:hover {
+        color: darken($red, 10%);
+    }
+
+    &:focus {
+        outline: none;
+    }
 }
 img {
 	max-width: 100%;
@@ -41,12 +48,20 @@ img {
 h1,
 h2 {
 	font-family: $secondary-font;
+    font-weight: normal;
+    font-variant: small-caps;
 }
 h1 {
     font-size: 3em;
+    line-height: 1em;
+
+    @include MQ(M) {
+        /*font-size: 4em;*/
+    }
 }
 h2 {
     font-size: 2em;
+    line-height: 1em;
 }
 
 /* --------------------------------
@@ -54,16 +69,17 @@ h2 {
 Modules
 
 -------------------------------- */
-
-.cd-container {
+.clearfix {
+	@include clearfix;
+}
+.container {
 	width: 90%;
 	max-width: $L; // breakpoints inside partials > _layout.scss
 	margin: 0 auto;
+    position: relative;
 
-	&::after { /* clearfix */
-		content: '';
-		display: table;
-		clear: both;
+	&::after {
+        @include clearfix;
 	}
 }
 .inner {
@@ -71,26 +87,172 @@ Modules
 	max-width: $L; // breakpoints inside partials > _layout.scss
 	margin: 0 auto;
 }
+[class^='block'] {
+    padding: 1.6em;
+    margin-bottom: 3em;
+}
+.block-blue {
+    background-color: $blue;
+    color: #FFF;
+}
+[class^='grid'] {
+	@include MQ(M) {
+        float: left;
+	}
+}
+.grid-1-3 {
+    text-align: left;
+
+	@include MQ(M) {
+        width: 32%;
+        margin-right: 2%;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+}
+.secondary-font {
+    font-family: $secondary-font;
+    font-weight: normal;
+    font-variant: small-caps;
+    text-transform: none;
+}
+.error {
+    position: absolute;
+    width: 100%;
+
+    @include MQ(M) {
+        text-align: center;
+    }
+}
+.button-container {
+    text-align: center;
+}
+.button {
+    display: inline-block;
+    padding: .75em 1.25em;
+    color: $red;
+    font-weight: bold;
+    font-size: 80%;
+    line-height: 80%;
+    text-transform: uppercase;
+    text-align: center;
+    border: 2px solid $red;
+
+    &:hover {
+        background-color: $red;
+        color: #FFF;
+    }
+}
 
 /* --------------------------------
 
 Main components
 
 -------------------------------- */
+.page {
+    min-height: 100vh;
+    background: url('../img/background.jpg') no-repeat center center;
+    background-size: cover;
+    display: table;
+    width: 100%;
 
-header {
-	background: $background;
+    .row {
+        display: table-row;
+    }
+
+    header {
+        background: $background;
+        padding: 1em 0;
+        display: table-cell;
+
+        .logo {
+            display: block;
+            width: 5.5em;
+            margin: 0 auto;
+        }
+
+        .title {
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        @include MQ(M) {
+            .logo {
+                width: 4em;
+                float: left;
+                margin-right: 1em;
+            }
+
+            .title {
+                font-size: 2.25em;
+                line-height: 46px; /* Height of .logo */
+                text-align: left;
+            }
+        }
+    }
+
+    .intro {
+        background: rgba($black, .7);
+        padding: 3em 0;
+        display: table-cell;
+        height: 100%;
+        vertical-align: middle;
+        color: #FFF;
+        text-align: center;
+
+        h1 {
+            font-family: $primary-font;
+            font-weight: bold;
+            text-align: center;
+            font-variant: normal;
+            text-transform: uppercase;
+        }
+
+        .block-blue {
+            background: rgba($blue, .8);
+
+            @include MQ(M) {
+                min-width: 677px; /* For smooth transition between M and S */
+                max-width: 66%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    h2 {
+        font-family: $primary-font;
+        font-weight: bold;
+        text-align: center;
+        font-variant: normal;
+        text-transform: uppercase;
+    }
+
+    .down-button {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin-top: 2em;
+        line-height: 26px;
+        border: 2px solid #FFF;
+        border-radius: 50%;
+        color: #FFF;
+
+        &:hover {
+            background: #FFF;
+            color: $black;
+        }
+    }
 }
-#cd-timeline {
+#timeline {
 	position: relative;
-	padding: 2em 0;
-	margin: {
-		top: 2em;
-		bottom: 2em;
-	}
+	padding: 3em 0 2em;
+	margin-bottom: 2em;
 
 	&::before {
-		/* this is the vertical line */
+		/* Vertical line */
 		content: '';
 		position: absolute;
 		top: 0;
@@ -100,11 +262,7 @@ header {
 		background: darken($background, 5%);
 	}
 
-	@include MQ(L) {
-		margin: {
-			top: 3em;
-			bottom: 3em;
-		}
+	@include MQ(M) {
 
 		&::before {
 			left: 50%;
@@ -113,7 +271,7 @@ header {
 	}
 }
 
-.cd-timeline-block {
+.timeline-block {
 	position: relative;
 	margin: 2em 0;
 	@include clearfix;
@@ -126,7 +284,107 @@ header {
 		margin-bottom: 0;
 	}
 
-	@include MQ(L) {
+    &:nth-of-type(5n+1) {
+        .timeline-content {
+            background-color: $red;
+            color: #FFF;
+
+            .bio {
+                background-image: linear-gradient(to left, #FFF 33%, rgba(255,255,255,0) 0%);
+            }
+
+            .read-more {
+                color: #FFF;
+                border-color: #FFF;
+
+                &:hover {
+                    background-color: #FFF;
+                    color: $black;
+                }
+            }
+
+            &::before {
+                background: $red;
+            }
+        }
+
+        .timeline-marker {
+            border-color: $red;
+        }
+    }
+
+    &:nth-of-type(5n+2) {
+        .timeline-content {
+            background-color: $yellow;
+
+            &::before {
+                background: $yellow;
+            }
+        }
+
+        .timeline-marker {
+            border-color: $yellow;
+        }
+    }
+
+    &:nth-of-type(5n+3) {
+        .timeline-content {
+            background-color: $green;
+
+            &::before {
+                background: $green;
+            }
+        }
+
+        .timeline-marker {
+            border-color: $green;
+        }
+    }
+
+    &:nth-of-type(5n+4) {
+        .timeline-content {
+            background-color: $blue;
+            color: #FFF;
+
+            .bio {
+                background-image: linear-gradient(to left, #FFF 33%, rgba(255,255,255,0) 0%);
+            }
+
+            .read-more {
+                color: #FFF;
+                border-color: #FFF;
+
+                &:hover {
+                    background-color: #FFF;
+                    color: $black;
+                }
+            }
+
+            &::before {
+                background: $blue;
+            }
+        }
+
+        .timeline-marker {
+            border-color: $blue;
+        }
+    }
+
+    &:nth-of-type(5n+5) {
+        .timeline-content {
+            background-color: $pink;
+
+            &::before {
+                background: $pink;
+            }
+        }
+
+        .timeline-marker {
+            border-color: $pink;
+        }
+    }
+
+	@include MQ(M) {
 		margin: 4em 0;
 
 		&:first-child {
@@ -139,43 +397,19 @@ header {
 	}
 }
 
-.cd-timeline-img {
+.timeline-marker {
+    background: #FFF;
 	position: absolute;
 	top: 0;
-	left: 0;
-	width: 40px;
-	height: 40px;
+	left: 5px;
+	width: 30px;
+	height: 30px;
 	border-radius: 50%;
-	box-shadow: 0 0 0 4px #ffffff, inset 0 2px 0 rgba(#000, .08), 0 3px 0 4px rgba(#000, .05) ;
+	border: 4px solid #FFF;
 
-	img {
-		display: block;
-		width: 24px;
-		height: 24px;
-		position: relative;
+	@include MQ(M) {
 		left: 50%;
-		top: 50%;
-		margin-left: -12px;
-		margin-top: -12px;
-	}
-
-	&.cd-picture {
-		background: $green;
-	}
-
-	&.cd-movie {
-		background: $red;
-	}
-
-	&.cd-location {
-		background: $yellow;
-	}
-
-	@include MQ(L) {
-		width: 60px;
-		height: 60px;
-		left: 50%;
-		margin-left: -30px;
+		margin-left: -15px;
 
 		/* Force Hardware Acceleration in WebKit */
 		-webkit-transform: translateZ(0);
@@ -187,96 +421,75 @@ header {
 
 		.cssanimations &.bounce-in {
 			visibility: visible;
-			@include animation(cd-bounce-1 .6s);
+			@include animation(bounce-1 .6s);
 		}
 	}
 }
 
-.cd-timeline-content {
+.timeline-content {
 	position: relative;
 	margin-left: 60px;
-	background: #ffffff;
-	@include border-radius;
-	padding: 1em;
-	box-shadow: 0 3px 0 darken($background, 5%);
+	padding: 1.6em;
 	@include clearfix;
 
-    .cd-name {
-        margin: 0;
+    img {
+        display: block;
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto 2em;
+        border-radius: 50%;
     }
 
-    .cd-lifespan {
+    .name {
+        margin: 0;
+        text-align: center;
+    }
+
+    .lifespan {
         margin-top: 0;
         font-size: 80%;
         font-weight: bold;
+        text-align: center;
     }
 
-	.cd-read-more,
-    .cd-date {
-		display: inline-block;
-	}
+    .bio {
+        background-image: linear-gradient(to left, #000 33%, rgba(255,255,255,0) 0%);
+        background-position: top;
+        background-size: 20px 2px;
+        background-repeat: repeat-x;
+        padding-top: 1em;
+    }
 
-	.cd-read-more {
-        display: none;
-		float: right;
-		padding: .8em 1em;
-		background: $red;
-		color: #ffffff;
-		@include border-radius;
+    .read-more {
+        color: $black;
+        border: 2px solid $black;
 
-		.no-touch &:hover {
-			background-color: lighten($red, 5%);
-		}
-	}
-
-	.cd-date {
-		float: left;
-		padding: .8em 0;
-		opacity: .7;
+        &:hover {
+            background-color: $black;
+            color: #FFF;
+        }
 	}
 
 	&::before {
 		content: '';
 		position: absolute;
-		top: 16px;
-		right: 100%;
-		height: 0;
-		width: 0;
-		border: 7px solid transparent;
-		border-right: 7px solid #ffffff;
+		top: 13px; /* (Marker height/2) - (:before height/2) */
+        left: -42px;
+		height: 4px;
+		width: 16%;
+        z-index: -99;
 	}
 
 	@include MQ(M) {
-		/*h2 {
-			@include font-size(20px);
-		}
-
-		p {
-			@include font-size(16px);
-		}
-
-		.cd-read-more, .cd-date {
-			@include font-size(14px);
-		}*/
-	}
-
-	@include MQ(L) {
 		margin-left: 0;
-		padding: 1.6em;
 		width: 45%;
 
 		&::before {
-			top: 24px;
 			left: 100%;
-			border-color: transparent;
-			border-left-color: #ffffff;
+            width: 11.1%;
 		}
 
-		.cd-read-more {
-			float: left;
-		}
-
-		.cd-date {
+		.date {
 			position: absolute;
 			width: 100%;
 			left: 122%;
@@ -284,25 +497,12 @@ header {
 			@include font-size(16px);
 		}
 
-		.cd-timeline-block:nth-child(even) & {
+		.timeline-block:nth-child(even) & {
 			float: right;
 
 			&::before {
-				top: 24px;
 				left: auto;
 				right: 100%;
-				border-color: transparent;
-				border-right-color: #ffffff;
-			}
-
-			.cd-read-more {
-				float: right;
-			}
-
-			.cd-date {
-				left: auto;
-				right: 122%;
-				text-align: right;
 			}
 		}
 
@@ -312,18 +512,59 @@ header {
 
 		.cssanimations &.bounce-in {
 			visibility: visible;
-			@include animation(cd-bounce-2 .6s);
+			@include animation(bounce-2 .6s);
 		}
 	}
 }
 
-@include MQ(L) {
+.credits {
+    font-size: 80%;
+}
+
+footer {
+    .inner {
+        background-image: linear-gradient(to left, #000 33%, rgba(255,255,255,0) 0%);
+        background-position: top;
+        background-size: 20px 2px;
+        background-repeat: repeat-x;
+        padding-top: 1em;
+    }
+
+    .footer-description {
+        @include MQ(S) {
+            width: 65%;
+        }
+
+        @include MQ(M) {
+            width: 50%;
+        }
+    }
+
+    .button {
+        margin-top: 1em;
+
+        @include MQ(S) {
+            float: right;
+        }
+    }
+
+    .copyright {
+        font-size: 80%;
+
+        @include MQ(M) {
+            float: right;
+        }
+    }
+
+}
+
+@include MQ(M) {
 	/* inverse bounce effect on even content blocks */
-	.cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
-		@include animation(cd-bounce-2-inverse .6s);
+	.cssanimations .timeline-block:nth-child(even) .timeline-content.bounce-in {
+		@include animation(bounce-2-inverse .6s);
 	}
 }
-@keyframes cd-bounce-1 {
+@keyframes bounce-1 {
   0% {
     opacity: 0;
     -webkit-transform: scale(0.5);
@@ -350,7 +591,7 @@ header {
     transform: scale(1);
   }
 }
-@-webkit-keyframes cd-bounce-2 {
+@-webkit-keyframes bounce-2 {
   0% {
     opacity: 0;
     -webkit-transform: translateX(-100px);
@@ -365,7 +606,7 @@ header {
     -webkit-transform: translateX(0);
   }
 }
-@-moz-keyframes cd-bounce-2 {
+@-moz-keyframes bounce-2 {
   0% {
     opacity: 0;
     -moz-transform: translateX(-100px);
@@ -380,7 +621,7 @@ header {
     -moz-transform: translateX(0);
   }
 }
-@keyframes cd-bounce-2 {
+@keyframes bounce-2 {
   0% {
     opacity: 0;
     -webkit-transform: translateX(-100px);
@@ -407,7 +648,7 @@ header {
     transform: translateX(0);
   }
 }
-@-webkit-keyframes cd-bounce-2-inverse {
+@-webkit-keyframes bounce-2-inverse {
   0% {
     opacity: 0;
     -webkit-transform: translateX(100px);
@@ -422,7 +663,7 @@ header {
     -webkit-transform: translateX(0);
   }
 }
-@-moz-keyframes cd-bounce-2-inverse {
+@-moz-keyframes bounce-2-inverse {
   0% {
     opacity: 0;
     -moz-transform: translateX(100px);
@@ -437,7 +678,7 @@ header {
     -moz-transform: translateX(0);
   }
 }
-@keyframes cd-bounce-2-inverse {
+@keyframes bounce-2-inverse {
   0% {
     opacity: 0;
     -webkit-transform: translateX(100px);
