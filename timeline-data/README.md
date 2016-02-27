@@ -2,7 +2,8 @@
 
 This data is uploaded to and served by Google App Engine Datastore.
 
-All images/illustrations are creation and property of [Shaina Koval](http://www.shainakoval.com). Do not copy, reproduce, distribute, link, or alter without permission.
+## Copyright 2016
+<strong>All images/illustrations are creation and property of [Shaina Koval](http://www.shainakoval.com). Do not copy, reproduce, distribute, link, or alter without permission.</strong>
 
 Bio research by Shaina Koval, [Rahn Kim](http://www.rahnkim.com), and Cassandra Mudgway.
 
