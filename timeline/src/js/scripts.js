@@ -6,7 +6,7 @@
 jQuery(document).ready(function($){
 
 	/********************
-	 * Timeline Animation
+	 * Scroll To
 	 ********************/
 	// Scroll to timeline
 	$('.down-button').click(function(event){
@@ -14,34 +14,9 @@ jQuery(document).ready(function($){
 		$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
 	});
 
-	//var timelineBlocks = $('.timeline-block'),
-	//	offset = 0.8;
-	//
-	////hide timeline blocks which are outside the viewport
-	//hideBlocks(timelineBlocks, offset);
-	//
-	////on scolling, show/animate timeline blocks when enter the viewport
-	//$(window).on('scroll', function(){
-	//	(!window.requestAnimationFrame)
-	//		? setTimeout(function(){ showBlocks(timelineBlocks, offset); }, 100)
-	//		: window.requestAnimationFrame(function(){ showBlocks(timelineBlocks, offset); });
-	//});
-	//
-	//function hideBlocks(blocks, offset) {
-	//	blocks.each(function(){
-	//		( $(this).offset().top > $(window).scrollTop()+$(window).height()*offset ) && $(this).find('.timeline-img, .timeline-content').addClass('is-hidden');
-	//	});
-	//};
-	//
-	//function showBlocks(blocks, offset) {
-	//	blocks.each(function(){
-	//		( $(this).offset().top <= $(window).scrollTop()+$(window).height()*offset && $(this).find('.timeline-img').hasClass('is-hidden') ) && $(this).find('.timeline-img, .timeline-content').removeClass('is-hidden').addClass('bounce-in');
-	//	});
-	//};
-
-	/********************
-	 * Data Handling
-	 ********************/
+	/************************
+	 * Knockout Data Handling
+	 ************************/
 	// Create View Model
 	function ViewModel() {
         // Map 'self' to ViewModel
@@ -69,6 +44,24 @@ jQuery(document).ready(function($){
 				clearTimeout(serviceError);
 			}
 		});
+
+		// Check if DOM element is in viewport on load
+		self.isInViewport = function(element) {
+			if ($(element).offset().top > $(window).scrollTop()+$(window).height()*.8) {
+				return 'is-hidden';
+			} else {
+				return 'bounce-in';
+			}
+		};
+
+		// Update CSS class while scrolling
+		self.isStillInViewport = function(element) {
+			$(window).on('scroll', function(){
+				if ($(element).offset().top < $(window).scrollTop()+$(window).height()*.8) {
+					$(element).find('.timeline-marker, .timeline-content').removeClass('is-hidden').addClass('bounce-in');
+				}
+			});
+		};
 	};
 
 	// Activate knockout.js

@@ -937,11 +937,11 @@ h2 {
     -webkit-backface-visibility: hidden;
   }
 
-  .cssanimations .timeline-marker.is-hidden {
+  .timeline-marker .is-hidden {
     visibility: hidden;
   }
 
-  .cssanimations .timeline-marker.bounce-in {
+  .timeline-marker .bounce-in {
     visibility: visible;
     -webkit-animation: bounce-1 0.6s;
     animation: bounce-1 0.6s;
