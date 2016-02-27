@@ -1,0 +1,110 @@
+[
+   {
+      "name":"Ada Lovelace",
+      "birth_year":1815,
+      "death_year":1852,
+      "blurb":"Founder of what we know today as computer science, Ada designed the first algorithm intended for a computer, and envisioned capabilities of machines beyond simple number-crunching.",
+      "picture_path":"images/Ada-Lovelace.jpg"
+   },
+   {
+      "name":"Alan Turing",
+      "birth_year":1912,
+      "death_year":1954,
+      "blurb":"Known for the Turing Machine, a hypothetical device capable of simulating any algorithm, Alan helped break German ciphers during WWII. He was prosecuted for \"homosexual acts\" by the UK.",
+      "picture_path":"images/Alan-Turing.jpg"
+   },
+   {
+      "name":"Andrew Chi-Chih Yao",
+      "birth_year":1946,
+      "blurb":"Andrew's work as computational theorist, including \"Yao's Principle,\" has significantly contributed to the theory of pseudo-random number generation and cryptography.",
+      "picture_path":"images/Andrew-Chi-Chih-Yao.jpg"
+   },
+   {
+      "name":"Barbara Liskov",
+      "birth_year":1939,
+      "blurb":"Barbara's work in programming language design and methodology, including the \"Liskov substitution principle,\" contributed to the development of object-oriented programming.",
+      "picture_path":"images/Barbara-Liskov.jpg"
+   },
+   {
+      "name":"The \"Computers\"",
+      "birth_year":1917,
+      "death_year":2013,
+      "blurb":"The primary programmers of the ENIAC, the six women collectively known as \"computers\" also knew their hardware, crawling inside the machinery to diagnose and debug problems.",
+      "picture_path":"images/The-Computers.jpg"
+   },
+   {
+      "name":"Elizabeth J. Feinler",
+      "birth_year":1931,
+      "blurb":"Pioneer and manager of various networks that became the basis for the Internet, Elizabeth also helped develop a program called PCSam, which became the basis of today's email systems.",
+      "picture_path":"images/Elizabeth-J-Feinler.jpg"
+   },
+   {
+      "name":"Frances E. Allen",
+      "birth_year":1932,
+      "blurb":"A pioneer in the field of optimising compilers, Frances introduced many of the abstractions, algorithms, and implementations used for automatic program optimisation technology.",
+      "picture_path":"images/Frances-E-Allen.jpg"
+   },
+   {
+      "name":"Rear Admiral Grace Hopper",
+      "birth_year":1906,
+      "death_year":1992,
+      "blurb":"A pioneering programmer of the Harvard Mark I computer in 1944, \"Amazing Grace\" invented the compiler, which translates natural-language programming language to machine language.",
+      "picture_path":"images/Grace-Hopper.jpg"
+   },
+   {
+      "name":"Hedy Lamarr",
+      "birth_year":1914,
+      "death_year":2000,
+      "blurb":"An inventor and actress, Hedy co-invented the spread spectrum and frequency hopping communication technologies. They were used in WWII to control torpedoes and later used in Wi-Fi and Bluetooth.",
+      "picture_path":"images/Hedy-Lamarr.jpg"
+   },
+   {
+      "name":"Klara Dan von Neumann",
+      "birth_year":1911,
+      "death_year":1963,
+      "blurb":"A pioneer programmer and key inventor on the ENIAC*, Klara's work is often downplayed in comparison to her husband's. She also taught weather scientists how to program.\r\n* The ENIAC was the first electronic general-purpose computer, announced in 1946.",
+      "picture_path":"images/Klara-Dan-von-Neumann.jpg"
+   },
+   {
+      "name":"Manuel Blum",
+      "birth_year":1938,
+      "blurb":"Manuel's machine-independent theory of complexity forms the foundation of computational complexity theory, the study of the \"difficulty\" of computational problems.",
+      "picture_path":"images/Manuel-Blum.jpg"
+   },
+   {
+      "name":"Mark Dean",
+      "birth_year":1957,
+      "blurb":"At IBM, Mark led a team for the design of a one-gigahertz computer processor chip. He holds three of IBM's original nine PC patents and is the first black person to become an IBM Fellow.",
+      "picture_path":"images/Mark-Dean.jpg"
+   },
+   {
+      "name":"Radia Perlman",
+      "birth_year": 1951,
+      "blurb": "Radia made large contributions to network engineering, and is best known for her invention of the spanning-tree protocol, a technology fundamental to network bridging (connecting multiple networks).",
+      "picture_path":"images/Radia-Perlman.jpg"
+   },
+   {
+      "name":"Raj Reddy",
+      "birth_year":1937,
+      "blurb":"One of the early researchers of artificial intelligence, Raj pioneered the study of spoken language systems, such as voice-controlled robots, speech recognition, and dictation.",
+      "picture_path":"images/Raj-Reddy.jpg"
+   },
+   {
+      "name":"Shafi Goldwasser",
+      "birth_year":1958,
+      "blurb":"Researcher of cryptography, computational complexity theory, and computational number theory, Shafi co-invented the zero-knowledge protocol, a key cryptographic tool.",
+      "picture_path":"images/Shafi-Goldwasser.jpg"
+   },
+   {
+      "name":"Sophie Wilson",
+      "birth_year":1957,
+      "blurb":"Known for designing the Acorn Micro-Computer, Sophie also designed the instruction set of the ARM processor that now drives billions of mobile devices. She is also an out transgender woman.",
+      "picture_path":"images/Sophie-Wilson.jpg"
+   },
+   {
+      "name":"Zero",
+      "birth_year":-1740,
+      "blurb":"The first known use of the number zero was in Egypt, where the hieroglyph also meant \"beautiful.\" Without the concept of zero, there would be no computer science as we know it.",
+      "picture_path":"images/Zero.jpg"
+   }
+]
