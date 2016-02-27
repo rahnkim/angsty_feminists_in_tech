@@ -79,6 +79,8 @@
    },
    {
       "name":"Radia Perlman",
+      "birth_year": 1951,
+      "blurb": "Radia made large contributions to network engineering, and is best known for her invention of the spanning-tree protocol, a technology fundamental to network bridging (connecting multiple networks).",
       "picture_path":"images/Radia-Perlman.jpg"
    },
    {
