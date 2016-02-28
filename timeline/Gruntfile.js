@@ -80,7 +80,9 @@ module.exports = function(grunt) {
                           '!**/normalize.css',
                           '!**/normalize.min.css',
                           '!**/sass/**',
-                          '!**/partials/**'],
+                          '!**/partials/**',
+                          // Other
+                          '!**/bower_components/**'],
                     dest: 'dist/'
                 }]
             },

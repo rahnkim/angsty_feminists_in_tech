@@ -30,8 +30,8 @@
                 <div class="intro">
                     <div class="inner">
                         <section class="block-blue">
-                            <h1>Faces <span class="secondary-font">of</span> Computer Science</h1>
-                            <p>Meet the "misfits" of computer science. Challenge your assumptions and see the history of computer science through the accomplishments and contributions of people that we often don't associate with the typical "face" of computer science.</p>
+                            <h1>Underdog Pioneers <span class="secondary-font">of</span> Tech</h1>
+                            <p>Meet the "misfits" of computer science and technology. Challenge your assumptions and see our history through the accomplishments and contributions of people that we often don't associate with the typical "face" of tech.</p>
                         </section>
 
                         <section>
@@ -54,13 +54,13 @@
 
             <div data-bind="foreach: dataList">
 
-                <div class="timeline-block">
+                <div class="timeline-block" data-bind="event: {scroll: $parent.isStillInViewport($element)}">
 
-                    <div class="timeline-marker">
+                    <div class="timeline-marker" data-bind="css: $parent.isInViewport($element)">
                         <span>&nbsp;</span>
                     </div> <!-- timeline-img -->
 
-                    <div class="timeline-content">
+                    <div class="timeline-content" data-bind="css: $parent.isInViewport($element)">
                         <img data-bind="attr: {src: 'data:image/png;charset=utf8;base64,' + picture}">
                         <h2 class="name" data-bind="text: name"></h2>
                         <p class="lifespan">
