@@ -10,7 +10,7 @@
       "name":"Alan Turing",
       "birth_year":1912,
       "death_year":1954,
-      "blurb":"Known for the Turing Machine, a hypothetical device capable of simulating any algorithm, Alan helped break German ciphers during WWII. He was prosecuted for \"homosexual acts\" by the UK.",
+      "blurb":"Considered the father of computer science and artificial intelligence, Alan formalised the concepts of algorithm and computation with the Turing Machine. During WWII, Alan's work was instrumental in breaking German ciphers. He was also an openly gay man and was prosecuted for \"homosexual acts\" by the UK.",
       "picture_path":"images/Alan-Turing.jpg"
    },
    {
