@@ -72,6 +72,12 @@
       "picture_path":"images/Manuel-Blum.jpg"
    },
    {
+      "name":"Margaret Hamilton",
+      "birth_year":1936,
+      "blurb":"As lead Apollo flight software designer at NASA, Margaret and her team built the software allowing Apollo 11 to successfully navigate to and land on the Moon. She co-developed concepts of asynchronous software, priority scheduling, and more, which became foundational to robust software designs.",
+      "picture_path":null
+   },
+   {
       "name":"Mark Dean",
       "birth_year":1957,
       "blurb":"At IBM, Mark led a team for the design of a one-gigahertz computer processor chip. He holds three of IBM's original nine PC patents and is the first black person to become an IBM Fellow.",
