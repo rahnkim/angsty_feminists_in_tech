@@ -20,10 +20,23 @@
       "picture_path":"images/Andrew-Chi-Chih-Yao.jpg"
    },
    {
+      "name":"Anita Borg",
+      "birth_year":1949,
+      "death_year":2003,
+      "blurb":"Anita spent her career developing in areas of operating systems, memory systems, email communications, and more, while fiercely advocating for women in technology as the founder of the email network, Systers, and the (Anita Borg) Institute for Women and Technology, and as the co-founder of the Grace Hopper Celebration of Women in Computing conference.",
+      "picture_path":null
+   },
+   {
       "name":"Barbara Liskov",
       "birth_year":1939,
       "blurb":"Barbara's work in programming language design and methodology, including the \"Liskov substitution principle,\" contributed to the development of object-oriented programming.",
       "picture_path":"images/Barbara-Liskov.jpg"
+   },
+   {
+      "name":"Chieko Asakawa",
+      "birth_year":1958,
+      "blurb":"A blind computer scientist at IBM, Chieko became an accomplished leader in accessibility research and development, including a key role in the development of web-to-speech system, IBM Home Page Reader, which is now produced in eleven languages and distributed worldwide.",
+      "picture_path":null
    },
    {
       "name":"The \"Computers\"",
@@ -59,11 +72,36 @@
       "picture_path":"images/Hedy-Lamarr.jpg"
    },
    {
+      "name":"Jennie S. Hwang",
+      "birth_year":1949,
+      "blurb":"A pioneer in environmentally-friendly electronics manufacturing and electronics miniaturisation technology and a renowned entrepreneur, Jennie was also the first Asian-American woman to be elected into National Academy of Engineering.",
+      "picture_path":null
+   },
+   {
+      "name":"John Forbes Nash, Jr.",
+      "birth_year":1928,
+      "death_year":2015,
+      "blurb":"John's contributions in mathematics, notably game theory, are influential in many fields including computer science and artificial intelligence. He was diagnosed and lived with paranoid schizophrenia, and his story became basis for the biography and film, \"A Beautiful Mind.\"",
+      "picture_path":null
+   },
+   {
+      "name":"Katherine Johnson",
+      "birth_year":1918,
+      "blurb":"Renowned for her accuracy in celestial navigation (space flight trajectories), Katherine started at NASA as a \"computer\" in the all African-American West Area Computers section. She soon transitioned to work as an aerospace technologist, notably, making calculations for the Apollo space programs.",
+      "picture_path":null
+   },
+   {
       "name":"Klara Dan von Neumann",
       "birth_year":1911,
       "death_year":1963,
       "blurb":"A pioneer programmer and key inventor on the ENIAC*, Klara's work is often downplayed in comparison to her husband's. She also taught weather scientists how to program.\r\n* The ENIAC was the first electronic general-purpose computer, announced in 1946.",
       "picture_path":"images/Klara-Dan-von-Neumann.jpg"
+   },
+   {
+      "name":"Lynn Conway",
+      "birth_year":1938,
+      "blurb":"Lynn's contributions include pioneering work in chip design, and architecture design that laid the groundwork for modern high performance microprocessors. In 1968, IBM fired Lynn Conway when she revealed to the company that she was transgender, and she subsequently was denied access to her children after transitioning. In 2000, she went public with her story as a trans woman, and began her work in activism.",
+      "picture_path":null
    },
    {
       "name":"Manuel Blum",
@@ -82,6 +120,13 @@
       "birth_year":1957,
       "blurb":"At IBM, Mark led a team for the design of a one-gigahertz computer processor chip. He holds three of IBM's original nine PC patents and is the first black person to become an IBM Fellow.",
       "picture_path":"images/Mark-Dean.jpg"
+   },
+   {
+      "name":"Peter Landin",
+      "birth_year":1930,
+      "death_year":2009,
+      "blurb":"Inventor of the first software emulator, Peter freed computer programs from manufacturers and laid the foundations for programming language design based on mathematical logic. Peter was politically radical, bisexual, and highly active in the Gay Liberation Front.",
+      "picture_path":null
    },
    {
       "name":"Radia Perlman",
@@ -106,6 +151,18 @@
       "birth_year":1957,
       "blurb":"Known for designing the Acorn Micro-Computer, Sophie also designed the instruction set of the ARM processor that now drives billions of mobile devices. She is also an out transgender woman.",
       "picture_path":"images/Sophie-Wilson.jpg"
+   },
+   {
+      "name":"West Area Computers",
+      "birth_year":null,
+      "blurb":"\"West Area Computers\" was a unit of all black female aeronautical research mathematicians at NASA. The unit was originally supervised by white supervisors and segregated under Jim Crow. Dorothy Vaughan, a black female mathematician, eventually took over as supervisor.",
+      "picture_path":null
+   },
+   {
+      "name":"Yukako Uchinaga",
+      "birth_year":1946,
+      "blurb":"At IBM, Yukako led the team that developed software to work with Asian languages such as Chinese, Japanese, and Korean, that require \"double byte character sets.\" She has also been deeply involved in advocacy for women at IBM Japan and Asia Pacific, as well as the Japanese government.",
+      "picture_path":null
    },
    {
       "name":"Zero",
