@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <form id="jsonFile" name="jsonFile" enctype="multipart/form-data" method="post">
+      <fieldset>
+        <h1>Batch Load Bios</h1>
+        <h2>*If necessary, manually clear Datastore first.</h2>
+        <div>
+          <label>JSON*:</label>
+          <input type='file' id='fileinput'>
+        </div>
+	    <div>
+	      <label>Image Folder*:</label>
+	      <input type="file" name="images" webkitdirectory directory multiple/>
+	    </div>
+        <div style="margin-top: 15px">
+          <input type='button' id='btnLoad' value='UPLOAD!' onclick='loadFile();'>
+        </div>
+      </fieldset>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      function loadFile() {
+        var images, input, file, fileReader;
+
+        if (typeof FileReader !== "function") {
+          alert("The FileReader API isn't supported on this browser yet.");
+          return;
+        }
+
+        images = document.getElementsByName("images");
+        var imageFiles = {};
+        for (var i = 0; i < images[0].files.length; i++) {
+          imageFiles[images[0].files[i].name] = images[0].files[i];
+        }
+
+        input = document.getElementById("fileinput");
+        if (!input.files) {
+          alert("This browser doesn't seem to support the 'files' property of file inputs.");
+        }
+        else if (!input.files[0]) {
+          alert("Please select a file before clicking 'Load'");
+        }
+        else {
+          file = input.files[0];
+          fileReader = new FileReader();
+          fileReader.onload = receivedText;
+          fileReader.readAsText(file);
+        }
+
+        function receivedText(e) {
+          lines = e.target.result;
+          var biosObject = JSON.parse(lines);
+          for (var i = 0; i < biosObject.bios.length; i++) {
+            var data = new FormData();
+            data.append("name", biosObject.bios[i].name);
+            data.append("birth_year", biosObject.bios[i].birth_year);
+            data.append("death_year", biosObject.bios[i].death_year);
+            data.append("blurb", biosObject.bios[i].blurb);
+            data.append("picture", imageFiles[biosObject.bios[i].picture_file_name]);
+            data.append("batch", true);
+            $.ajax({
+              method: "POST",
+              url: "/",
+              processData: false,
+              contentType: false,
+              data: data
+            })
+              .done(function(msg) {
+                $("body").append("<p>" + msg + "<p>");
+              });
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
