@@ -9,6 +9,19 @@ jQuery(document).ready(function($){
 		$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
 	});
 
+	// Scroll to top
+	$('#to-top').click(function(event){
+		event.preventDefault();
+		$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+	});
+
+	/************************
+	 * Intro Animation
+	 ************************/
+	$(window).resize(function() {
+		$('.load-animate').removeClass('load-animate');
+	});
+
 	/************************
 	 * Knockout Data Handling
 	 ************************/
@@ -37,6 +50,7 @@ jQuery(document).ready(function($){
 
 				// Cancel the error handling timeout
 				clearTimeout(serviceError);
+				$('.error').hide();
 			}
 		});
 
