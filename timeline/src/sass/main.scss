@@ -175,22 +175,20 @@ Main components
         }
 
         .title {
-            margin-bottom: 0;
+            margin: 0;
             font-size: 1.5em;
             text-align: center;
         }
 
         @include MQ(M) {
             .logo {
-                width: 4em;
+                width: 2.5em;
                 float: left;
-                margin-right: 1em;
+                margin-right: .5em;
             }
 
             .title {
-                margin-bottom: .67em;
-                font-size: 2.25em;
-                line-height: 46px; /* Height of .logo */
+                line-height: 40px; /* Height of .logo */
                 text-align: left;
             }
         }
@@ -206,11 +204,16 @@ Main components
         text-align: center;
 
         h1 {
+            margin: 0;
             font-family: $primary-font;
             font-weight: bold;
             text-align: center;
             font-variant: normal;
             text-transform: uppercase;
+        }
+
+        p {
+            margin-bottom: 0;
         }
 
         .block-blue {
@@ -226,6 +229,7 @@ Main components
     }
 
     h2 {
+        margin-bottom: 0;
         font-family: $primary-font;
         font-weight: bold;
         text-align: center;
