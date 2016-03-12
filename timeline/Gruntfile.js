@@ -119,7 +119,7 @@ module.exports = function(grunt) {
 
         watch: {
             css: {
-                files: 'src/sass/main.scss',
+                files: ['src/sass/main.scss', 'src/partials/_layout.scss', 'src/partials/_mixins.scss', 'src/partials/_variables.scss'],
                 tasks: ['sass', 'autoprefixer']
             }
         }
