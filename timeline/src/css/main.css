@@ -459,7 +459,7 @@ h2 {
 
 @media only screen and (min-width: 768px) {
   .timeline-block {
-    margin: 4em 0;
+    margin: 4em 0 -17em;
   }
 
   .timeline-block:first-child {
