@@ -45,6 +45,7 @@ class BioHandler(webapp2.RequestHandler):
       bio.blurb = self.request.POST.get("blurb")
       print self.request.POST.get("picture")
       bio.picture = base64.b64encode(self.request.POST.get("picture").file.read())
+      # Use json.loads to "destringify" each resource in resource array.
       bio.put()
       self.response.write("Successfully added bio for {0}.".format(bio.name))
       if not self.request.POST.get("batch"):

@@ -1,71 +1,163 @@
 {  
    "bios":[  
-      {  
+      {
+         "event":"The first computer program written (on paper, for a mechanical computer that was never built).",
+         "event_year":1843,
          "name":"Ada Lovelace",
          "birth_year":1815,
          "death_year":1852,
          "blurb":"One of the first visionaries of what we know today as computer science, Ada designed the first algorithm intended for a computer, for Charles Babbage's early mechanical general-purpose computer, the Analytical Engine. With her \"poetical scientific\" sensibilities, Ada envisioned capabilities of machines beyond simple number-crunching.",
-         "picture_file_name":"Ada-Lovelace.jpg"
+         "picture_file_name":"Ada-Lovelace.jpg",
+         "resources":[
+            {
+               "title":"Untangling the Tale of Ada Lovelace",
+               "source":"Backchannel",
+              "url":"https://medium.com/backchannel/untangling-the-tale-of-ada-lovelace-4cbca62898b6"
+            },
+            {
+               "title":"Ada Lovelace, the First Tech Visionary",
+               "source":"The New Yorker",
+               "url":"http://www.newyorker.com/tech/elements/ada-lovelace-the-first-tech-visionary"
+            }
+         ]
       },
-      {  
+      {
+         "event":"The universal Turing machine lays conceptual foundation for the modern computer.",
+         "event_year":1935,
          "name":"Alan Turing",
          "birth_year":1912,
          "death_year":1954,
          "blurb":"Considered the father of theoretical computer science and artificial intelligence, Alan formalised the concepts of algorithm and computation with the Turing Machine. During WWII, Alan's work in cryptanalysis was instrumental in breaking German ciphers. He was also an openly gay man who was prosecuted for \"homosexual acts\" by the UK and chemically castrated.",
-         "picture_file_name":"Alan-Turing.jpg"
+         "picture_file_name":"Alan-Turing.jpg",
+         "resources":[
+            {
+               "title":"Code-Breaker",
+               "source":"The New Yorker",
+               "url":"http://www.newyorker.com/magazine/2006/02/06/code-breaker"
+            },
+            {
+               "title":"A Queer History of Computing",
+               "source":"Rhizome",
+               "url":"http://rhizome.org/editorial/2013/feb/19/queer-computing-1/"
+            }
+         ]
       },
-      {  
+      {
+         "event":"Yao's Principle published; becomes fundamental to randomised algorithms and complexity.",
+         "event_year":1977,
          "name":"Andrew Chi-Chih Yao",
          "birth_year":1946,
          "blurb":"Andrew's work as computational theorist, including \"Yao's Principle,\" has significantly contributed to the theory of pseudo-random number generation and cryptography.",
          "picture_file_name":"Andrew-Chi-Chih-Yao.jpg"
       },
-      {  
+      {
+         "event":"Grace Hopper Celebration of Women in Computing conference established.",
+         "event_year":1994,
          "name":"Anita Borg",
          "birth_year":1949,
          "death_year":2003,
          "blurb":"Anita spent her career developing in areas of operating systems, memory systems, email communications, and more, while fiercely advocating for women in technology as the founder of the email network, Systers, and the (Anita Borg) Institute for Women and Technology, and as the co-founder of the Grace Hopper Celebration of Women in Computing conference.",
-         "picture_file_name":"Anita-Borg.jpg"
+         "picture_file_name":"Anita-Borg.jpg",
+         "resources": [
+            {
+               "title": "Dr. Anita Borg: Technology is changing the world (video)",
+               "source": "YouTube - Anita Borg Institute",
+               "url": "https://www.youtube.com/watch?v=1yPxd5jqz_Q"
+            }
+         ]
       },
-      {  
+      {
+         "event":"The \"Liskov substitution principle\" introduced and leaves indelible mark on object-oriented programming.",
+         "event_year":1987,
          "name":"Barbara Liskov",
          "birth_year":1939,
-         "blurb":"Barbara's work in programming language design and methodology, including the \"Liskov substitution principle,\" contributed to the development of object-oriented programming.",
+         "blurb":"Barbara's work in programming language design and methodology, including the \"Liskov substitution principle,\" contributed to development in data abstraction, fault tolerance, and distributed computing.",
          "picture_file_name":"Barbara-Liskov.jpg"
       },
-      {  
+      {
+         "event":"IBM Home Page Reader debuts, opening up the web for visually impaired people.",
+         "event_year":1997,
          "name":"Chieko Asakawa",
          "birth_year":1958,
-         "blurb":"A blind computer scientist at IBM, Chieko became an accomplished leader in accessibility research and development, including a key role in the development of web-to-speech system, IBM Home Page Reader, which is now produced in eleven languages and distributed worldwide.",
-         "picture_file_name":"Chieko-Asakawa.jpg"
+         "blurb":"A blind computer scientist at IBM, Chieko's work is composed of leading research and development in accessibility, including a key role in the development of a word processor for Braille documents, a digital library for Braille documents, and a web-to-speech system, IBM Home Page Reader.",
+         "picture_file_name":"Chieko-Asakawa.jpg",
+         "resources":[
+            {
+               "title":"Chieko Asakawa: How new technology helps blind people explore the world (video)",
+               "source":"TED",
+               "url":"https://www.ted.com/talks/chieko_asakawa_how_new_technology_helps_blind_people_explore_the_world"
+            }
+         ]
       },
-      {  
-         "name":"Elizabeth J. Feinler",
+      {
+         "event":"The internet arrives at the basic structure that we have today.",
+         "event_year":1989,
+         "name":"Elizabeth \"Jake\" Feinler",
          "birth_year":1931,
-         "blurb":"Pioneer and manager of various networks that became the basis for the Internet, Elizabeth also helped develop a program called PCSam, which became the basis of today's email systems.",
-         "picture_file_name":"Elizabeth-J-Feinler.jpg"
+         "blurb":"Pioneer and manager of various networks that became the basis for the internet, Elizabeth was a part of the teams that developed the Domain Name System (DNS) as well as a program called PCSam that became the basis of today's email systems.",
+         "picture_file_name":"Elizabeth-J-Feinler.jpg",
+         "resources":[
+            {
+               "title":"Before Google and GoDaddy, There Was Elizabeth Feinler",
+               "source":"Wired",
+               "url":"http://www.wired.com/2012/06/elizabeth-jake-feinler/"
+            }
+         ]
       },
-      {  
+      {
+         "event":"ENIAC (Electronic Numerical Integrator And Computer), the first electronic general-purpose computer, announced.",
+         "event_year":1946,
          "name":"The ENIAC Programmers",
-         "birth_year":1917,
-         "death_year":2013,
-         "blurb":"The primary programmers of the ENIAC, the first electronic general-purpose computer announced in 1946, were six women drafted from a pool of mathematicians known as \"computers.\" The ENIAC programmers not only built software but also knew their hardware, crawling inside the machinery to diagnose and debug problems.",
-         "picture_file_name":"ENIAC-Programmers.jpg"
+         "is_group":true,
+         "birth_year":1946,
+         "death_year":1955,
+         "blurb":"The primary programmers of the ENIAC were six women drafted from a pool of mathematicians known as \"computers.\" The ENIAC programmers not only built software but also knew their hardware, crawling inside the machinery to diagnose and debug problems. Their achievements remained largely invisible to the public, and most of the ENIAC programmers were not invited to the ENIAC’s 50th anniversary event.",
+         "picture_file_name":"ENIAC-Programmers.jpg",
+         "resources":[
+            {
+               "title":"Jean Bartik and the ENIAC Women (video)",
+               "source":"YouTube - ComputerHistory",
+               "url":"https://www.youtube.com/watch?v=aPweFhhXFvY"
+            },
+            {
+               "title":"ENIAC Trailer (video)",
+               "source":"Vimeo",
+               "url":"https://vimeo.com/107667129"
+            }
+         ]
       },
-      {  
+      {
+         "event":"IBM delivers supercomputer Stretch-Harvest to the NSA.",
+         "event_year":1962,
          "name":"Frances E. Allen",
          "birth_year":1932,
-         "blurb":"A pioneer in the field of optimising compilers, Frances introduced many of the abstractions, algorithms, and implementations used for automatic program optimisation technology.",
-         "picture_file_name":"Frances-E-Allen.jpg"
+         "blurb":"A pioneer in the field of optimising compilers, Frances introduced many of the abstractions, algorithms, and implementations used for automatic program optimisation technology. Her work was implemented in the compilers for the top secret NSA supercomputer, the Stretch-Harvest.",
+         "picture_file_name":"Frances-E-Allen.jpg",
+         "resources":[
+            {
+               "title":"Scientist at Work: Frances Allen; Would-Be Math Teacher Ended Up Educating a Computer Revolution",
+               "source":"The New York Times",
+               "url":"http://www.nytimes.com/2002/08/06/science/scientist-work-frances-allen-would-be-math-teacher-ended-up-educating-computer.html"
+            }
+         ]
       },
-      {  
+      {
+         "event":"First operational compiler completed.",
+         "event_time":1952,
          "name":"Rear Admiral Grace Hopper",
          "birth_year":1906,
          "death_year":1992,
-         "blurb":"A pioneering programmer of the Harvard Mark I computer in 1944, \"Amazing Grace\" invented the compiler, which translates natural-language programming language to machine language.",
-         "picture_file_name":"Grace-Hopper.jpg"
+         "blurb":"\"Amazing Grace\" invented the compiler, which translates human readable programming language into machine executable language. Also a pioneering programmer of the revolutionary Harvard Mark I computer in 1944, she's known as the /"Queen of Code,/" and the first person to use the term \"debugging.\"",
+         "picture_file_name":"Grace-Hopper.jpg",
+         "resources":[
+            {
+               "title":"The Queen Of Code (video)",
+               "source":"FiveThirtyEight",
+               "url":"http://fivethirtyeight.com/features/the-queen-of-code/"
+            }
+         ]
       },
-      {  
+      {
          "name":"Hedy Lamarr",
          "birth_year":1914,
          "death_year":2000,
@@ -132,7 +224,7 @@
       {  
          "name":"Radia Perlman",
          "birth_year":1951,
-         "blurb":"Radia made large contributions to network engineering, and is best known for her invention of the spanning-tree protocol, a technology fundamental to network bridging (connecting multiple networks).",
+         "blurb":"Often called \"Mother of the internet,\"Radia made large contributions to network engineering, and is best known for her invention of the spanning-tree protocol, a technology fundamental to network bridging (connecting multiple networks).",
          "picture_file_name":"Radia-Perlman.jpg"
       },
       {  
