@@ -158,36 +158,58 @@
          ]
       },
       {
+         "event":"Frequency-hopping radio system patented; becomes a critical element for today's wifi and Bluetooth technologies.",
+         "event_year":1942,
          "name":"Hedy Lamarr",
          "birth_year":1914,
          "death_year":2000,
-         "blurb":"An inventor and actress, Hedy co-invented the spread spectrum and frequency hopping communication technologies. They were used in WWII to control torpedoes and later used in Wi-Fi and Bluetooth.",
-         "picture_file_name":"Hedy-Lamarr.jpg"
+         "blurb":"An inventor and actress, Hedy co-invented the spread spectrum and frequency hopping communication technologies. It was invented with the purpose of creating jam-proof torpedoes in WWII but was ignored until its applications for the Navy during 1962's Cuban missile crisis, and now is foundational to wifi and Bluetooth technologies. Hedy's long overdue recognition did not come until near the end of her life in 1997.",
+         "picture_file_name":"Hedy-Lamarr.jpg",
+         "resources":[
+            {
+               "title":"Hedy Lamarr's 101st Birthday Google Doodle (video)",
+               "source":"Google Doodles",
+               "url":"https://www.google.com/doodles/hedy-lamarrs-101st-birthday"
+            }
+         ]
       },
-      {  
+      {
+         "event":"Lead-free technology and manufacturing literature published.",
+         "event_year":2000,
          "name":"Jennie S. Hwang",
          "birth_year":1949,
          "blurb":"A pioneer in environmentally-friendly electronics manufacturing and electronics miniaturisation technology and a renowned entrepreneur, Jennie was also the first Asian-American woman to be elected into National Academy of Engineering.",
          "picture_file_name":"Jennie-Hwang.jpg"
       },
-      {  
+      {
+         "event":"\"Nash equilibrium\" published; a Nobel winning game theory thesis with computer science applications in networks, scheduling, and more.",
+         "event_year":1950,
          "name":"John Forbes Nash, Jr.",
          "birth_year":1928,
          "death_year":2015,
          "blurb":"John's contributions in mathematics, notably game theory, are influential in many fields including computer science and artificial intelligence. He was diagnosed and lived with paranoid schizophrenia, and his story became basis for the biography and film, \"A Beautiful Mind.\"",
          "picture_file_name":"John-Nash.jpg"
       },
-      {  
+      {
+         "event":"Alan Shepard is the first American in space with his flight trajectory calculated by Katherine Johnson (and not by a machine).",
+         "event_year":1959,
          "name":"Katherine Johnson",
          "birth_year":1918,
-         "blurb":"Renowned for her accuracy in celestial navigation (space flight trajectories), Katherine started at NASA as a \"computer\" in the segregated all African-American West Area Computers section. She soon transitioned to work as an aerospace technologist, notably, making calculations for the Apollo space programs.",
-         "picture_file_name":"Katherine-Johnson.jpg"
+         "blurb":"Renowned for her accuracy in celestial navigation (space flight trajectories), Katherine started at NASA as a \"computer\" in the segregated all black West Area Computers section. She soon transitioned to work as an aerospace technologist, notably, making calculations for the Apollo space programs.",
+         "picture_file_name":"Katherine-Johnson.jpg",
+         "resources":[
+            {
+               "title":"Makers Profile: Katherine G. Johnson",
+               "source":"Makers",
+               "url":"http://www.makers.com/katherine-g-johnson"
+            }
+         ]
       },
       {  
          "name":"Klara Dan von Neumann",
          "birth_year":1911,
          "death_year":1963,
-         "blurb":"A pioneer programmer and key inventor on the ENIAC*, Klara's work is often downplayed in comparison to her husband's. She also taught weather scientists how to program.",
+         "blurb":"A pioneer programmer and key inventor on the ENIAC, Klara's work is often downplayed in comparison to her husband's. She also taught weather scientists how to program.",
          "picture_file_name":"Klara-Dan-von-Neumann.jpg"
       },
       {  
