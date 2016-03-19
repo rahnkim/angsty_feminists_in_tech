@@ -205,35 +205,45 @@
             }
          ]
       },
-      {  
+      {
+         "event":"First computerised Monte Carlo simulations run on the ENIAC, considered one of the first programs stored in and run from computer memory.",
+         "event_year":1948,
          "name":"Klara Dan von Neumann",
          "birth_year":1911,
          "death_year":1963,
-         "blurb":"A pioneer programmer and key inventor on the ENIAC, Klara's work is often downplayed in comparison to her husband's. She also taught weather scientists how to program.",
+         "blurb":"A programmer and key inventor on the ENIAC and a major contributor to the first computerised Monte Carlo simulations, Klara's work is often downplayed in comparison to her husband's. Klara, with Adele Goldstine and Mary Mauchly, was a part of a pioneering group of women who held senior positions working with the ENIAC. In an environment where women primarily existed as extensions of their husbands, these three women arguably received a boost in seniority due to their husbands' ownership of the ENIAC project. This led to tension with the other female ENIAC programmers/operators.",
          "picture_file_name":"Klara-Dan-von-Neumann.jpg"
       },
-      {  
+      {
+         "event":"\"Mead & Conway revolution\" triggers breakthrough in chip design education with the textbook, \"Introduction to VLSI System Design.\"",
+         "event_year":1979,
          "name":"Lynn Conway",
          "birth_year":1938,
-         "blurb":"Lynn's contributions include pioneering work in chip design, and architecture design that laid the groundwork for modern high performance microprocessors. In 1968, IBM fired Lynn when she revealed to the company that she was transgender, and she was denied access to her children after transitioning. In 2000, she went public with her story as a trans woman, and began her work in activism.",
+         "blurb":"Lynn's contributions include pioneering work in chip design, and architecture design that laid the groundwork for modern high performance microprocessors. In 1968, IBM, likely the president of IBM himself, fired Lynn when the company learned that she was transgender. She was denied access to her children after medically transitioning. In 2000, she went public with her story as a trans woman, and began her work in activism.",
          "picture_file_name":"Lynn-Conway.jpg"
       },
-      {  
+      {
+         "event":"Discovery of the \"essence\" of an algorithm's complexity (i.e. cost to run), independent of specific machine model, fundamentally changes the study of computational complexity theory. Think Big O numbers!",
+         "event_year":1964,
          "name":"Manuel Blum",
          "birth_year":1938,
-         "blurb":"Manuel's machine-independent theory of complexity forms the foundation of computational complexity theory, the study of the \"difficulty\" of computational problems.",
+         "blurb":"Manuel's machine-independent theory of complexity forms the foundation of computational complexity theory. He is also recognised for his work on the application of complexity theory to cryptography and program checking.",
          "picture_file_name":"Manuel-Blum.jpg"
       },
-      {  
+      {
+         "event":"Apollo 11 lands first humans on the Moon and returns them to Earth safely.",
+         "event_year":1969,
          "name":"Margaret Hamilton",
          "birth_year":1936,
-         "blurb":"As lead Apollo flight software designer at NASA, Margaret and her team built the software allowing Apollo 11 to successfully navigate to and land on the Moon. She co-developed concepts of asynchronous software, priority scheduling, and more, which became foundational to robust software designs.",
+         "blurb":"As lead Apollo flight software designer at NASA, Margaret and her team built the software allowing Apollo 11 to successfully navigate to and land on the Moon. The robustness of the software prevented a mission abort. She co-developed concepts of asynchronous software, priority scheduling, and more, which became foundational to robust software designs.",
          "picture_file_name":"Margaret-Hamilton.jpg"
       },
-      {  
+      {
+         "event":"IBM Personal Computer released; becomes simply known as the \"PC,\" an industry standard of personal computers.",
+         "event_year":1981,
          "name":"Mark Dean",
          "birth_year":1957,
-         "blurb":"At IBM, Mark led a team for the design of a one-gigahertz computer processor chip. He holds three of IBM's original nine PC patents and is the first black person to become an IBM Fellow.",
+         "blurb":"In the early 1980s, Mark led a 12-person team to design the original IBM PC. He holds three of IBM's original nine PC patents, and is the first black person to become an IBM Fellow. In 1999, Mark led a team that created the first a one-gigahertz computer processor chip.",
          "picture_file_name":"Mark-Dean.jpg"
       },
       {  
