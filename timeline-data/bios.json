@@ -147,7 +147,7 @@
          "name":"Rear Admiral Grace Hopper",
          "birth_year":1906,
          "death_year":1992,
-         "blurb":"\"Amazing Grace\" invented the compiler, which translates human readable programming language into machine executable language. Also a pioneering programmer of the revolutionary Harvard Mark I computer in 1944, she's known as the /"Queen of Code,/" and the first person to use the term \"debugging.\"",
+         "blurb":"\"Amazing Grace\" invented the compiler, which translates human readable programming language into machine executable language. Also a pioneering programmer of the revolutionary Harvard Mark I computer in 1944, she's known as the \"Queen of Code,\" and the first person to use the term \"debugging.\"",
          "picture_file_name":"Grace-Hopper.jpg",
          "resources":[
             {
@@ -246,18 +246,36 @@
          "blurb":"In the early 1980s, Mark led a 12-person team to design the original IBM PC. He holds three of IBM's original nine PC patents, and is the first black person to become an IBM Fellow. In 1999, Mark led a team that created the first a one-gigahertz computer processor chip.",
          "picture_file_name":"Mark-Dean.jpg"
       },
-      {  
+      {
+         "event":"Universal programs shown as possible, generalised and described with mathematical logic.",
+         "event_year":1964,
          "name":"Peter Landin",
          "birth_year":1930,
          "death_year":2009,
          "blurb":"Inventor of the first software emulator, Peter freed computer programs from manufacturers and laid the foundations for programming language design based on mathematical logic. Peter was politically radical, bisexual, and highly active in the Gay Liberation Front.",
-         "picture_file_name":"Peter-Landin.jpg"
+         "picture_file_name":"Peter-Landin.jpg",
+         "resources":[
+            {
+               "title":"A Queer History of Computing: Part Four",
+               "source":"Rhizome",
+               "url":"http://rhizome.org/editorial/2013/may/06/queer-history-computing-part-four/"
+            }
+         ]
       },
-      {  
+      {
+         "event":"First spanning tree protocol invented, a crucial building block of the internet.",
+         "event_year":1985,
          "name":"Radia Perlman",
          "birth_year":1951,
-         "blurb":"Often called \"Mother of the internet,\"Radia made large contributions to network engineering, and is best known for her invention of the spanning-tree protocol, a technology fundamental to network bridging (connecting multiple networks).",
-         "picture_file_name":"Radia-Perlman.jpg"
+         "blurb":"Radia made large contributions to network engineering, and is best known for her invention of the spanning-tree protocol, a technology fundamental to network bridging (connecting multiple networks).",
+         "picture_file_name":"Radia-Perlman.jpg",
+         "resources":[
+            {
+               "title":"Radia Perlman: Don't Call Me the Mother of the Internet",
+               "source":"The Atlantic",
+               "url":"http://www.theatlantic.com/technology/archive/2014/03/radia-perlman-dont-call-me-the-mother-of-the-internet/284146/"
+            }
+         ]
       },
       {  
          "name":"Raj Reddy",
