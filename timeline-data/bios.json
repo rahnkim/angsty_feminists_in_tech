@@ -1,174 +1,349 @@
-{  
-   "bios":[  
-      {  
+{
+   "bios":[
+      {
+         "event":"The first computer program written (on paper, for a mechanical computer that was never built).",
+         "event_year":1843,
          "name":"Ada Lovelace",
          "birth_year":1815,
          "death_year":1852,
          "blurb":"One of the first visionaries of what we know today as computer science, Ada designed the first algorithm intended for a computer, for Charles Babbage's early mechanical general-purpose computer, the Analytical Engine. With her \"poetical scientific\" sensibilities, Ada envisioned capabilities of machines beyond simple number-crunching.",
-         "picture_file_name":"Ada-Lovelace.jpg"
+         "picture_file_name":"Ada-Lovelace.jpg",
+         "resources":[
+            {
+               "title":"Untangling the Tale of Ada Lovelace",
+               "source":"Backchannel",
+               "url":"https://medium.com/backchannel/untangling-the-tale-of-ada-lovelace-4cbca62898b6"
+            },
+            {
+               "title":"Ada Lovelace, the First Tech Visionary",
+               "source":"The New Yorker",
+               "url":"http://www.newyorker.com/tech/elements/ada-lovelace-the-first-tech-visionary"
+            }
+         ]
       },
-      {  
+      {
+         "event":"The universal Turing machine lays conceptual foundation for the modern computer.",
+         "event_year":1935,
          "name":"Alan Turing",
          "birth_year":1912,
          "death_year":1954,
          "blurb":"Considered the father of theoretical computer science and artificial intelligence, Alan formalised the concepts of algorithm and computation with the Turing Machine. During WWII, Alan's work in cryptanalysis was instrumental in breaking German ciphers. He was also an openly gay man who was prosecuted for \"homosexual acts\" by the UK and chemically castrated.",
-         "picture_file_name":"Alan-Turing.jpg"
+         "picture_file_name":"Alan-Turing.jpg",
+         "resources":[
+            {
+               "title":"Code-Breaker",
+               "source":"The New Yorker",
+               "url":"http://www.newyorker.com/magazine/2006/02/06/code-breaker"
+            },
+            {
+               "title":"A Queer History of Computing",
+               "source":"Rhizome",
+               "url":"http://rhizome.org/editorial/2013/feb/19/queer-computing-1/"
+            }
+         ]
       },
-      {  
+      {
+         "event":"Yao's Principle published; becomes fundamental to randomised algorithms and complexity.",
+         "event_year":1977,
          "name":"Andrew Chi-Chih Yao",
          "birth_year":1946,
          "blurb":"Andrew's work as computational theorist, including \"Yao's Principle,\" has significantly contributed to the theory of pseudo-random number generation and cryptography.",
          "picture_file_name":"Andrew-Chi-Chih-Yao.jpg"
       },
-      {  
+      {
+         "event":"Grace Hopper Celebration of Women in Computing conference established.",
+         "event_year":1994,
          "name":"Anita Borg",
          "birth_year":1949,
          "death_year":2003,
          "blurb":"Anita spent her career developing in areas of operating systems, memory systems, email communications, and more, while fiercely advocating for women in technology as the founder of the email network, Systers, and the (Anita Borg) Institute for Women and Technology, and as the co-founder of the Grace Hopper Celebration of Women in Computing conference.",
-         "picture_file_name":"Anita-Borg.jpg"
+         "picture_file_name":"Anita-Borg.jpg",
+         "resources":[
+            {
+               "title":"Dr. Anita Borg: Technology is changing the world (video)",
+               "source":"YouTube - Anita Borg Institute",
+               "url":"https://www.youtube.com/watch?v=1yPxd5jqz_Q"
+            }
+         ]
       },
-      {  
+      {
+         "event":"The \"Liskov substitution principle\" introduced and leaves indelible mark on object-oriented programming.",
+         "event_year":1987,
          "name":"Barbara Liskov",
          "birth_year":1939,
-         "blurb":"Barbara's work in programming language design and methodology, including the \"Liskov substitution principle,\" contributed to the development of object-oriented programming.",
+         "blurb":"Barbara's work in programming language design and methodology, including the \"Liskov substitution principle,\" contributed to development in data abstraction, fault tolerance, and distributed computing.",
          "picture_file_name":"Barbara-Liskov.jpg"
       },
-      {  
+      {
+         "event":"IBM Home Page Reader debuts, opening up the web for visually impaired people.",
+         "event_year":1997,
          "name":"Chieko Asakawa",
          "birth_year":1958,
-         "blurb":"A blind computer scientist at IBM, Chieko became an accomplished leader in accessibility research and development, including a key role in the development of web-to-speech system, IBM Home Page Reader, which is now produced in eleven languages and distributed worldwide.",
-         "picture_file_name":"Chieko-Asakawa.jpg"
+         "blurb":"A blind computer scientist at IBM, Chieko's work is composed of leading research and development in accessibility, including a key role in the development of a word processor for Braille documents, a digital library for Braille documents, and a web-to-speech system, IBM Home Page Reader.",
+         "picture_file_name":"Chieko-Asakawa.jpg",
+         "resources":[
+            {
+               "title":"Chieko Asakawa: How new technology helps blind people explore the world (video)",
+               "source":"TED",
+               "url":"https://www.ted.com/talks/chieko_asakawa_how_new_technology_helps_blind_people_explore_the_world"
+            }
+         ]
       },
-      {  
-         "name":"Elizabeth J. Feinler",
+      {
+         "event":"The internet arrives at the basic structure that we have today.",
+         "event_year":1989,
+         "name":"Elizabeth \"Jake\" Feinler",
          "birth_year":1931,
-         "blurb":"Pioneer and manager of various networks that became the basis for the Internet, Elizabeth also helped develop a program called PCSam, which became the basis of today's email systems.",
-         "picture_file_name":"Elizabeth-J-Feinler.jpg"
+         "blurb":"Pioneer and manager of various networks that became the basis for the internet, Elizabeth was a part of the teams that developed the Domain Name System (DNS) as well as a program called PCSam that became the basis of today's email systems.",
+         "picture_file_name":"Elizabeth-J-Feinler.jpg",
+         "resources":[
+            {
+               "title":"Before Google and GoDaddy, There Was Elizabeth Feinler",
+               "source":"Wired",
+               "url":"http://www.wired.com/2012/06/elizabeth-jake-feinler/"
+            }
+         ]
       },
-      {  
+      {
+         "event":"ENIAC (Electronic Numerical Integrator And Computer), the first electronic general-purpose computer, announced.",
+         "event_year":1946,
          "name":"The ENIAC Programmers",
-         "birth_year":1917,
-         "death_year":2013,
-         "blurb":"The primary programmers of the ENIAC, the first electronic general-purpose computer announced in 1946, were six women drafted from a pool of mathematicians known as \"computers.\" The ENIAC programmers not only built software but also knew their hardware, crawling inside the machinery to diagnose and debug problems.",
-         "picture_file_name":"ENIAC-Programmers.jpg"
+         "is_group":true,
+         "birth_year":1946,
+         "death_year":1955,
+         "blurb":"The primary programmers of the ENIAC were six women drafted from a pool of mathematicians known as \"computers.\" The ENIAC programmers not only built software but also knew their hardware, crawling inside the machinery to diagnose and debug problems. Their achievements remained largely invisible to the public, and most of the ENIAC programmers were not invited to the ENIAC’s 50th anniversary event.",
+         "picture_file_name":"ENIAC-Programmers.jpg",
+         "resources":[
+            {
+               "title":"Jean Bartik and the ENIAC Women (video)",
+               "source":"YouTube - ComputerHistory",
+               "url":"https://www.youtube.com/watch?v=aPweFhhXFvY"
+            },
+            {
+               "title":"ENIAC Trailer (video)",
+               "source":"Vimeo",
+               "url":"https://vimeo.com/107667129"
+            }
+         ]
       },
-      {  
+      {
+         "event":"IBM delivers supercomputer Stretch-Harvest to the NSA.",
+         "event_year":1962,
          "name":"Frances E. Allen",
          "birth_year":1932,
-         "blurb":"A pioneer in the field of optimising compilers, Frances introduced many of the abstractions, algorithms, and implementations used for automatic program optimisation technology.",
-         "picture_file_name":"Frances-E-Allen.jpg"
+         "blurb":"A pioneer in the field of optimising compilers, Frances introduced many of the abstractions, algorithms, and implementations used for automatic program optimisation technology. Her work was implemented in the compilers for the top secret NSA supercomputer, the Stretch-Harvest.",
+         "picture_file_name":"Frances-E-Allen.jpg",
+         "resources":[
+            {
+               "title":"Scientist at Work: Frances Allen; Would-Be Math Teacher Ended Up Educating a Computer Revolution",
+               "source":"The New York Times",
+               "url":"http://www.nytimes.com/2002/08/06/science/scientist-work-frances-allen-would-be-math-teacher-ended-up-educating-computer.html"
+            }
+         ]
       },
-      {  
+      {
+         "event":"First operational compiler completed.",
+         "event_time":1952,
          "name":"Rear Admiral Grace Hopper",
          "birth_year":1906,
          "death_year":1992,
-         "blurb":"A pioneering programmer of the Harvard Mark I computer in 1944, \"Amazing Grace\" invented the compiler, which translates natural-language programming language to machine language.",
-         "picture_file_name":"Grace-Hopper.jpg"
+         "blurb":"\"Amazing Grace\" invented the compiler, which translates human readable programming language into machine executable language. Also a pioneering programmer of the revolutionary Harvard Mark I computer in 1944, she's known as the \"Queen of Code,\" and the first person to use the term \"debugging.\"",
+         "picture_file_name":"Grace-Hopper.jpg",
+         "resources":[
+            {
+               "title":"The Queen Of Code (video)",
+               "source":"FiveThirtyEight",
+               "url":"http://fivethirtyeight.com/features/the-queen-of-code/"
+            }
+         ]
       },
-      {  
+      {
+         "event":"Frequency-hopping radio system patented; becomes a critical element for today's wifi and Bluetooth technologies.",
+         "event_year":1942,
          "name":"Hedy Lamarr",
          "birth_year":1914,
          "death_year":2000,
-         "blurb":"An inventor and actress, Hedy co-invented the spread spectrum and frequency hopping communication technologies. They were used in WWII to control torpedoes and later used in Wi-Fi and Bluetooth.",
-         "picture_file_name":"Hedy-Lamarr.jpg"
+         "blurb":"An inventor and actress, Hedy co-invented the spread spectrum and frequency hopping communication technologies. It was invented with the purpose of creating jam-proof torpedoes in WWII but was ignored until its applications for the Navy during 1962's Cuban missile crisis, and now is foundational to wifi and Bluetooth technologies. Hedy's long overdue recognition did not come until near the end of her life in 1997.",
+         "picture_file_name":"Hedy-Lamarr.jpg",
+         "resources":[
+            {
+               "title":"Hedy Lamarr's 101st Birthday Google Doodle (video)",
+               "source":"Google Doodles",
+               "url":"https://www.google.com/doodles/hedy-lamarrs-101st-birthday"
+            }
+         ]
       },
-      {  
+      {
+         "event":"Lead-free technology and manufacturing literature published.",
+         "event_year":2000,
          "name":"Jennie S. Hwang",
          "birth_year":1949,
          "blurb":"A pioneer in environmentally-friendly electronics manufacturing and electronics miniaturisation technology and a renowned entrepreneur, Jennie was also the first Asian-American woman to be elected into National Academy of Engineering.",
          "picture_file_name":"Jennie-Hwang.jpg"
       },
-      {  
+      {
+         "event":"\"Nash equilibrium\" published; a Nobel winning game theory thesis with computer science applications in networks, scheduling, and more.",
+         "event_year":1950,
          "name":"John Forbes Nash, Jr.",
          "birth_year":1928,
          "death_year":2015,
          "blurb":"John's contributions in mathematics, notably game theory, are influential in many fields including computer science and artificial intelligence. He was diagnosed and lived with paranoid schizophrenia, and his story became basis for the biography and film, \"A Beautiful Mind.\"",
          "picture_file_name":"John-Nash.jpg"
       },
-      {  
+      {
+         "event":"Alan Shepard is the first American in space with his flight trajectory calculated by Katherine Johnson (and not by a machine).",
+         "event_year":1959,
          "name":"Katherine Johnson",
          "birth_year":1918,
-         "blurb":"Renowned for her accuracy in celestial navigation (space flight trajectories), Katherine started at NASA as a \"computer\" in the segregated all African-American West Area Computers section. She soon transitioned to work as an aerospace technologist, notably, making calculations for the Apollo space programs.",
-         "picture_file_name":"Katherine-Johnson.jpg"
+         "blurb":"Renowned for her accuracy in celestial navigation (space flight trajectories), Katherine started at NASA as a \"computer\" in the segregated all black West Area Computers section. She soon transitioned to work as an aerospace technologist, notably, making calculations for the Apollo space programs.",
+         "picture_file_name":"Katherine-Johnson.jpg",
+         "resources":[
+            {
+               "title":"Makers Profile: Katherine G. Johnson",
+               "source":"Makers",
+               "url":"http://www.makers.com/katherine-g-johnson"
+            }
+         ]
       },
-      {  
+      {
+         "event":"First computerised Monte Carlo simulations run on the ENIAC, considered one of the first programs stored in and run from computer memory.",
+         "event_year":1948,
          "name":"Klara Dan von Neumann",
          "birth_year":1911,
          "death_year":1963,
-         "blurb":"A pioneer programmer and key inventor on the ENIAC*, Klara's work is often downplayed in comparison to her husband's. She also taught weather scientists how to program.",
+         "blurb":"A programmer and key inventor on the ENIAC and a major contributor to the first computerised Monte Carlo simulations, Klara's work is often downplayed in comparison to her husband's. Klara, with Adele Goldstine and Mary Mauchly, was a part of a pioneering group of women who held senior positions working with the ENIAC. In an environment where women primarily existed as extensions of their husbands, these three women arguably received a boost in seniority due to their husbands' ownership of the ENIAC project. This led to tension with the other female ENIAC programmers/operators.",
          "picture_file_name":"Klara-Dan-von-Neumann.jpg"
       },
-      {  
+      {
+         "event":"\"Mead & Conway revolution\" triggers breakthrough in chip design education with the textbook, \"Introduction to VLSI System Design.\"",
+         "event_year":1979,
          "name":"Lynn Conway",
          "birth_year":1938,
-         "blurb":"Lynn's contributions include pioneering work in chip design, and architecture design that laid the groundwork for modern high performance microprocessors. In 1968, IBM fired Lynn when she revealed to the company that she was transgender, and she was denied access to her children after transitioning. In 2000, she went public with her story as a trans woman, and began her work in activism.",
+         "blurb":"Lynn's contributions include pioneering work in chip design, and architecture design that laid the groundwork for modern high performance microprocessors. In 1968, IBM, likely the president of IBM himself, fired Lynn when the company learned that she was transgender. She was denied access to her children after medically transitioning. In 2000, she went public with her story as a trans woman, and began her work in activism.",
          "picture_file_name":"Lynn-Conway.jpg"
       },
-      {  
+      {
+         "event":"Discovery of the \"essence\" of an algorithm's complexity (i.e. cost to run), independent of specific machine model, fundamentally changes the study of computational complexity theory. Think Big O numbers!",
+         "event_year":1964,
          "name":"Manuel Blum",
          "birth_year":1938,
-         "blurb":"Manuel's machine-independent theory of complexity forms the foundation of computational complexity theory, the study of the \"difficulty\" of computational problems.",
+         "blurb":"Manuel's machine-independent theory of complexity forms the foundation of computational complexity theory. He is also recognised for his work on the application of complexity theory to cryptography and program checking.",
          "picture_file_name":"Manuel-Blum.jpg"
       },
-      {  
+      {
+         "event":"Apollo 11 lands first humans on the Moon and returns them to Earth safely.",
+         "event_year":1969,
          "name":"Margaret Hamilton",
          "birth_year":1936,
-         "blurb":"As lead Apollo flight software designer at NASA, Margaret and her team built the software allowing Apollo 11 to successfully navigate to and land on the Moon. She co-developed concepts of asynchronous software, priority scheduling, and more, which became foundational to robust software designs.",
+         "blurb":"As lead Apollo flight software designer at NASA, Margaret and her team built the software allowing Apollo 11 to successfully navigate to and land on the Moon. The robustness of the software prevented a mission abort. She co-developed concepts of asynchronous software, priority scheduling, and more, which became foundational to robust software designs.",
          "picture_file_name":"Margaret-Hamilton.jpg"
       },
-      {  
+      {
+         "event":"IBM Personal Computer released; becomes simply known as the \"PC,\" an industry standard of personal computers.",
+         "event_year":1981,
          "name":"Mark Dean",
          "birth_year":1957,
-         "blurb":"At IBM, Mark led a team for the design of a one-gigahertz computer processor chip. He holds three of IBM's original nine PC patents and is the first black person to become an IBM Fellow.",
+         "blurb":"In the early 1980s, Mark led a 12-person team to design the original IBM PC. He holds three of IBM's original nine PC patents, and is the first black person to become an IBM Fellow. In 1999, Mark led a team that created the first a one-gigahertz computer processor chip.",
          "picture_file_name":"Mark-Dean.jpg"
       },
-      {  
+      {
+         "event":"Universal programs shown as possible, generalised and described with mathematical logic.",
+         "event_year":1964,
          "name":"Peter Landin",
          "birth_year":1930,
          "death_year":2009,
          "blurb":"Inventor of the first software emulator, Peter freed computer programs from manufacturers and laid the foundations for programming language design based on mathematical logic. Peter was politically radical, bisexual, and highly active in the Gay Liberation Front.",
-         "picture_file_name":"Peter-Landin.jpg"
+         "picture_file_name":"Peter-Landin.jpg",
+         "resources":[
+            {
+               "title":"A Queer History of Computing: Part Four",
+               "source":"Rhizome",
+               "url":"http://rhizome.org/editorial/2013/may/06/queer-history-computing-part-four/"
+            }
+         ]
       },
-      {  
+      {
+         "event":"First spanning tree protocol invented, a crucial building block of the internet.",
+         "event_year":1985,
          "name":"Radia Perlman",
          "birth_year":1951,
          "blurb":"Radia made large contributions to network engineering, and is best known for her invention of the spanning-tree protocol, a technology fundamental to network bridging (connecting multiple networks).",
-         "picture_file_name":"Radia-Perlman.jpg"
+         "picture_file_name":"Radia-Perlman.jpg",
+         "resources":[
+            {
+               "title":"Radia Perlman: Don't Call Me the Mother of the Internet",
+               "source":"The Atlantic",
+               "url":"http://www.theatlantic.com/technology/archive/2014/03/radia-perlman-dont-call-me-the-mother-of-the-internet/284146/"
+            }
+         ]
       },
-      {  
+      {
+         "event":"The first system capable of continuous speech recognition invented.",
+         "event_year":1976,
          "name":"Raj Reddy",
          "birth_year":1937,
          "blurb":"One of the early researchers of artificial intelligence, Raj pioneered the study of spoken language systems, such as voice-controlled robots, speech recognition, and dictation.",
          "picture_file_name":"Raj-Reddy.jpg"
       },
-      {  
+      {
+         "event":"Zero-knowledge proofs, a key tool of modern cryptographic protocol design, introduced.",
+         "event_year":1985,
          "name":"Shafi Goldwasser",
          "birth_year":1958,
          "blurb":"Researcher of cryptography, computational complexity theory, and computational number theory, Shafi co-invented the zero-knowledge protocol, a key cryptographic tool.",
          "picture_file_name":"Shafi-Goldwasser.jpg"
       },
-      {  
+      {
+         "event":"ARM processor invented, its speed and outstanding efficiency laying the foundation for the mobile computing device era.",
+         "event_year":1983,
          "name":"Sophie Wilson",
          "birth_year":1957,
-         "blurb":"Known for designing the Acorn Micro-Computer, Sophie also designed the instruction set of the ARM processor that now drives billions of mobile devices. She is also an out transgender woman.",
-         "picture_file_name":"Sophie-Wilson.jpg"
+         "blurb":"Also credited for designing the Acorn Micro-Computer, Sophie realised the ARM (Advanced RISC Machine) computer processor. Descendants of the original ARM processor now drive billions of mobile devices: as of 2012, 95% of smartphones were powered by ARM processors. Sophie is also an out transgender woman.",
+         "picture_file_name":"Sophie-Wilson.jpg",
+         "resources":[
+            {
+               "title":"Sophie Wilson - Low-power processors perfect for smartphones - Portrait (video)",
+               "source":"YouTube - EPOfilms",
+               "url":"https://www.youtube.com/watch?v=kG5xttPclBQ"
+            }
+         ]
       },
-      {  
+      {
+         "event":"First black female computer joins NACA.",
+         "event_year":1943,
          "name":"West Area Computers",
-         "birth_year":1907,
-         "blurb":"\"West Area Computers\" was a unit of all black female aeronautical research mathematicians at NASA. The unit was originally supervised by white supervisors, segregated under Jim Crow, and denied dormitory housing. Dorothy Vaughan, a black female mathematician, eventually took over as supervisor.",
-         "picture_file_name":"West-Area-Computers.jpg"
+         "is_group":true,
+         "birth_year":1943,
+         "death_year":1958,
+         "blurb":"\"West Area Computers\" was a segregated unit of all black female aeronautical research mathematicians at NASA (then NACA). The unit was originally supervised by white supervisors, segregated under Jim Crow, and denied dormitory housing. Dorothy Vaughan, a black female mathematician, eventually took over as supervisor. Many computers went on to computer programming.",
+         "picture_file_name":"West-Area-Computers.jpg",
+         "resources":[
+            {
+               "title":"Timeline - Human Computers at NASA",
+               "source":"Macalester College",
+               "url":"http://omeka.macalester.edu/humancomputerproject/timeline"
+            },
+            {
+               "title":"NASA’s Hidden Computer Women (podcast)",
+               "source":"stuff mom never told you",
+               "url":"http://www.stuffmomnevertoldyou.com/podcasts/nasas-hidden-computer-women/"
+            }
+         ]
       },
-      {  
+      {
+         "event":"Kanji (Chinese characters used in Japanese language) representation and input development begins, which later becomes extended to support for processing double byte character set based Asian languages.",
+         "event_year":1971,
          "name":"Yukako Uchinaga",
          "birth_year":1946,
          "blurb":"At IBM, Yukako led the team that developed software to work with Asian languages such as Chinese, Japanese, and Korean, that require \"double byte character sets.\" She has also been deeply involved in advocacy for women at IBM Japan and Asia Pacific, as well as the Japanese government.",
          "picture_file_name":"Yukako-Uchinaga.jpg"
       },
-      {  
+      {
+         "event":"Zero is formalised as a mathematical concept.",
+         "event_year":650,
          "name":"Zero",
          "birth_year":-1740,
-         "blurb":"The first known use of the number zero was in Egypt, where the hieroglyph also meant \"beautiful.\" Without the concept of zero, there would be no computer science as we know it.",
+         "blurb":"The first known use of the symbol for zero, as a placeholder rather than a mathematic entity, was in Egypt in 1740 BCE, where the hieroglyph also meant \"beautiful.\" It was first formalised as a mathematic concept in arithmetic operations by Indians around 650 CE. Without the concept of zero, there would be no computer science as we know it.",
          "picture_file_name":"Zero.jpg"
       }
    ]

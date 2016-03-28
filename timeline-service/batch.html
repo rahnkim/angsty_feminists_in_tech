@@ -3,7 +3,7 @@
   <body>
     <form id="jsonFile" name="jsonFile" enctype="multipart/form-data" method="post">
       <fieldset>
-        <h1>Batch Load Bios</h1>
+        <h1>Batch Load Bio/Events</h1>
         <h2>*If necessary, manually clear Datastore first.</h2>
         <div>
           <label>JSON*:</label>
@@ -54,12 +54,20 @@
           var biosObject = JSON.parse(lines);
           for (var i = 0; i < biosObject.bios.length; i++) {
             var data = new FormData();
+            data.append("event", biosObject.bios[i].event);
+            data.append("event_year", biosObject.bios[i].event_year);
+            data.append("is_group", biosObject.bios[i].is_group);
             data.append("name", biosObject.bios[i].name);
             data.append("birth_year", biosObject.bios[i].birth_year);
             data.append("death_year", biosObject.bios[i].death_year);
             data.append("blurb", biosObject.bios[i].blurb);
             data.append("picture", imageFiles[biosObject.bios[i].picture_file_name]);
             data.append("batch", true);
+            if (biosObject.bios[i].resources) {
+              biosObject.bios[i].resources.forEach(function(resource) {
+                data.append("resources[]", JSON.stringify(resource));
+              });
+            }
             $.ajax({
               method: "POST",
               url: "/",
