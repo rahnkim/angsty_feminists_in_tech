@@ -1,0 +1,28 @@
+application: angsty-feminists-in-tech
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+
+# Given favicon icon at images/fav.png, the site favicon can be set as below.
+# - url: /favicon\.ico
+#  static_files: images/fav.png
+#  upload: image/fav\.png
+
+- url: /css
+  static_dir: css
+  
+- url: /js
+  static_dir: js
+  
+- url: /img
+  static_dir: img
+
+- url: .*
+  script: app.app
+
+libraries:
+- name: webapp2
+  version: latest
