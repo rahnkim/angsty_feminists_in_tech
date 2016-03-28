@@ -1,5 +1,5 @@
-{  
-   "bios":[  
+{
+   "bios":[
       {
          "event":"The first computer program written (on paper, for a mechanical computer that was never built).",
          "event_year":1843,
@@ -12,7 +12,7 @@
             {
                "title":"Untangling the Tale of Ada Lovelace",
                "source":"Backchannel",
-              "url":"https://medium.com/backchannel/untangling-the-tale-of-ada-lovelace-4cbca62898b6"
+               "url":"https://medium.com/backchannel/untangling-the-tale-of-ada-lovelace-4cbca62898b6"
             },
             {
                "title":"Ada Lovelace, the First Tech Visionary",
@@ -58,11 +58,11 @@
          "death_year":2003,
          "blurb":"Anita spent her career developing in areas of operating systems, memory systems, email communications, and more, while fiercely advocating for women in technology as the founder of the email network, Systers, and the (Anita Borg) Institute for Women and Technology, and as the co-founder of the Grace Hopper Celebration of Women in Computing conference.",
          "picture_file_name":"Anita-Borg.jpg",
-         "resources": [
+         "resources":[
             {
-               "title": "Dr. Anita Borg: Technology is changing the world (video)",
-               "source": "YouTube - Anita Borg Institute",
-               "url": "https://www.youtube.com/watch?v=1yPxd5jqz_Q"
+               "title":"Dr. Anita Borg: Technology is changing the world (video)",
+               "source":"YouTube - Anita Borg Institute",
+               "url":"https://www.youtube.com/watch?v=1yPxd5jqz_Q"
             }
          ]
       },
@@ -277,40 +277,73 @@
             }
          ]
       },
-      {  
+      {
+         "event":"The first system capable of continuous speech recognition invented.",
+         "event_year":1976,
          "name":"Raj Reddy",
          "birth_year":1937,
          "blurb":"One of the early researchers of artificial intelligence, Raj pioneered the study of spoken language systems, such as voice-controlled robots, speech recognition, and dictation.",
          "picture_file_name":"Raj-Reddy.jpg"
       },
-      {  
+      {
+         "event":"Zero-knowledge proofs, a key tool of modern cryptographic protocol design, introduced.",
+         "event_year":1985,
          "name":"Shafi Goldwasser",
          "birth_year":1958,
          "blurb":"Researcher of cryptography, computational complexity theory, and computational number theory, Shafi co-invented the zero-knowledge protocol, a key cryptographic tool.",
          "picture_file_name":"Shafi-Goldwasser.jpg"
       },
-      {  
+      {
+         "event":"ARM processor invented, its speed and outstanding efficiency laying the foundation for the mobile computing device era.",
+         "event_year":1983,
          "name":"Sophie Wilson",
          "birth_year":1957,
-         "blurb":"Known for designing the Acorn Micro-Computer, Sophie also designed the instruction set of the ARM processor that now drives billions of mobile devices. She is also an out transgender woman.",
-         "picture_file_name":"Sophie-Wilson.jpg"
+         "blurb":"Also credited for designing the Acorn Micro-Computer, Sophie realised the ARM (Advanced RISC Machine) computer processor. Descendants of the original ARM processor now drive billions of mobile devices: as of 2012, 95% of smartphones were powered by ARM processors. Sophie is also an out transgender woman.",
+         "picture_file_name":"Sophie-Wilson.jpg",
+         "resources":[
+            {
+               "title":"Sophie Wilson - Low-power processors perfect for smartphones - Portrait (video)",
+               "source":"YouTube - EPOfilms",
+               "url":"https://www.youtube.com/watch?v=kG5xttPclBQ"
+            }
+         ]
       },
-      {  
+      {
+         "event":"First black female computer joins NACA.",
+         "event_year":1943,
          "name":"West Area Computers",
-         "birth_year":1907,
-         "blurb":"\"West Area Computers\" was a unit of all black female aeronautical research mathematicians at NASA. The unit was originally supervised by white supervisors, segregated under Jim Crow, and denied dormitory housing. Dorothy Vaughan, a black female mathematician, eventually took over as supervisor.",
-         "picture_file_name":"West-Area-Computers.jpg"
+         "is_group":true,
+         "birth_year":1943,
+         "death_year":1958,
+         "blurb":"\"West Area Computers\" was a segregated unit of all black female aeronautical research mathematicians at NASA (then NACA). The unit was originally supervised by white supervisors, segregated under Jim Crow, and denied dormitory housing. Dorothy Vaughan, a black female mathematician, eventually took over as supervisor. Many computers went on to computer programming.",
+         "picture_file_name":"West-Area-Computers.jpg",
+         "resources":[
+            {
+               "title":"Timeline - Human Computers at NASA",
+               "source":"Macalester College",
+               "url":"http://omeka.macalester.edu/humancomputerproject/timeline"
+            },
+            {
+               "title":"NASA’s Hidden Computer Women (podcast)",
+               "source":"stuff mom never told you",
+               "url":"http://www.stuffmomnevertoldyou.com/podcasts/nasas-hidden-computer-women/"
+            }
+         ]
       },
-      {  
+      {
+         "event":"Kanji (Chinese characters used in Japanese language) representation and input development begins, which later becomes extended to support for processing double byte character set based Asian languages.",
+         "event_year":1971,
          "name":"Yukako Uchinaga",
          "birth_year":1946,
          "blurb":"At IBM, Yukako led the team that developed software to work with Asian languages such as Chinese, Japanese, and Korean, that require \"double byte character sets.\" She has also been deeply involved in advocacy for women at IBM Japan and Asia Pacific, as well as the Japanese government.",
          "picture_file_name":"Yukako-Uchinaga.jpg"
       },
-      {  
+      {
+         "event":"Zero is formalised as a mathematical concept.",
+         "event_year":650,
          "name":"Zero",
          "birth_year":-1740,
-         "blurb":"The first known use of the number zero was in Egypt, where the hieroglyph also meant \"beautiful.\" Without the concept of zero, there would be no computer science as we know it.",
+         "blurb":"The first known use of the symbol for zero, as a placeholder rather than a mathematic entity, was in Egypt in 1740 BCE, where the hieroglyph also meant \"beautiful.\" It was first formalised as a mathematic concept in arithmetic operations by Indians around 650 CE. Without the concept of zero, there would be no computer science as we know it.",
          "picture_file_name":"Zero.jpg"
       }
    ]
