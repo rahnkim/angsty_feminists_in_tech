@@ -27,7 +27,7 @@
          "name":"Alan Turing",
          "birth_year":1912,
          "death_year":1954,
-         "blurb":"Considered the father of theoretical computer science and artificial intelligence, Alan formalised the concepts of algorithm and computation with the Turing Machine. During WWII, Alan's work in cryptanalysis was instrumental in breaking German ciphers. He was also an openly gay man who was prosecuted for \"homosexual acts\" by the UK and chemically castrated.",
+         "blurb":"Considered the father of theoretical computer science and artificial intelligence, Alan formalised the concepts of algorithm and computation with the Turing Machine. During WWII, Alan's work in cryptanalysis was instrumental in breaking German ciphers. He was also an openly gay man who was prosecuted for \"homosexual acts\" by the UK and was consequently chemically castrated.",
          "picture_file_name":"Alan-Turing.jpg",
          "resources":[
             {
@@ -163,7 +163,7 @@
          "name":"Hedy Lamarr",
          "birth_year":1914,
          "death_year":2000,
-         "blurb":"An inventor and actress, Hedy co-invented the spread spectrum and frequency hopping communication technologies. It was invented with the purpose of creating jam-proof torpedoes in WWII but was ignored until its applications for the Navy during 1962's Cuban missile crisis, and now is foundational to wifi and Bluetooth technologies. Hedy's long overdue recognition did not come until near the end of her life in 1997.",
+         "blurb":"An inventor and actress, Hedy co-invented the spread spectrum and frequency hopping communication technology. It was invented with the purpose of creating jam-proof torpedoes in WWII but was ignored until its applications for the Navy during 1962's Cuban missile crisis, and now is foundational to wifi and Bluetooth technologies. Hedy's long overdue recognition did not come until near the end of her life in 1997.",
          "picture_file_name":"Hedy-Lamarr.jpg",
          "resources":[
             {
@@ -178,7 +178,7 @@
          "event_year":2000,
          "name":"Jennie S. Hwang",
          "birth_year":1949,
-         "blurb":"A pioneer in environmentally-friendly electronics manufacturing and electronics miniaturisation technology and a renowned entrepreneur, Jennie was also the first Asian-American woman to be elected into National Academy of Engineering.",
+         "blurb":"A pioneer in environmentally-friendly electronics manufacturing and electronics miniaturisation technology and a renowned entrepreneur, Jennie was also the first Asian-American woman to be elected into the National Academy of Engineering.",
          "picture_file_name":"Jennie-Hwang.jpg"
       },
       {
@@ -219,7 +219,7 @@
          "event_year":1979,
          "name":"Lynn Conway",
          "birth_year":1938,
-         "blurb":"Lynn's contributions include pioneering work in chip design, and architecture design that laid the groundwork for modern high performance microprocessors. In 1968, IBM, likely the president of IBM himself, fired Lynn when the company learned that she was transgender. She was denied access to her children after medically transitioning. In 2000, she went public with her story as a trans woman, and began her work in activism.",
+         "blurb":"Lynn's contributions include pioneering work in chip design and architecture design, which laid the groundwork for modern high performance microprocessors. In 1968, IBM, likely the president of IBM himself, fired Lynn when the company learned that she was transgender. She was denied access to her children after medically transitioning. In 2000, she went public with her story as a trans woman, and began her work in activism.",
          "picture_file_name":"Lynn-Conway.jpg"
       },
       {
