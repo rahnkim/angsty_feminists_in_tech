@@ -68,6 +68,7 @@
                             <p class="event-date" data-bind="text: event_year"></p>
                             <p class="event-description" data-bind="text: event"></p>
                         </div>
+                        
                         <div class="timeline-bio">
                             <img data-bind="attr: {src: 'data:image/png;charset=utf8;base64,' + picture}">
                             <h2 class="name" data-bind="text: name"></h2>
@@ -82,15 +83,12 @@
                         </div>
 
                         <div class="timeline-resources">
-                            <p>
-                                <a href="https://www.youtube.com/watch?v=aPweFhhXFvY">Jean Bartik and the ENIAC Women (video)</a><br>
-                                <span class="source">from YouTube - ComputerHistory</span>
-                            </p>
-
-                            <p>
-                                <a href="https://vimeo.com/107667129">ENIAC Trailer (video)</a><br>
-                                <span class="source">from Vimeo</span>
-                            </p>
+                            <div data-bind="foreach: {data: resources, as: 'resource'}">
+                                <p>
+                                    <a data-bind="text: resource.title, attr: {href: resource.url}"></a><br>
+                                    <span class="source">from </span><span class="source" data-bind="text: resource.source"></span>
+                                </p>
+                            </div>
                             <div class="button-container">
                                 <a class="read-more button" data-bind="click: function(data, event) { $parent.toggleResources($element, data, event) }">Show Bio</a>
                             </div>
