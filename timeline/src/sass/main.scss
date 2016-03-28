@@ -504,6 +504,7 @@ Main components
 
 	@include MQ(M) {
 		margin: 4em 0 -17em;
+        width: 45%;
 		/*margin: 4em 0;*/
 
 		&:first-child {
@@ -514,11 +515,23 @@ Main components
 			margin-bottom: 0;
 		}
 
-        /* Reverse order of event date and event description */
-        &:nth-of-type(2n+1) {
+        &:nth-of-type(odd) {
+            float: left;
+
+            .timeline-marker {
+                /* Resets default timeline-marker positioning */
+                left: initial;
+                right: -11.11%;
+                margin-left: 0;
+                margin-right: -15px; /* Half the marker's width */
+            }
             .timeline-event {
                 flex-direction: row-reverse;
             }
+        }
+
+        &:nth-of-type(even) {
+            float: right;
         }
 	}
 }
@@ -535,8 +548,8 @@ Main components
     z-index: 1;
 
 	@include MQ(M) {
-		left: 50%;
-		margin-left: -15px;
+        left: -11.11%;
+        margin-left: -15px; /* Half the marker's width */
 
 		/* Force Hardware Acceleration in WebKit */
 		-webkit-transform: translateZ(0);
@@ -637,7 +650,6 @@ Main components
 
 	@include MQ(M) {
 		margin-left: 0;
-		width: 45%;
 
 		&::before {
 			left: 100%;

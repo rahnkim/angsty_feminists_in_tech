@@ -544,6 +544,7 @@ h2 {
 @media only screen and (min-width: 768px) {
   .timeline-block {
     margin: 4em 0 -17em;
+    width: 45%;
   }
 
   .timeline-block:first-child {
@@ -554,12 +555,27 @@ h2 {
     margin-bottom: 0;
   }
 
-  .timeline-block:nth-of-type(2n+1) .timeline-event {
+  .timeline-block:nth-of-type(odd) {
+    float: left;
+  }
+
+  .timeline-block:nth-of-type(odd) .timeline-marker {
+    left: initial;
+    right: -11.11%;
+    margin-left: 0;
+    margin-right: -15px;
+  }
+
+  .timeline-block:nth-of-type(odd) .timeline-event {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
     -webkit-flex-direction: row-reverse;
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
+  }
+
+  .timeline-block:nth-of-type(even) {
+    float: right;
   }
 }
 
@@ -577,7 +593,7 @@ h2 {
 
 @media only screen and (min-width: 768px) {
   .timeline-marker {
-    left: 50%;
+    left: -11.11%;
     margin-left: -15px;
     -webkit-transform: translateZ(0);
     -webkit-backface-visibility: hidden;
@@ -692,7 +708,6 @@ h2 {
 @media only screen and (min-width: 768px) {
   .timeline-content {
     margin-left: 0;
-    width: 45%;
   }
 
   .timeline-content::before {
