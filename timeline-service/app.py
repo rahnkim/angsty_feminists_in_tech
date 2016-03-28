@@ -82,7 +82,7 @@ class BioEventHandler(webapp2.RequestHandler):
 
       self.response.write("Successfully added bio/event for {0}.".format(bio_event.name))
       if not self.request.POST.get("batch"):
-        self.redirect('/new')
+        self.redirect('/new-single')
     except Exception as inst:
       self.response.write(inst)
 
@@ -140,10 +140,10 @@ class BioEventSubmissionHandler(webapp2.RequestHandler):
 			</fieldset>
 		  </form>""")
       self.response.out.write('<p><a href="%s">Sign out</a>.</p></body></html>' %
-                                  users.create_logout_url('/new'))
+                                  users.create_logout_url('/new-single'))
     else:
       self.response.out.write('<p><a href="%s">Sign in</a>.</p></body></html>' %
-                                  users.create_login_url('/new'))
+                                  users.create_login_url('/new-single'))
 
 class BioEventBatchHandler(webapp2.RequestHandler):
   def get(self):
@@ -154,16 +154,16 @@ class BioEventBatchHandler(webapp2.RequestHandler):
       else:
         self.response.out.write(
             '<html><body><p><a href="%s">Sign out</a>.</p></body></html>' %
-                users.create_logout_url('/new'))
+                users.create_logout_url('/new-batch'))
     else:
       self.response.out.write(
           '<html><body><p><a href="%s">Sign in</a>.</p></body></html>' %
-              users.create_login_url('/new'))
+              users.create_login_url('/new-batch'))
 
 
 app = webapp2.WSGIApplication(
     [
-        ("/", BioEventHandler), ("/new", BioEventSubmissionHandler),
-        ("/newbatch", BioEventBatchHandler)
+        ("/", BioEventHandler), ("/new-single", BioEventSubmissionHandler),
+        ("/new-batch", BioEventBatchHandler)
     ],
     debug=True)
