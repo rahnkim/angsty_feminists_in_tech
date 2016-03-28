@@ -54,6 +54,14 @@ jQuery(document).ready(function($){
 			}
 		});
 
+		// Toggle "Resources" modal
+		self.toggleResources = function(element, data, event) {
+			var parentBlock = $(element).parents('.timeline-block');
+			$(parentBlock.find('.timeline-resources')).toggle();
+			$(parentBlock.find('.timeline-bio')).children('.bio').toggle();
+			$(parentBlock.find('.timeline-bio')).children('.button-container').toggle();
+		};
+
 		// Check if DOM element is in viewport on load
 		self.isInViewport = function(element) {
 			if ($(element).offset().top > $(window).scrollTop()+$(window).height()*.8) {
