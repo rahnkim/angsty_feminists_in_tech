@@ -185,7 +185,7 @@ Modules
         }
     }
 }
-/*.close {
+.close {
     position: absolute;
     top: 5px;
     right: 5px;
@@ -197,7 +197,7 @@ Modules
     border: 2px solid #FFF;
     border-radius: 50%;
     cursor: pointer;
-}*/
+}
 .footnote {
     margin-top: 1em;
     padding-left: 1em;
@@ -213,7 +213,85 @@ Modules
 
 /* --------------------------------
 
-Main components
+Header
+
+-------------------------------- */
+header {
+    background: $background;
+    padding: 1em 0;
+    display: table-cell;
+
+    .logo {
+        display: block;
+        width: 5.5em;
+        margin: 0 auto;
+    }
+
+    .title {
+        margin: 0;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    @include MQ(M) {
+        .logo {
+            width: 2.5em;
+            float: left;
+            margin-right: .5em;
+        }
+
+        .title {
+            line-height: 40px; /* Height of .logo */
+            text-align: left;
+        }
+    }
+}
+
+/* --------------------------------
+
+Footer
+
+-------------------------------- */
+footer {
+    .inner {
+        background-image: linear-gradient(to left, #000 33%, rgba(255,255,255,0) 0%);
+        background-position: top;
+        background-size: 20px 2px;
+        background-repeat: repeat-x;
+        padding-top: 1em;
+    }
+
+    .footer-description {
+        @include MQ(S) {
+            width: 65%;
+        }
+
+        @include MQ(M) {
+            width: 50%;
+        }
+    }
+
+    .button {
+        margin-top: 1em;
+
+        @include MQ(S) {
+            float: right;
+        }
+    }
+
+    .copyright {
+        font-size: 80%;
+
+        @include MQ(M) {
+            float: right;
+        }
+    }
+
+}
+
+/* --------------------------------
+
+Timeline components
 
 -------------------------------- */
 .page {
@@ -225,37 +303,6 @@ Main components
 
     .row {
         display: table-row;
-    }
-
-    header {
-        background: $background;
-        padding: 1em 0;
-        display: table-cell;
-
-        .logo {
-            display: block;
-            width: 5.5em;
-            margin: 0 auto;
-        }
-
-        .title {
-            margin: 0;
-            font-size: 1.5em;
-            text-align: center;
-        }
-
-        @include MQ(M) {
-            .logo {
-                width: 2.5em;
-                float: left;
-                margin-right: .5em;
-            }
-
-            .title {
-                line-height: 40px; /* Height of .logo */
-                text-align: left;
-            }
-        }
     }
 
     .intro {
@@ -725,43 +772,6 @@ Main components
 
 .credits {
     font-size: 80%;
-}
-
-footer {
-    .inner {
-        background-image: linear-gradient(to left, #000 33%, rgba(255,255,255,0) 0%);
-        background-position: top;
-        background-size: 20px 2px;
-        background-repeat: repeat-x;
-        padding-top: 1em;
-    }
-
-    .footer-description {
-        @include MQ(S) {
-            width: 65%;
-        }
-
-        @include MQ(M) {
-            width: 50%;
-        }
-    }
-
-    .button {
-        margin-top: 1em;
-
-        @include MQ(S) {
-            float: right;
-        }
-    }
-
-    .copyright {
-        font-size: 80%;
-
-        @include MQ(M) {
-            float: right;
-        }
-    }
-
 }
 
 @include MQ(M) {
