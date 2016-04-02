@@ -2,7 +2,7 @@
 
 ## Application
 
-TODO.
+Design and front-end development by [Shaina Koval](http://www.shainakoval.com).
 
 ## Data (Service)
 
