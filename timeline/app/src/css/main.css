@@ -639,17 +639,16 @@ h2 {
 .timeline-content .timeline-event .event-date {
   margin: 0;
   padding: 1em 1.6em;
+  font-size: 1.3em;
+  line-height: 1.3em;
 }
 
 .timeline-content .timeline-event .event-description {
-  font-size: .9em;
-  line-height: 1.4em;
+  font-size: 1.15em;
 }
 
 .timeline-content .timeline-event .event-date {
   font-family: "Neucha",cursive;
-  font-size: 1.3em;
-  line-height: 1.6em;
 }
 
 .timeline-content .timeline-bio {
