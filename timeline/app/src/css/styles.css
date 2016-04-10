@@ -1196,6 +1196,7 @@ footer .copyright {
 .timeline-content {
   position: relative;
   margin-left: 60px;
+  min-width: 100%;
   content: "";
   display: table;
   clear: both;

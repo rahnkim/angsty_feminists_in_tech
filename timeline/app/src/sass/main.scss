@@ -616,6 +616,7 @@ Timeline components
 .timeline-content {
 	position: relative;
 	margin-left: 60px;
+    min-width: 100%;
 	@include clearfix;
 
     .timeline-event {
