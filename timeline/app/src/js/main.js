@@ -25,8 +25,8 @@ jQuery(document).ready(function($){
 	/************************
 	 * Knockout Data Handling
 	 ************************/
-	// Create View Model
-	function ViewModel() {
+	// Create View Model.
+	var ViewModel = function() {
         // Map 'self' to ViewModel
         var self = this;
 
@@ -53,32 +53,45 @@ jQuery(document).ready(function($){
 				$('.error').hide();
 			}
 		});
+	}
 
-		// Toggle "Resources" modal
-		self.toggleResources = function(element, data, event) {
-			var parentBlock = $(element).parents('.timeline-block');
-			$(parentBlock.find('.timeline-resources')).toggle();
-			$(parentBlock.find('.timeline-bio')).children('.bio').toggle();
-			$(parentBlock.find('.timeline-bio')).children('.button-container').toggle();
-		};
+    // Toggle "Resources" modal.
+	ViewModel.prototype.toggleResources = function(element, data, event) {
+		var parentBlock = $(element).parents('.timeline-block');
+		$(parentBlock.find('.timeline-resources')).toggle();
+		$(parentBlock.find('.timeline-bio')).children('.bio').toggle();
+		$(parentBlock.find('.timeline-bio')).children('.button-container').toggle();
+	};
 
-		// Check if DOM element is in viewport on load
-		self.isInViewport = function(element) {
-			if ($(element).offset().top > $(window).scrollTop()+$(window).height()*.8) {
-				return 'is-hidden';
-			} else {
-				return 'bounce-in';
+    // The given element's distance from top of page.
+	ViewModel.prototype.distanceFromTop = function(element) {
+		return $(element).offset().top;
+	};
+
+    // The lowest "reasonably" user viewable point (y-value) on the page.
+	ViewModel.prototype.lowestViewablePointOnPage = function() {
+	    return $(window).scrollTop() + $(window).height() * .8;
+	};
+
+	// Check if DOM element is in viewport on load.
+	ViewModel.prototype.isInViewport = function(element) {
+		if (this.distanceFromTop(element) > this.lowestViewablePointOnPage()) {
+			return 'is-hidden';
+		} else {
+			return 'bounce-in';
+		}
+	};
+
+	// Update CSS class while scrolling.
+	ViewModel.prototype.isStillInViewport = function(element) {
+	    var self = this;
+		$(window).on('scroll', function(){
+			if (self.distanceFromTop(element) < self.lowestViewablePointOnPage()) {
+				$(element).find('.timeline-marker, .timeline-content')
+				          .removeClass('is-hidden')
+				          .addClass('bounce-in');
 			}
-		};
-
-		// Update CSS class while scrolling
-		self.isStillInViewport = function(element) {
-			$(window).on('scroll', function(){
-				if ($(element).offset().top < $(window).scrollTop()+$(window).height()*.8) {
-					$(element).find('.timeline-marker, .timeline-content').removeClass('is-hidden').addClass('bounce-in');
-				}
-			});
-		};
+		});
 	};
 
 	// Activate knockout.js
