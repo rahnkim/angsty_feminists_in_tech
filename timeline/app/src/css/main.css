@@ -699,6 +699,7 @@ footer .copyright {
 }
 
 .timeline-content .timeline-event .event-description {
+  width: 100%;
   font-size: 1.15em;
 }
 
