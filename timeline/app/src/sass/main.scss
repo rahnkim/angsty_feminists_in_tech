@@ -210,7 +210,11 @@ Modules
         margin-left: -1em;
     }
 }
-
+.hero-text {
+    margin-bottom: 2.3em;
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
 /* --------------------------------
 
 Header
@@ -314,7 +318,12 @@ Timeline components
         color: #FFF;
         text-align: center;
 
+        .inner {          
+            max-width: $M;
+        }
+
         h1 {
+            font-size: 2.5em;
             margin: 0;
             font-weight: bold;
             text-align: center;
@@ -326,25 +335,15 @@ Timeline components
             margin-bottom: 0;
         }
 
-        .block-blue {
-            background: rgba($blue, .8);
-
-            @include MQ(M) {
-                min-width: 677px; /* For smooth transition between M and S */
-                max-width: 50%;
-                margin-left: auto;
-                margin-right: auto;
+        @include MQ(M) {
+            h1 {
+                font-size: 4em;
             }
         }
     }
 
-    h2 {
-        margin-bottom: 0;
-        font-weight: bold;
-        text-align: center;
-    }
-
     .down-button {
+        position: absolute;
         display: inline-block;
         width: 30px;
         height: 30px;
@@ -769,6 +768,14 @@ Timeline components
 
     h2 {
         text-align: center;
+    }
+
+    a {
+        color: $yellow;
+
+        &:hover {
+            color: darken($yellow, 10%);
+        }
     }
 }
 
