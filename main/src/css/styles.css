@@ -1,0 +1,391 @@
+/*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+/*# sourceMappingURL=normalize.css.map */
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:after,
+*:before {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  font-family: "PT Sans",sans-serif;
+  line-height: 160%;
+  color: #000;
+  background-color: #F5F5F6;
+}
+
+a {
+  color: #CB2026;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #9f191e;
+}
+
+a:focus {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+img.right {
+  float: right;
+  width: 300px;
+}
+
+img.left {
+  float: left;
+  width: 300px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Neucha",cursive;
+  font-weight: normal;
+  font-variant: small-caps;
+}
+
+h1 {
+  line-height: 1em;
+}
+
+@media only screen and (min-width: 500px) {
+  h1 {
+    font-size: 3em;
+  }
+}
+
+h2 {
+  font-size: 1.625em;
+  line-height: 1em;
+}
+
+@media only screen and (min-width: 500px) {
+  h2 {
+    font-size: 2em;
+  }
+}
+
+h1+p,
+h2+p,
+h3+p {
+  margin-top: 0;
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 99;
+}
+
+.container {
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.inner {
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+[class^='block'] {
+  padding: 1.6em;
+  margin-bottom: 3em;
+}
+
+.block-blue {
+  background-color: #3C50A2;
+  color: #FFF;
+}
+
+@media only screen and (min-width: 500px) {
+  [class*='grid'] {
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .grid-1-3 {
+    width: 49%;
+  }
+
+  .grid-1-3:first-of-type {
+    margin-right: 2%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .grid-1-3 {
+    width: 32%;
+    margin-right: 2%;
+  }
+
+  .grid-1-3:last-of-type {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .grid-2-3 {
+    width: 49%;
+  }
+
+  .grid-2-3:first-of-type {
+    margin-right: 2%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .grid-2-3 {
+    width: 66%;
+    margin-right: 2%;
+  }
+
+  .grid-2-3:last-of-type {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.secondary-font {
+  font-family: "Neucha",cursive;
+  font-weight: normal;
+  font-variant: small-caps;
+  text-transform: none;
+}
+
+.error {
+  position: absolute;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .error {
+    text-align: center;
+  }
+}
+
+.button-container {
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  padding: .75em 1.25em;
+  color: #CB2026;
+  font-weight: bold;
+  font-size: 80%;
+  line-height: 80%;
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid #CB2026;
+}
+
+.button:hover {
+  background-color: #CB2026;
+  color: #FFF;
+}
+
+@media only screen and (min-width: 768px) {
+  .load-animate:nth-child(1) {
+    -webkit-animation: fadeIn 0.6s ease-in-out;
+    animation: fadeIn 0.6s ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+  }
+
+  .load-animate:nth-child(2) {
+    -webkit-animation: fadeIn 0.6s ease-in-out;
+    animation: fadeIn 0.6s ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+  }
+
+  .load-animate:nth-child(3) {
+    -webkit-animation: fadeIn 0.6s ease-in-out;
+    animation: fadeIn 0.6s ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+  }
+
+  .load-animate:nth-child(4) {
+    -webkit-animation: fadeIn 0.6s ease-in-out;
+    animation: fadeIn 0.6s ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+  }
+
+  .load-animate:nth-child(5) {
+    -webkit-animation: fadeIn 0.6s ease-in-out;
+    animation: fadeIn 0.6s ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 1.2em;
+  height: 1.2em;
+  font-family: "Neucha",cursive;
+  line-height: 1em;
+  text-align: center;
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.footnote {
+  margin-top: 1em;
+  padding-left: 1em;
+  font-size: .8em;
+  line-height: 1.4em;
+}
+
+.footnote .asterisk {
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+header {
+  background: #F5F5F6;
+  padding: 1em 0;
+}
+
+header .logo {
+  display: block;
+  width: 5.5em;
+  margin: 0 auto;
+}
+
+header .title {
+  margin: 0;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  header .logo {
+    width: 2.5em;
+    float: left;
+    margin-right: .5em;
+  }
+
+  header .title {
+    line-height: 40px;
+    text-align: left;
+  }
+}
+
+footer .inner {
+  background-image: -webkit-linear-gradient(right, #000 33%, rgba(255, 255, 255, 0) 0%);
+  background-image: linear-gradient(to left, #000 33%, rgba(255,255,255,0) 0%);
+  background-position: top;
+  background-size: 20px 2px;
+  background-repeat: repeat-x;
+  padding-top: 1em;
+}
+
+@media only screen and (min-width: 320px) {
+  footer .footer-description {
+    width: 65%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  footer .footer-description {
+    width: 50%;
+  }
+}
+
+footer .button {
+  margin-top: 1em;
+}
+
+@media only screen and (min-width: 320px) {
+  footer .button {
+    float: right;
+  }
+}
+
+footer .copyright {
+  font-size: 80%;
+}
+
+@media only screen and (min-width: 768px) {
+  footer .copyright {
+    float: right;
+  }
+}
+
+.project-description {
+  background: #FFF;
+  padding: 1.3em;
+}
+
+.project-description h2 {
+  margin-top: 0;
+}
+
+.project-description p:last-of-type {
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=main.css.map */

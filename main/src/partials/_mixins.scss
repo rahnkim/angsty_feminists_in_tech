@@ -1,0 +1,25 @@
+// rem fallback - credits: http://zerosixthree.se/
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+// clearfix
+@mixin clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@mixin animation--fadedown($delay) {
+  @include animation(fadeIn 0.6s ease-in-out);
+  @include animation-iteration-count(1);
+  @include animation-fill-mode(forwards);
+  @include animation-delay(#{$delay}s);
+}
