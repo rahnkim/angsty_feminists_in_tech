@@ -353,6 +353,7 @@ footer .copyright {
 
 .page {
   min-height: 100vh;
+  height: 100vh;
   background: url("../img/background.jpg") no-repeat center center;
   background-size: cover;
   display: table;
@@ -397,7 +398,6 @@ footer .copyright {
 }
 
 .page .down-button {
-  position: absolute;
   display: inline-block;
   width: 30px;
   height: 30px;
