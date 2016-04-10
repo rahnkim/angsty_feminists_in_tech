@@ -294,7 +294,9 @@ header {
         text-align: center;
     }
 
-    @include MQ(M) {
+    &.fixed {
+        background: rgba(255, 255, 255, 0.3);
+
         .logo {
             width: 2.5em;
             float: left;
@@ -306,6 +308,12 @@ header {
             text-align: left;
         }
     }
+
+    @include MQ(M) {
+        .title {
+            font-size: 2em;
+        }
+    }
 }
 
 /* --------------------------------
@@ -314,28 +322,30 @@ Footer
 
 -------------------------------- */
 footer {
+    background: $black;
+    padding: 1.3em;
+    color: #CCC;
+
     .container {
-        background-image: linear-gradient(to left, #000 33%, rgba(255,255,255,0) 0%);
-        background-position: top;
-        background-size: 20px 2px;
-        background-repeat: repeat-x;
-        padding-top: 1em;
+        // background-image: linear-gradient(to left, #000 33%, rgba(255,255,255,0) 0%);
+        // background-position: top;
+        // background-size: 20px 2px;
+        // background-repeat: repeat-x;
+        // padding-top: 1em;
     }
 
     .footer-description {
-        @include MQ(S) {
-            width: 65%;
-        }
+        margin: 0;
 
-        @include MQ(M) {
-            width: 50%;
+        @include MQ(S2) {
+            width: 65%;
         }
     }
 
     .button {
-        margin-top: 1em;
+        margin-bottom: 1.3em;
 
-        @include MQ(S) {
+        @include MQ(S2) {
             float: right;
         }
     }
@@ -369,7 +379,7 @@ Homepage
 
         .project-title {
             margin: 0;
-            font-size: 5em;
+            font-size: 3em;
         }
 
         p:last-of-type {
@@ -378,6 +388,10 @@ Homepage
 
         @include MQ(M) {
             max-width: $M;
+
+            .project-title {
+                font-size: 5em;
+            }
         }
     }
 
@@ -418,7 +432,7 @@ Homepage
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    margin: 3em auto;
+    margin: 0 auto;
 
     .resources-image,
     .resources-content {

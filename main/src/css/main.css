@@ -50,7 +50,7 @@ h2 {
   font-family: "Neucha",cursive;
   font-weight: normal;
   font-variant: small-caps;
-  color: #000;
+  color: #222;
 }
 
 h1 {
@@ -78,7 +78,7 @@ h3 {
   margin-bottom: 0;
   font-size: 1em;
   font-weight: bold;
-  color: #000;
+  color: #222;
 }
 
 h1+p,
@@ -185,7 +185,7 @@ h3+p {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(34,34,34,0.7);
   z-index: 99;
 }
 
@@ -299,45 +299,48 @@ header .title {
   text-align: center;
 }
 
+header.fixed {
+  background: rgba(255,255,255,0.3);
+}
+
+header.fixed .logo {
+  width: 2.5em;
+  float: left;
+  margin-right: .5em;
+}
+
+header.fixed .title {
+  line-height: 40px;
+  text-align: left;
+}
+
 @media only screen and (min-width: 768px) {
-  header .logo {
-    width: 2.5em;
-    float: left;
-    margin-right: .5em;
-  }
-
   header .title {
-    line-height: 40px;
-    text-align: left;
+    font-size: 2em;
   }
 }
 
-footer .container {
-  background-image: -webkit-linear-gradient(right, #000 33%, rgba(255, 255, 255, 0) 0%);
-  background-image: linear-gradient(to left, #000 33%, rgba(255,255,255,0) 0%);
-  background-position: top;
-  background-size: 20px 2px;
-  background-repeat: repeat-x;
-  padding-top: 1em;
+footer {
+  background: #222;
+  padding: 1.3em;
+  color: #CCC;
 }
 
-@media only screen and (min-width: 320px) {
+footer .footer-description {
+  margin: 0;
+}
+
+@media only screen and (min-width: 500px) {
   footer .footer-description {
     width: 65%;
   }
 }
 
-@media only screen and (min-width: 768px) {
-  footer .footer-description {
-    width: 50%;
-  }
-}
-
 footer .button {
-  margin-top: 1em;
+  margin-bottom: 1.3em;
 }
 
-@media only screen and (min-width: 320px) {
+@media only screen and (min-width: 500px) {
   footer .button {
     float: right;
   }
@@ -369,7 +372,7 @@ footer .copyright {
 
 [class*="project"] .container .project-title {
   margin: 0;
-  font-size: 5em;
+  font-size: 3em;
 }
 
 [class*="project"] .container p:last-of-type {
@@ -379,6 +382,10 @@ footer .copyright {
 @media only screen and (min-width: 768px) {
   [class*="project"] .container {
     max-width: 768px;
+  }
+
+  [class*="project"] .container .project-title {
+    font-size: 5em;
   }
 }
 
@@ -426,7 +433,7 @@ footer .copyright {
   -webkit-align-items: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  margin: 3em auto;
+  margin: 0 auto;
 }
 
 .resources .resources-image,
