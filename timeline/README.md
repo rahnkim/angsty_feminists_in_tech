@@ -1,14 +1,21 @@
-# The Angsty Feminists in Tech Project (TAFITI) Timeline
+# The Angsty Feminists in Tech Project (TAFITI): Timeline
+
+Live site is at http://timeline.angstyfeministsintech.org
 
 ## Application
 
-Design and front-end development by [Shaina Koval](http://www.shainakoval.com).
+Design and front-end development by [Shaina Koval](http://www.shainakoval.com) and JavaScript co-development by [Rahn Kim](http://www.rahnkim.com).
 
-### File Structure
+### Tools, Libraries, and Platforms
+* [jQuery](https://jquery.com/)
+* [SASS](http://sass-lang.com/)
+* [Google App Engine](https://cloud.google.com/appengine/) (Python)
+
+### Folder/File Structure
 * All changes are to be made in `src`
 * All files in `dist` are copied from `src` or are generated with Grunt; any changes there will not last
 
-### Using Grunt
+### Using Grunt, the JavaScript Task Runner
 1. Run `npm install -g grunt-cli` to globally install the [Grunt CLI](http://gruntjs.com/)
 2. Run `npm install` in the project root directory
 3. Run Grunt tasks with `grunt` (see `Gruntfile.js` for more commands)
