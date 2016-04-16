@@ -45,52 +45,6 @@
         </div><!-- .page -->
 
         <section id="timeline" class="container">
-
-            <div data-bind="foreach: dataList">
-
-                <div class="timeline-block" data-bind="event: {scroll: $parent.isStillInViewport($element)}">
-
-                    <div class="timeline-marker" data-bind="css: $parent.isInViewport($element)">
-                        <span>&nbsp;</span>
-                    </div> <!-- timeline-img -->
-
-                    <div class="timeline-content" data-bind="css: $parent.isInViewport($element)">
-                        <div class="timeline-event">
-                            <p class="event-date" data-bind="text: event_year"></p>
-                            <p class="event-description" data-bind="text: event"></p>
-                        </div>
-                        
-                        <div class="timeline-bio">
-                            <img data-bind="attr: {src: 'data:image/png;charset=utf8;base64,' + picture}">
-                            <h2 class="name" data-bind="text: name"></h2>
-                            <p class="lifespan">
-                                <span data-bind="visible: is_group === true">Years Active: </span>
-                                <span class="birth_year" data-bind="text: birth_year > 0 ? birth_year : Math.abs(birth_year) + ' BCE'"></span> - <span class="death_year" data-bind="text: death_year"></span>
-                            </p>
-                            <p class="bio" data-bind="text: blurb"></p>
-                            <div class="button-container">
-                                <a class="read-more button" data-bind="text: resources.length > 0 ? 'View Resources' : 'Learn More on Google', attr: resources.length > 0 ? {href: '#'} : {href: 'http://www.google.com/search?q=' + name}, click: resources.length > 0 ? function(data, event) { $parent.toggleResources($element, data, event) } : ''" target="_blank"></a>
-                            </div>
-                        </div>
-
-                        <div class="timeline-resources">
-                            <div data-bind="foreach: {data: resources, as: 'resource'}">
-                                <p>
-                                    <a data-bind="text: resource.title, attr: {href: resource.url}" target=
-                                    "_blank"></a><br>
-                                    <span class="source">from </span><span class="source" data-bind="text: resource.source"></span>
-                                </p>
-                            </div>
-                            <div class="button-container">
-                                <a class="read-more button" data-bind="click: function(data, event) { $parent.toggleResources($element, data, event) }">Show Bio</a>
-                            </div>
-                        </div>
-
-                    </div> <!-- timeline-content -->
-
-                </div> <!-- timeline-block -->
-
-            </div><!-- div iterating through list -->
         </section>
 
         <section class="block-blue final-note">
@@ -131,7 +85,6 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
         <script src="js/scripts.min.js"></script>
         
     </body>
