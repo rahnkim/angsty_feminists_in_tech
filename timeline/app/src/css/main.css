@@ -780,6 +780,7 @@ footer .copyright {
 @media only screen and (min-width: 768px) {
   .timeline-content {
     margin-left: 0;
+    width: 100%;
   }
 
   .timeline-content::before {

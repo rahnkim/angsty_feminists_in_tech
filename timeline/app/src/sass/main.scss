@@ -705,6 +705,7 @@ Timeline components
 
 	@include MQ(M) {
 		margin-left: 0;
+        width: 100%;
 
 		&::before {
 			left: 100%;
