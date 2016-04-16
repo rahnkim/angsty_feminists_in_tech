@@ -305,7 +305,7 @@ angstyTimeline.TimelineView.prototype.maybeShowHiddenItems_ = function() {
   });
 };
 
-jQuery(document).ready(function(){
+jQuery(document).ready(function() {
   var view = new angstyTimeline.TimelineView();
   var controller = angstyTimeline.TimelineController(view);
 });
