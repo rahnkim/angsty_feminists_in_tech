@@ -209,7 +209,7 @@ angstyTimeline.TimelineView.prototype.setTimelineData = function(timelineData) {
 
   // Render the data.
   this.displayTimelineData_();
-}
+};
 
 /**
  * Iterates through given array of Event/Bios and constructs and displays DOM
