@@ -1127,7 +1127,10 @@ footer .copyright {
 
 @media only screen and (min-width: 768px) {
   .timeline-block {
-    margin: 4em 0 -17em;
+    margin: 0;
+    -webkit-transform: translateY(-17em);
+    -ms-transform: translateY(-17em);
+    transform: translateY(-17em);
     width: 45%;
   }
 
