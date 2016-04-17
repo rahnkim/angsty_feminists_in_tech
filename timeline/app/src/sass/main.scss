@@ -551,8 +551,8 @@ Timeline components
     }
 
 	@include MQ(M) {
-		margin: 4em 0 -17em;
-        width: 45%;
+		margin-top: 4em;
+    width: 45%;
 		/*margin: 4em 0;*/
 
 		&:first-child {

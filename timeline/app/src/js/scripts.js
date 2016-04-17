@@ -33,8 +33,8 @@ angstyTimeline.TimelineController = function(view) {
         }, 4000));
         self.view_.clearErrorMessage();
 
-        // Render response JSON data in view.
-        self.view_.displayTimelineData(result);
+        // Set and then render response JSON data in view.
+        self.view_.setTimelineData(result);
       }
     }
   });
@@ -60,6 +60,12 @@ angstyTimeline.TimelineController = function(view) {
   * @constructor
   */
 angstyTimeline.TimelineView = function() {
+  /**
+   * Timeline data array.
+   * @param {?Array.<EventBio>}
+   */
+  this.timelineData = null;
+
   // On clicking the down button, jump/scroll to timeline section. */
   $('.down-button').click(this.scrollToTimelineTop_);
 
@@ -72,6 +78,10 @@ angstyTimeline.TimelineView = function() {
   $(window).resize(function() {
     $('.load-animate').removeClass('load-animate');
   });
+
+  // On resize, the timeline items may need to be re-stacked vertically to fix
+  // their relative positions to each other.
+  $(window).resize(this.restackItems_.bind(this));
 
   // On scroll, if items are in viewport, displays ones that were previously 
   // hidden.
@@ -119,13 +129,78 @@ angstyTimeline.TimelineView.prototype.scrollToTimelineTop_ = function(e) {
 };
 
 /**
- * Iterates through given array of Event/Bios and constructs and displays DOM
- * elements that house the data.
- * @param {!Array.<EventBio>}
+ * Re-stacks timeline items/blocks to be vertically flush against one another.
  * @private
  */
-angstyTimeline.TimelineView.prototype.displayTimelineData =
-    function(timelineData) {
+angstyTimeline.TimelineView.prototype.restackItems_ = function() {
+  var blocks = $('.timeline-block');
+  if (blocks.length <= 0) {
+    return;
+  }
+
+  if ($(blocks[0]).outerWidth() > ($(window).innerWidth() * 0.5)) {
+    // Timeline is in single column format: reset bottom margins to 2em.
+    var SINGLE_COLUMN_MARGIN_BOTTOM = '2em';
+
+    var blockLastIndex = blocks.length - 1;
+    blocks.each(function(index) {
+      if (index === blockLastIndex) {
+        return; // break.
+      }
+      this.style.marginBottom = SINGLE_COLUMN_MARGIN_BOTTOM;
+    });
+    return;
+  }
+
+  // Early return above if timeline is in single column format.
+  // Re-stack timeline items below only if timeline is in double column format.
+  var heightGap = $(window).innerWidth() * 0.16;
+  var radix = 10;
+  blocks.each(function(index) {
+    if (index === 0) {
+      return; // continue.
+    }
+    if (index === 1) {
+      var firstDiv = blocks[0];
+      var distanceBetweenTopOfThisDivAndTopOfFirstDiv =
+          $(this).position().top - $(firstDiv).position().top;
+      firstDiv.style.marginBottom =
+          parseInt(firstDiv.style.marginBottom, radix) -
+          (distanceBetweenTopOfThisDivAndTopOfFirstDiv - heightGap) + 'px';
+      return; // continue.
+    }
+    var previousDivOnSameColumn = blocks[index - 2];
+    var bottomOfPreviousDivOnSameColumn =
+        $(previousDivOnSameColumn).position().top +
+        $(previousDivOnSameColumn).outerHeight(false);
+    var distanceBetweenTopOfThisDivAndBottomOfPrevDivOnSameColumn =
+        $(this).position().top - bottomOfPreviousDivOnSameColumn;
+    var gapToClose = distanceBetweenTopOfThisDivAndBottomOfPrevDivOnSameColumn -
+        heightGap;
+    var previousDiv = blocks[index - 1];
+    previousDiv.style.marginBottom =
+        parseInt(previousDiv.style.marginBottom, radix) - gapToClose + 'px';
+  });
+};
+
+/**
+ * Sets timeline data array.
+ * @param {!Array.<EventBio>}
+ */
+angstyTimeline.TimelineView.prototype.setTimelineData = function(timelineData) {
+  this.timelineData = timelineData;
+
+  // Render the data.
+  this.displayTimelineData_();
+}
+
+/**
+ * Iterates through given array of Event/Bios and constructs and displays DOM
+ * elements that house the data.
+ * @private
+ */
+angstyTimeline.TimelineView.prototype.displayTimelineData_ = function() {
+  var timelineData = this.timelineData;
   var timeline = $('#timeline');
 
   timelineData.forEach(function(item) {
@@ -133,6 +208,7 @@ angstyTimeline.TimelineView.prototype.displayTimelineData =
     var block = document.createElement('div');
     timeline.append(block);
     $(block).addClass('timeline-block');
+    block.style.marginBottom = 0 + 'px'; // Needed for item re-stacking.
 
     // Children of timeline-block. Depth 1.
     var marker = document.createElement('div');
@@ -254,11 +330,18 @@ angstyTimeline.TimelineView.prototype.displayTimelineData =
         .append(document.createTextNode('Show Bio'));
   });
 
+  // Make sure the items are in the right positions.
+  this.restackItems_();
+
   // Make sure items within current viewport are shown.
   this.maybeShowHiddenItems_();
 
   // Add listener for click here, after elements are placed in DOM.
   $('.read-more').click(this.toggleResources_);
+
+  // The timeline item height may change on click, hence stacking needs to be
+  // recalculated.
+  $('.read-more').click(this.restackItems_.bind(this));
 };
 
 /**
@@ -310,6 +393,7 @@ angstyTimeline.TimelineView.prototype.maybeShowHiddenItems_ = function() {
   });
 };
 
+// When document is ready, instantiate the view and controller.
 jQuery(document).ready(function() {
   var view = new angstyTimeline.TimelineView();
   var controller = angstyTimeline.TimelineController(view);
