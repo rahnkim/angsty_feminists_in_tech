@@ -129,7 +129,8 @@ angstyTimeline.TimelineView.prototype.scrollToTimelineTop_ = function(e) {
 };
 
 /**
- * Re-stacks timeline items/blocks to be vertically flush against one another.
+ * Dynamically re-stacks timeline items/blocks to be vertically flush against
+ * their neighboring items.
  * @private
  */
 angstyTimeline.TimelineView.prototype.restackItems_ = function() {
@@ -143,41 +144,62 @@ angstyTimeline.TimelineView.prototype.restackItems_ = function() {
     var SINGLE_COLUMN_MARGIN_BOTTOM = '2em';
 
     var blockLastIndex = blocks.length - 1;
-    blocks.each(function(index) {
-      if (index === blockLastIndex) {
-        return; // break.
-      }
+    (blocks.slice(0, blockLastIndex)).each(function(index) {
       this.style.marginBottom = SINGLE_COLUMN_MARGIN_BOTTOM;
     });
     return;
-  }
+  } // Early return from method if timeline is in single column format.
 
-  // Early return above if timeline is in single column format.
   // Re-stack timeline items below only if timeline is in double column format.
-  var heightGap = $(window).innerWidth() * 0.16;
+  var verticalGap = $(window).innerWidth() * 0.16;
   var radix = 10;
   blocks.each(function(index) {
     if (index === 0) {
-      return; // continue.
-    }
+      return;
+    } // continue loop with next item.
+
+    var topOfThisDiv = $(this).position().top;
     if (index === 1) {
       var firstDiv = blocks[0];
       var distanceBetweenTopOfThisDivAndTopOfFirstDiv =
-          $(this).position().top - $(firstDiv).position().top;
+          topOfThisDiv - $(firstDiv).position().top;
       firstDiv.style.marginBottom =
           parseInt(firstDiv.style.marginBottom, radix) -
-          (distanceBetweenTopOfThisDivAndTopOfFirstDiv - heightGap) + 'px';
-      return; // continue.
-    }
+          (distanceBetweenTopOfThisDivAndTopOfFirstDiv - verticalGap) + 'px';
+      return;
+    } // continue loop with next item.
+
+    // For items at index 2 and above.
+
+    // Take distance between the top of this item and the bottom of the 
+    // previous-previous item (i.e. vertically adjacent neighbor immediately
+    // north of this item and on the same column).
     var previousDivOnSameColumn = blocks[index - 2];
     var bottomOfPreviousDivOnSameColumn =
         $(previousDivOnSameColumn).position().top +
         $(previousDivOnSameColumn).outerHeight(false);
     var distanceBetweenTopOfThisDivAndBottomOfPrevDivOnSameColumn =
-        $(this).position().top - bottomOfPreviousDivOnSameColumn;
+        topOfThisDiv - bottomOfPreviousDivOnSameColumn;
+
+    // Calculate the distance needed to close between above two items to achieve
+    // the desired vertical gap between them.
     var gapToClose = distanceBetweenTopOfThisDivAndBottomOfPrevDivOnSameColumn -
-        heightGap;
+        verticalGap;
+
+    // Get the previous item (i.e. previous item in DOM order, which is the
+    // timeline item immediately north of this item, on the opposite column).
     var previousDiv = blocks[index - 1];
+
+    // Enforce the vertical gap as the minimum vertical distance between two
+    // horizontally adjacent items.
+    var projectedDistanceBeweenTopOfThisDivAndTopOfPrevDiv =
+        topOfThisDiv - gapToClose - $(previousDiv).position().top;
+    if (projectedDistanceBeweenTopOfThisDivAndTopOfPrevDiv < verticalGap) {
+        gapToClose -= verticalGap -
+            projectedDistanceBeweenTopOfThisDivAndTopOfPrevDiv;
+    }
+
+    // Finally, apply new margin-bottom to the previous (in DOM order) item.
     previousDiv.style.marginBottom =
         parseInt(previousDiv.style.marginBottom, radix) - gapToClose + 'px';
   });
