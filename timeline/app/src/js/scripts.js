@@ -239,22 +239,23 @@ angstyTimeline.TimelineView.prototype.displayTimelineData_ = function() {
     $(bio).addClass('timeline-bio');
 
     // Children of timeline-bio. Depth 3.
-    var img = document.createElement('img');
-    $(bio).append(img);
-    $(img).attr('src', 'data:image/png;charset=utf8;base64,' + item.picture);
+    var bioMain = document.createElement('div');
+    $(bio).append(bioMain);
+    $(bioMain).addClass('bio-main');
 
+    // Children of bio-main. Depth 4.
     var bioHeading = document.createElement('h2');
-    $(bio).append(bioHeading);
+    $(bioMain).append(bioHeading);
     $(bioHeading).addClass('name').text(item.name);
 
     var bioDates = document.createElement('p');
-    $(bio).append(bioDates);
+    $(bioMain).append(bioDates);
     $(bioDates).addClass('lifespan');
     if (item.is_group) {
       $(bioDates).text('Years Active: ');
     }
 
-    // Children of lifespan. Depth 4.
+    // Children of lifespan. Depth 5.
     var birthYear = document.createElement('span');
     $(bioDates).append(birthYear);
     var birthYearContent = item.birth_year > 0 ? item.birth_year :
@@ -269,14 +270,24 @@ angstyTimeline.TimelineView.prototype.displayTimelineData_ = function() {
       $(deathYear).addClass('death_year').text(item.death_year);
     }
 
-    // Children of timeline-bio. Depth 3.
+    // Children of timeline-bio. Depth 4.
     var bioBlurb = document.createElement('p');
-    $(bio).append(bioBlurb);
+    $(bioMain).append(bioBlurb);
     $(bioBlurb).addClass('bio').text(item.blurb);
 
+   // Children of timeline-bio. Depth 3.
+    var bioExtras = document.createElement('div');
+    $(bio).append(bioExtras);
+    $(bioExtras).addClass('bio-extras');
+
+    // Children of bio-extras. Depth 4.
     var resourceButton = document.createElement('div');
-    $(bio).append(resourceButton);
+    $(bioExtras).append(resourceButton);
     $(resourceButton).addClass('button-container');
+
+    var img = document.createElement('img');
+    $(bioExtras).append(img);
+    $(img).attr('src', 'data:image/png;charset=utf8;base64,' + item.picture);
 
     // Child of resourceButton element. Depth 4.
     var readMore = document.createElement('a');
@@ -291,9 +302,9 @@ angstyTimeline.TimelineView.prototype.displayTimelineData_ = function() {
     $(readMore).addClass('read-more button').append(readMoreText)
                .attr('target', '_blank');
 
-    // Child of timeline-content. Depth 2.
+    // Child of bio-main. Depth 2.
     var resources = document.createElement('div');
-    $(content).append(resources);
+    $(bioMain).append(resources);
     $(resources).addClass('timeline-resources');
 
     // Child of timeline-resources. Depth 3.
@@ -322,12 +333,6 @@ angstyTimeline.TimelineView.prototype.displayTimelineData_ = function() {
     var bioButton = document.createElement('div');
     $(resources).append(bioButton);
     $(bioButton).addClass('button-container');
-
-    // Child of bioButton element. Depth 4.
-    var resourceToBio = document.createElement('a');
-    $(bioButton).append(resourceToBio);
-    $(resourceToBio).addClass('read-more button')
-        .append(document.createTextNode('Show Bio'));
   });
 
   // Make sure the items are in the right positions.
@@ -353,8 +358,13 @@ angstyTimeline.TimelineView.prototype.toggleResources_ = function(e) {
   var element = e.target;
   var parentBlock = $(element).parents('.timeline-block');
   $(parentBlock.find('.timeline-resources')).toggle();
-  $(parentBlock.find('.timeline-bio')).children('.bio').toggle();
-  $(parentBlock.find('.timeline-bio')).children('.button-container').toggle();
+  $(parentBlock.find('.timeline-bio')).find('.bio').toggle();
+  var buttonLink = $(parentBlock.find('.timeline-bio')).find('.read-more');
+  if ($(buttonLink).text() === 'View Resources') {
+    $(buttonLink).text('Show Bio');
+  } else {
+    $(buttonLink).text('View Resources');
+  }
 };
 
 /**

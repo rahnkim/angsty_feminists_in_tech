@@ -173,6 +173,7 @@ Modules
     text-transform: uppercase;
     text-align: center;
     border: 2px solid $red;
+    cursor: pointer;
 
     &:hover {
         background-color: $red;
@@ -270,7 +271,7 @@ footer {
     }
 
     .footer-description {
-        @include MQ(S) {
+        @include MQ(S2) {
             width: 65%;
         }
 
@@ -279,11 +280,19 @@ footer {
         }
     }
 
-    .button {
+    .button-container {
         margin-top: 1em;
 
-        @include MQ(S) {
+        .button {
+            display: block;
+        }
+
+        @include MQ(S2) {
             float: right;
+
+            .button {
+                display: inline;
+            }
         }
     }
 
@@ -389,14 +398,6 @@ Timeline components
     width: 100%;
 	@include clearfix;
 
-	&:first-child {
-		margin-top: 0;
-	}
-
-	&:last-child {
-		margin-bottom: 0;
-	}
-
     &:nth-of-type(5n+1) {
         .timeline-content {
             .timeline-event {
@@ -408,11 +409,6 @@ Timeline components
                 }
             }
 
-            .bio,
-            .timeline-resources p:first-child  {
-                background-image: linear-gradient(to left, #FFF 33%, rgba(255,255,255,0) 0%);
-            }
-
             &::before {
                 background: $red;
             }
@@ -420,10 +416,6 @@ Timeline components
 
         .timeline-marker {
             background-color: $red;
-        }
-
-        p a {
-            color: #FFF;
         }
     }
 
@@ -470,11 +462,6 @@ Timeline components
                 }
             }
 
-            .bio,
-            .timeline-resources p:first-child {
-                background-image: linear-gradient(to left, #FFF 33%, rgba(255,255,255,0) 0%);
-            }
-
             &::before {
                 background: $blue;
             }
@@ -482,10 +469,6 @@ Timeline components
 
         .timeline-marker {
             background-color: $blue;
-        }
-
-        p a {
-            color: #FFF;
         }
     }
 
@@ -506,17 +489,9 @@ Timeline components
     }
 
 	@include MQ(M) {
-		margin-top: 4em;
-    width: 45%;
+		// margin-top: 4em;
+        width: 45%;
 		/*margin: 4em 0;*/
-
-		&:first-child {
-			margin-top: 0;
-		}
-
-		&:last-child {
-			margin-bottom: 0;
-		}
 
         &:nth-of-type(odd) {
             float: left;
@@ -600,32 +575,32 @@ Timeline components
         }
 
         .event-description {
-            padding-left: 16px;
             width: 100%;
             font-size: .875em;
             line-height: 1.25em;
         }
 
         .event-date {
-            padding-right: 16px;
             font-size: 1.25em;
-            text-align: center;
-            border-right: 2px solid $black;
         }
 
         @include MQ(M) {
             flex-direction: row;
+
+            .event-description {
+                padding-left: 16px;
+            }
+
+            .event-date {
+                padding-right: 16px;
+                border-right: 2px solid $black;
+            }
         }
     }
 
     .timeline-bio {
-        padding: 1.6em;
-
-        img {
-            display: block;
-            width: 100%;
-            max-width: 250px;
-            margin: 0 auto 2em;
+        .bio-main {
+            padding: 1.6em 1.6em 0;
         }
 
         .name {
@@ -635,6 +610,25 @@ Timeline components
         .lifespan {
             margin-top: 0;
             font-size: .875em;
+        }
+
+        .bio-extras {
+            display: flex;
+            // align-items: center;
+            padding-left: 1.6em;
+        }
+
+        .button-container {
+            margin-top: .875em;
+            text-align: left;
+            width: 40%;
+        }
+
+        img {
+            display: block;
+            width: 60%;
+            height: 60%;
+            max-width: 250px;
         }
     }
 
@@ -697,15 +691,9 @@ Timeline components
 
 .timeline-resources {
     display: none;
-    margin-top: -3.8em;
-    padding: 1.6em;
 
     p:first-child {
-        background-image: linear-gradient(to left, #000 33%, rgba(255,255,255,0) 0%);
-        background-position: top;
-        background-size: 20px 2px;
-        background-repeat: repeat-x;
-        padding-top: 1em;
+        margin-top: 0;
     }
 
     p a {

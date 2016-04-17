@@ -185,6 +185,7 @@ h2 {
   text-transform: uppercase;
   text-align: center;
   border: 2px solid #CB2026;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -323,7 +324,7 @@ footer .inner {
   padding-top: 1em;
 }
 
-@media only screen and (min-width: 320px) {
+@media only screen and (min-width: 500px) {
   footer .footer-description {
     width: 65%;
   }
@@ -335,13 +336,21 @@ footer .inner {
   }
 }
 
-footer .button {
+footer .button-container {
   margin-top: 1em;
 }
 
-@media only screen and (min-width: 320px) {
-  footer .button {
+footer .button-container .button {
+  display: block;
+}
+
+@media only screen and (min-width: 500px) {
+  footer .button-container {
     float: right;
+  }
+
+  footer .button-container .button {
+    display: inline;
   }
 }
 
@@ -444,14 +453,6 @@ footer .copyright {
   clear: both;
 }
 
-.timeline-block:first-child {
-  margin-top: 0;
-}
-
-.timeline-block:last-child {
-  margin-bottom: 0;
-}
-
 .timeline-block:nth-of-type(5n+1) .timeline-content .timeline-event {
   background-color: #CB2026;
   color: #FFF;
@@ -461,22 +462,12 @@ footer .copyright {
   border-color: #FFF;
 }
 
-.timeline-block:nth-of-type(5n+1) .timeline-content .bio,
-.timeline-block:nth-of-type(5n+1) .timeline-content .timeline-resources p:first-child {
-  background-image: -webkit-linear-gradient(right, #FFF 33%, rgba(255, 255, 255, 0) 0%);
-  background-image: linear-gradient(to left, #FFF 33%, rgba(255,255,255,0) 0%);
-}
-
 .timeline-block:nth-of-type(5n+1) .timeline-content::before {
   background: #CB2026;
 }
 
 .timeline-block:nth-of-type(5n+1) .timeline-marker {
   background-color: #CB2026;
-}
-
-.timeline-block:nth-of-type(5n+1) p a {
-  color: #FFF;
 }
 
 .timeline-block:nth-of-type(5n+2) .timeline-content .timeline-event {
@@ -512,22 +503,12 @@ footer .copyright {
   border-color: #FFF;
 }
 
-.timeline-block:nth-of-type(5n+4) .timeline-content .bio,
-.timeline-block:nth-of-type(5n+4) .timeline-content .timeline-resources p:first-child {
-  background-image: -webkit-linear-gradient(right, #FFF 33%, rgba(255, 255, 255, 0) 0%);
-  background-image: linear-gradient(to left, #FFF 33%, rgba(255,255,255,0) 0%);
-}
-
 .timeline-block:nth-of-type(5n+4) .timeline-content::before {
   background: #3C50A2;
 }
 
 .timeline-block:nth-of-type(5n+4) .timeline-marker {
   background-color: #3C50A2;
-}
-
-.timeline-block:nth-of-type(5n+4) p a {
-  color: #FFF;
 }
 
 .timeline-block:nth-of-type(5n+5) .timeline-content .timeline-event {
@@ -544,16 +525,7 @@ footer .copyright {
 
 @media only screen and (min-width: 768px) {
   .timeline-block {
-    margin-top: 4em;
     width: 45%;
-  }
-
-  .timeline-block:first-child {
-    margin-top: 0;
-  }
-
-  .timeline-block:last-child {
-    margin-bottom: 0;
   }
 
   .timeline-block:nth-of-type(odd) {
@@ -658,17 +630,13 @@ footer .copyright {
 }
 
 .timeline-content .timeline-event .event-description {
-  padding-left: 16px;
   width: 100%;
   font-size: .875em;
   line-height: 1.25em;
 }
 
 .timeline-content .timeline-event .event-date {
-  padding-right: 16px;
   font-size: 1.25em;
-  text-align: center;
-  border-right: 2px solid #000;
 }
 
 @media only screen and (min-width: 768px) {
@@ -679,17 +647,19 @@ footer .copyright {
     -ms-flex-direction: row;
     flex-direction: row;
   }
+
+  .timeline-content .timeline-event .event-description {
+    padding-left: 16px;
+  }
+
+  .timeline-content .timeline-event .event-date {
+    padding-right: 16px;
+    border-right: 2px solid #000;
+  }
 }
 
-.timeline-content .timeline-bio {
-  padding: 1.6em;
-}
-
-.timeline-content .timeline-bio img {
-  display: block;
-  width: 100%;
-  max-width: 250px;
-  margin: 0 auto 2em;
+.timeline-content .timeline-bio .bio-main {
+  padding: 1.6em 1.6em 0;
 }
 
 .timeline-content .timeline-bio .name {
@@ -699,6 +669,27 @@ footer .copyright {
 .timeline-content .timeline-bio .lifespan {
   margin-top: 0;
   font-size: .875em;
+}
+
+.timeline-content .timeline-bio .bio-extras {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 1.6em;
+}
+
+.timeline-content .timeline-bio .button-container {
+  margin-top: .875em;
+  text-align: left;
+  width: 40%;
+}
+
+.timeline-content .timeline-bio img {
+  display: block;
+  width: 60%;
+  height: 60%;
+  max-width: 250px;
 }
 
 .timeline-content::before {
@@ -763,17 +754,10 @@ footer .copyright {
 
 .timeline-resources {
   display: none;
-  margin-top: -3.8em;
-  padding: 1.6em;
 }
 
 .timeline-resources p:first-child {
-  background-image: -webkit-linear-gradient(right, #000 33%, rgba(255, 255, 255, 0) 0%);
-  background-image: linear-gradient(to left, #000 33%, rgba(255,255,255,0) 0%);
-  background-position: top;
-  background-size: 20px 2px;
-  background-repeat: repeat-x;
-  padding-top: 1em;
+  margin-top: 0;
 }
 
 .timeline-resources p a {
