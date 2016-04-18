@@ -658,6 +658,11 @@ footer .copyright {
   }
 }
 
+.timeline-content .timeline-bio {
+  border: 1px solid #d1d3d4;
+  border-top: none;
+}
+
 .timeline-content .timeline-bio .bio-main {
   padding: 1.6em 1.6em 0;
 }
