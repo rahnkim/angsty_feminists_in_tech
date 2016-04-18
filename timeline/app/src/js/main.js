@@ -146,7 +146,7 @@ angstyTimeline.TimelineView.prototype.restackItems_ = function() {
   } // Early return from method if timeline is in single column format.
 
   // Re-stack timeline items below only if timeline is in double column format.
-  var verticalGap = $(window).innerWidth() * 0.16;
+  var verticalGap = 120;
   var radix = 10;
   blocks.each(function(index) {
     if (index === 0) {
@@ -312,6 +312,7 @@ angstyTimeline.TimelineView.prototype.displayTimelineData_ = function() {
     var readMoreText;
     if (item.resources.length > 0) {
       readMoreText = document.createTextNode('View Resources');
+      $(readMore).addClass('has-resource-list')
     } else {
       readMoreText = document.createTextNode('Learn More on Google');
       $(readMore).attr('href', 'http://www.google.com/search?q=' + item.name);
@@ -359,11 +360,11 @@ angstyTimeline.TimelineView.prototype.displayTimelineData_ = function() {
   this.maybeShowHiddenItems_();
 
   // Add listener for click here, after elements are placed in DOM.
-  $('.read-more').click(this.toggleResources_);
+  $('.has-resource-list').click(this.toggleResources_);
 
   // The timeline item height may change on click, hence stacking needs to be
   // recalculated.
-  $('.read-more').click(this.restackItems_.bind(this));
+  $('.has-resource-list').click(this.restackItems_.bind(this));
 };
 
 /**
