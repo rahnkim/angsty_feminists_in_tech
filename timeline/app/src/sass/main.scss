@@ -63,6 +63,7 @@ h3 {
 	font-family: $secondary-font;
     font-weight: normal;
     font-variant: small-caps;
+    letter-spacing: 2px;
 }
 h1 {
     line-height: 1em;
@@ -172,6 +173,7 @@ Modules
     text-transform: uppercase;
     text-align: center;
     border: 2px solid $red;
+    cursor: pointer;
 
     &:hover {
         background-color: $red;
@@ -214,8 +216,8 @@ Modules
 }
 .hero-text {
     margin-bottom: 2.3em;
-    font-size: 1.2em;
-    line-height: 1.6em;
+    font-size: 1.25em;
+    line-height: 1.5em;
 }
 /* --------------------------------
 
@@ -237,6 +239,7 @@ header {
         margin: 0;
         font-size: 1.5em;
         text-align: center;
+        letter-spacing: 0;
     }
 
     @include MQ(M) {
@@ -268,7 +271,7 @@ footer {
     }
 
     .footer-description {
-        @include MQ(S) {
+        @include MQ(S2) {
             width: 65%;
         }
 
@@ -277,11 +280,19 @@ footer {
         }
     }
 
-    .button {
+    .button-container {
         margin-top: 1em;
 
-        @include MQ(S) {
+        .button {
+            display: block;
+        }
+
+        @include MQ(S2) {
             float: right;
+
+            .button {
+                display: inline;
+            }
         }
     }
 
@@ -327,7 +338,7 @@ Timeline components
 
         h1 {
             font-size: 2.5em;
-            margin: 0;
+            margin-bottom: .4em;
             font-weight: bold;
             text-align: center;
             font-variant: normal;
@@ -335,22 +346,17 @@ Timeline components
         }
 
         p {
-            margin-bottom: 0;
-        }
-
-        @include MQ(M) {
-            h1 {
-                font-size: 4em;
-            }
+            margin: 0;
         }
     }
 
     .down-button {
         display: inline-block;
-        width: 30px;
-        height: 30px;
+        width: 48px;
+        height: 48px;
         margin-top: 2em;
-        line-height: 26px;
+        font-size: 1.625em;
+        line-height: 44px; /* height - border*2 */
         border: 2px solid #FFF;
         border-radius: 50%;
         color: #FFF;
@@ -392,39 +398,14 @@ Timeline components
     width: 100%;
 	@include clearfix;
 
-	&:first-child {
-		margin-top: 0;
-	}
-
-	&:last-child {
-		margin-bottom: 0;
-	}
-
     &:nth-of-type(5n+1) {
         .timeline-content {
-            background-color: $red;
-            color: #FFF;
-
             .timeline-event {
-                background-color: darken($red, 10%);
+                background-color: $red;
+                color: #FFF;
 
                 .event-date {
-                    background-color: darken($red, 15%);
-                }
-            }
-
-            .bio,
-            .timeline-resources p:first-child  {
-                background-image: linear-gradient(to left, #FFF 33%, rgba(255,255,255,0) 0%);
-            }
-
-            .read-more {
-                color: #FFF;
-                border-color: #FFF;
-
-                &:hover {
-                    background-color: #FFF;
-                    color: $black;
+                    border-color: #FFF;
                 }
             }
 
@@ -434,24 +415,14 @@ Timeline components
         }
 
         .timeline-marker {
-            border-color: $red;
-        }
-
-        p a {
-            color: #FFF;
+            background-color: $red;
         }
     }
 
     &:nth-of-type(5n+2) {
         .timeline-content {
-            background-color: $yellow;
-
             .timeline-event {
-                background-color: lighten($yellow, 10%);
-
-                .event-date {
-                    background-color: lighten($yellow, 15%);
-                }
+                background-color: $yellow;
             }
 
             &::before {
@@ -460,20 +431,14 @@ Timeline components
         }
 
         .timeline-marker {
-            border-color: $yellow;
+            background-color: $yellow;
         }
     }
 
     &:nth-of-type(5n+3) {
         .timeline-content {
-            background-color: $green;
-
             .timeline-event {
-                background-color: lighten($green, 10%);
-
-                .event-date {
-                    background-color: lighten($green, 15%);
-                }
+                background-color: $green;
             }
 
             &::before {
@@ -482,35 +447,18 @@ Timeline components
         }
 
         .timeline-marker {
-            border-color: $green;
+            background-color: $green;
         }
     }
 
     &:nth-of-type(5n+4) {
         .timeline-content {
-            background-color: $blue;
-            color: #FFF;
-
             .timeline-event {
-                background-color: darken($blue, 10%);
+                background-color: $blue;
+                color: #FFF;
 
                 .event-date {
-                    background-color: darken($blue, 15%);
-                }
-            }
-
-            .bio,
-            .timeline-resources p:first-child {
-                background-image: linear-gradient(to left, #FFF 33%, rgba(255,255,255,0) 0%);
-            }
-
-            .read-more {
-                color: #FFF;
-                border-color: #FFF;
-
-                &:hover {
-                    background-color: #FFF;
-                    color: $black;
+                    border-color: #FFF;
                 }
             }
 
@@ -520,24 +468,14 @@ Timeline components
         }
 
         .timeline-marker {
-            border-color: $blue;
-        }
-
-        p a {
-            color: #FFF;
+            background-color: $blue;
         }
     }
 
     &:nth-of-type(5n+5) {
         .timeline-content {
-            background-color: $pink;
-
             .timeline-event {
-                background-color: lighten($pink, 10%);
-
-                .event-date {
-                    background-color: lighten($pink, 15%);
-                }
+                background-color: $pink;
             }
 
             &::before {
@@ -546,22 +484,14 @@ Timeline components
         }
 
         .timeline-marker {
-            border-color: $pink;
+            background-color: $pink;
         }
     }
 
 	@include MQ(M) {
-		margin-top: 4em;
-    width: 45%;
+		// margin-top: 4em;
+        width: 45%;
 		/*margin: 4em 0;*/
-
-		&:first-child {
-			margin-top: 0;
-		}
-
-		&:last-child {
-			margin-bottom: 0;
-		}
 
         &:nth-of-type(odd) {
             float: left;
@@ -569,12 +499,23 @@ Timeline components
             .timeline-marker {
                 /* Resets default timeline-marker positioning */
                 left: initial;
-                right: -11.11%;
+                right: -10%;
                 margin-left: 0;
                 margin-right: -15px; /* Half the marker's width */
             }
             .timeline-event {
                 flex-direction: row-reverse;
+
+                .event-date {
+                    padding-right: 0;
+                    padding-left: 16px;
+                    border-left: 2px solid $black;
+                    border-right: none;
+                }
+                .event-description {
+                    padding-right: 16px;
+                    padding-left: 0;
+                }
             }
         }
 
@@ -588,16 +529,15 @@ Timeline components
     background: #FFF;
 	position: absolute;
 	top: 0;
-	left: -13px;
-	width: 30px;
-	height: 30px;
+	left: -8px;
+	width: 20px;
+	height: 20px;
 	border-radius: 50%;
-	border: 4px solid #FFF;
     z-index: 1;
 
 	@include MQ(M) {
         left: -11.11%;
-        margin-left: -15px; /* Half the marker's width */
+        margin-left: -10px; /* Half the marker's width */
 
 		/* Force Hardware Acceleration in WebKit */
 		-webkit-transform: translateZ(0);
@@ -615,6 +555,7 @@ Timeline components
 }
 
 .timeline-content {
+    background-color: #FFF;
 	position: relative;
 	margin-left: 30px;
     // min-width: 100%;
@@ -625,81 +566,79 @@ Timeline components
         justify-content: space-between;
         flex-direction: column;
         align-items: stretch;
-        margin-bottom: 1em;
-        border-bottom: 10px solid $background;
+        padding: 1em 1.6em;
 
         .event-description,
         .event-date {
             margin: 0;
-            padding: 1em 1.6em;
-            font-size: 1.3em;
-            line-height: 1.3em;
+            // font-weight: bold;
         }
 
         .event-description {
             width: 100%;
-            font-size: 1.15em;
+            font-size: .875em;
+            line-height: 1.25em;
         }
 
         .event-date {
-            font-family: $secondary-font;
-            text-align: center;
+            font-size: 1.25em;
         }
 
         @include MQ(M) {
             flex-direction: row;
+
+            .event-description {
+                padding-left: 16px;
+            }
+
+            .event-date {
+                padding-right: 16px;
+                border-right: 2px solid $black;
+            }
         }
     }
 
     .timeline-bio {
-        padding: 1.6em;
-
-        img {
-            display: block;
-            width: 100%;
-            max-width: 250px;
-            margin: 0 auto 2em;
-            border-radius: 50%;
+        .bio-main {
+            padding: 1.6em 1.6em 0;
         }
 
         .name {
             margin: 0;
-            text-align: center;
         }
 
         .lifespan {
             margin-top: 0;
-            font-size: 80%;
-            font-weight: bold;
-            text-align: center;
+            font-size: .875em;
         }
 
-        .bio {
-            background-image: linear-gradient(to left, #000 33%, rgba(255,255,255,0) 0%);
-            background-position: top;
-            background-size: 20px 2px;
-            background-repeat: repeat-x;
-            padding-top: 1em;
+        .bio-extras {
+            display: flex;
+            // align-items: center;
+            padding-left: 1.6em;
         }
-    }
 
-    .read-more {
-        color: $black;
-        border: 2px solid $black;
+        .button-container {
+            margin-top: .875em;
+            text-align: left;
+            width: 40%;
+        }
 
-        &:hover {
-            background-color: $black;
-            color: #FFF;
+        img {
+            display: block;
+            width: 60%;
+            height: 60%;
+            max-width: 250px;
         }
     }
 
 	&::before {
 		content: '';
 		position: absolute;
-		top: 13px; /* (Marker height/2) - (:before height/2) */
-        left: -42px;
+		top: 9px; /* (Marker height/2) - (:before height/2) */
+        left: -30px;
 		height: 4px;
-		width: 19%;
+		width: 11.11%;
         z-index: -99;
 	}
 
@@ -709,7 +648,7 @@ Timeline components
 
 		&::before {
 			left: 100%;
-            width: 11.1%;
+            width: 9.5%;
 		}
 
 		.date {
@@ -738,19 +677,23 @@ Timeline components
 			@include animation(bounce-2 .6s);
 		}
 	}
+
+    .button {
+        color: $black;
+        border-color: $black;
+
+        &:hover {
+            background-color: $black;
+            color: #FFF;
+        }
+    }
 }
 
 .timeline-resources {
     display: none;
-    margin-top: -3.8em;
-    padding: 1.6em;
 
     p:first-child {
-        background-image: linear-gradient(to left, #000 33%, rgba(255,255,255,0) 0%);
-        background-position: top;
-        background-size: 20px 2px;
-        background-repeat: repeat-x;
-        padding-top: 1em;
+        margin-top: 0;
     }
 
     p a {
