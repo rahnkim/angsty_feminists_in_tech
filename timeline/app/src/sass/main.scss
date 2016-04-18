@@ -489,9 +489,7 @@ Timeline components
     }
 
 	@include MQ(M) {
-		// margin-top: 4em;
         width: 45%;
-		/*margin: 4em 0;*/
 
         &:nth-of-type(odd) {
             float: left;
@@ -557,8 +555,8 @@ Timeline components
 .timeline-content {
     background-color: #FFF;
 	position: relative;
+    width: calc(100% - 30px);
 	margin-left: 30px;
-    // min-width: 100%;
 	@include clearfix;
 
     .timeline-event {
@@ -571,7 +569,6 @@ Timeline components
         .event-description,
         .event-date {
             margin: 0;
-            // font-weight: bold;
         }
 
         .event-description {
@@ -624,14 +621,15 @@ Timeline components
         .button-container {
             margin-top: .875em;
             text-align: left;
-            width: 40%;
+            width: 42%;
+            z-index: 99;
         }
 
         img {
             display: block;
-            width: 60%;
-            height: 60%;
-            max-width: 250px;
+            width: 58%;
+            height: 58%;
+            max-width: 300px;
         }
     }
 
