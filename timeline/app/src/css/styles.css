@@ -811,6 +811,31 @@ h2 {
   line-height: 1.5em;
 }
 
+[class^='browser-warning'] {
+  background: #CB2026;
+  padding: 2em 0;
+  text-align: center;
+  color: #FFF;
+  z-index: 1;
+}
+
+[class^='browser-warning'] h2,
+[class^='browser-warning'] p {
+  margin: 0;
+}
+
+[class^='browser-warning'] a {
+  color: #fee26c;
+}
+
+[class^='browser-warning'] a:hover {
+  color: #FECE06;
+}
+
+.browser-warning-timeline {
+  margin-top: 2em;
+}
+
 header {
   background: #F5F5F6;
   padding: 1em 0;

@@ -219,6 +219,36 @@ Modules
     font-size: 1.25em;
     line-height: 1.5em;
 }
+
+/* --------------------------------
+
+Browser Check
+
+-------------------------------- */
+[class^='browser-warning'] {
+    background: $red;
+    padding: 2em 0;
+    text-align: center;
+    color: #FFF;
+    z-index: 1;
+
+    h2,
+    p {
+        margin: 0;
+    }
+
+    a {
+        color: lighten($yellow, 20);
+
+        &:hover {
+            color: $yellow;
+        }
+    }
+}
+.browser-warning-timeline {
+    margin-top: 2em;
+}
+
 /* --------------------------------
 
 Header
