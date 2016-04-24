@@ -430,6 +430,10 @@ angstyTimeline.TimelineView.prototype.maybeShowHiddenItems_ = function() {
 
 // When document is ready, instantiate the view and controller.
 jQuery(document).ready(function() {
+  if ($('html').hasClass('old-browser')) {
+    // Don't bother instantiating angstyTimeline classes and return early.
+    return;
+  }
   var view = new angstyTimeline.TimelineView();
   var controller = angstyTimeline.TimelineController(view);
 });
