@@ -305,10 +305,12 @@ angstyTimeline.TimelineView.prototype.displayTimelineData_ = function() {
     var img = document.createElement('img');
     $(bioExtras).append(img);
     $(img).attr('src', 'data:image/png;charset=utf8;base64,' + item.picture);
+    $(img).attr('alt', 'Black and white drawing of ' + item.name);
 
     // Child of resourceButton element. Depth 4.
     var readMore = document.createElement('a');
     $(resourceButton).append(readMore);
+    $(readMore).attr('role', 'button');
     var readMoreText;
     if (item.resources.length > 0) {
       readMoreText = document.createTextNode('View Resources');
