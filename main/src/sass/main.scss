@@ -24,7 +24,7 @@ html * {
 }
 body {
 	font: {
-		size: 100%;
+		size: 1em;
 		family: $primary-font;
 	}
     line-height: 160%;
@@ -185,8 +185,8 @@ Typography
 -------------------------------- */
 .hero-text {
     margin-bottom: 2.3em;
-    font-size: 1.2em;
-    line-height: 1.6em;
+    font-size: 1.25em;
+    line-height: 1.5em;
 }
 .secondary-font {
     font-family: $secondary-font;
@@ -233,7 +233,7 @@ Forms & Buttons
     text-align: center;
 }
 .button {
-    display: inline-block;
+    display: block;
     padding: .75em 1.25em;
     color: $red;
     font-weight: bold;
@@ -257,6 +257,10 @@ Forms & Buttons
             background-color: transparent;
             color: lighten($text-colour, 20%);
         }
+    }
+
+    @include MQ(S2) {
+        display: inline-block;
     }
 }
 .close {
@@ -365,6 +369,9 @@ footer {
 Homepage
 
 -------------------------------- */
+.intro {
+    max-width: $M;
+}
 [class*="project"] {
     .overlay {
         padding: 2.6em 1.3em;

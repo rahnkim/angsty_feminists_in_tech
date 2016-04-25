@@ -11,7 +11,7 @@ html * {
 }
 
 body {
-  font-size: 100%;
+  font-size: 1em;
   font-family: "PT Sans",sans-serif;
   line-height: 160%;
   color: #404040;
@@ -191,8 +191,8 @@ h3+p {
 
 .hero-text {
   margin-bottom: 2.3em;
-  font-size: 1.2em;
-  line-height: 1.6em;
+  font-size: 1.25em;
+  line-height: 1.5em;
 }
 
 .secondary-font {
@@ -241,7 +241,7 @@ h3+p {
 }
 
 .button {
-  display: inline-block;
+  display: block;
   padding: .75em 1.25em;
   color: #CB2026;
   font-weight: bold;
@@ -266,6 +266,12 @@ h3+p {
 .button.disabled:hover {
   background-color: transparent;
   color: #737373;
+}
+
+@media only screen and (min-width: 500px) {
+  .button {
+    display: inline-block;
+  }
 }
 
 .close {
@@ -354,6 +360,10 @@ footer .copyright {
   footer .copyright {
     float: right;
   }
+}
+
+.intro {
+  max-width: 768px;
 }
 
 [class*="project"] .overlay {
