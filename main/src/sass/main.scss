@@ -185,8 +185,16 @@ Typography
 -------------------------------- */
 .hero-text {
     margin-bottom: 2.3em;
-    font-size: 1.25em;
-    line-height: 1.5em;
+    padding: 0 1.3em;
+
+    @include MQ(S) {
+        font-size: 1.25em;
+        line-height: 1.5em;
+    }
+    
+    @include MQ(M) {
+        padding: 0;
+    }
 }
 .secondary-font {
     font-family: $secondary-font;
@@ -195,13 +203,12 @@ Typography
     text-transform: none;
 }
 .byline {
-    margin-top: 0;
+    margin: 0;
     font-size: 80%;
-
-    a {
-        text-transform: uppercase;
-        font-weight: bold;
-    }
+    font-weight: bold;
+}
+.byline+p {
+    margin-top: .25em;
 }
 .error {
     position: absolute;
@@ -436,10 +443,12 @@ Homepage
     }
 }
 .resources {
+    background: #FFF;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     margin: 0 auto;
+    padding: 0 5%;
 
     .resources-image,
     .resources-content {
@@ -454,7 +463,7 @@ Homepage
 
     .resources-content {
         background: #FFF;
-        padding: 3em;
+        padding:  2.6em 1.3em;
 
         h2 {
             margin-top: 0;
@@ -467,10 +476,15 @@ Homepage
 
     @include MQ(M) {
         flex-direction: row;
+        padding: 0;
 
         .resources-image,
         .resources-content {
             width: 50%;
+        }
+
+        .resources-content {
+            padding: 3em;
         }
 
         .resources-image {

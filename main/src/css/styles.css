@@ -14,7 +14,7 @@ html * {
 }
 
 body {
-  font-size: 100%;
+  font-size: 1em;
   font-family: "PT Sans",sans-serif;
   line-height: 160%;
   color: #404040;
@@ -194,8 +194,20 @@ h3+p {
 
 .hero-text {
   margin-bottom: 2.3em;
-  font-size: 1.25em;
-  line-height: 1.5em;
+  padding: 0 1.3em;
+}
+
+@media only screen and (min-width: 320px) {
+  .hero-text {
+    font-size: 1.25em;
+    line-height: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-text {
+    padding: 0;
+  }
 }
 
 .secondary-font {
@@ -206,13 +218,13 @@ h3+p {
 }
 
 .byline {
-  margin-top: 0;
+  margin: 0;
   font-size: 80%;
+  font-weight: bold;
 }
 
-.byline a {
-  text-transform: uppercase;
-  font-weight: bold;
+.byline+p {
+  margin-top: .25em;
 }
 
 .error {
@@ -244,7 +256,7 @@ h3+p {
 }
 
 .button {
-  display: inline-block;
+  display: block;
   padding: .75em 1.25em;
   color: #CB2026;
   font-weight: bold;
@@ -269,6 +281,12 @@ h3+p {
 .button.disabled:hover {
   background-color: transparent;
   color: #737373;
+}
+
+@media only screen and (min-width: 500px) {
+  .button {
+    display: inline-block;
+  }
 }
 
 .close {
@@ -427,6 +445,7 @@ footer .copyright {
 }
 
 .resources {
+  background: #FFF;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -441,6 +460,7 @@ footer .copyright {
   -ms-flex-align: stretch;
   align-items: stretch;
   margin: 0 auto;
+  padding: 0 5%;
 }
 
 .resources .resources-image,
@@ -456,7 +476,7 @@ footer .copyright {
 
 .resources .resources-content {
   background: #FFF;
-  padding: 3em;
+  padding: 2.6em 1.3em;
 }
 
 .resources .resources-content h2 {
@@ -474,11 +494,16 @@ footer .copyright {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+    padding: 0;
   }
 
   .resources .resources-image,
   .resources .resources-content {
     width: 50%;
+  }
+
+  .resources .resources-content {
+    padding: 3em;
   }
 
   .resources .resources-image {
