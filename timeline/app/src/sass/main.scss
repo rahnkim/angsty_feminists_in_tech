@@ -282,6 +282,11 @@ header {
         .title {
             line-height: 40px; /* Height of .logo */
             text-align: left;
+            color: $black;
+
+            &:hover {
+                color: $black;
+            }
         }
     }
 }
