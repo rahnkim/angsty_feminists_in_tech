@@ -184,16 +184,9 @@ Typography
 
 -------------------------------- */
 .hero-text {
-    margin-bottom: 2.3em;
-    padding: 0 1.3em;
-
     @include MQ(S) {
         font-size: 1.25em;
         line-height: 1.5em;
-    }
-    
-    @include MQ(M) {
-        padding: 0;
     }
 }
 .secondary-font {
@@ -378,6 +371,12 @@ Homepage
 -------------------------------- */
 .intro {
     max-width: $M;
+    margin-bottom: 2.3em;
+    padding: 0 1.3em;
+    
+    @include MQ(M) {
+        padding: 0;
+    }
 }
 [class*="project"] {
     .overlay {

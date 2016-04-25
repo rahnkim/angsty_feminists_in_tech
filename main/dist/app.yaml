@@ -6,10 +6,10 @@ threadsafe: yes
 
 handlers:
 
-# Given favicon icon at images/fav.png, the site favicon can be set as below.
-# - url: /favicon\.ico
-#  static_files: images/fav.png
-#  upload: image/fav\.png
+# Given favicon icon at img/fav.png, the site favicon can be set as below.
+- url: /favicon\.ico
+  static_files: img/fav.png
+  upload: img/fav\.png
 
 - url: /css
   static_dir: css
