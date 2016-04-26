@@ -731,6 +731,7 @@ h2 {
     animation-fill-mode: forwards;
     -webkit-animation-delay: 0.1s;
     animation-delay: 0.1s;
+    opacity: 0;
   }
 
   .load-animate:nth-child(2) {
@@ -742,6 +743,7 @@ h2 {
     animation-fill-mode: forwards;
     -webkit-animation-delay: 0.2s;
     animation-delay: 0.2s;
+    opacity: 0;
   }
 
   .load-animate:nth-child(3) {
@@ -753,6 +755,7 @@ h2 {
     animation-fill-mode: forwards;
     -webkit-animation-delay: 0.3s;
     animation-delay: 0.3s;
+    opacity: 0;
   }
 
   .load-animate:nth-child(4) {
@@ -764,6 +767,7 @@ h2 {
     animation-fill-mode: forwards;
     -webkit-animation-delay: 0.4s;
     animation-delay: 0.4s;
+    opacity: 0;
   }
 
   .load-animate:nth-child(5) {
@@ -775,6 +779,7 @@ h2 {
     animation-fill-mode: forwards;
     -webkit-animation-delay: 0.5s;
     animation-delay: 0.5s;
+    opacity: 0;
   }
 }
 

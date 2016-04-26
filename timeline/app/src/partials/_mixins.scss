@@ -22,4 +22,5 @@
   @include animation-iteration-count(1);
   @include animation-fill-mode(forwards);
   @include animation-delay(#{$delay}s);
+  opacity: 0;
 }
