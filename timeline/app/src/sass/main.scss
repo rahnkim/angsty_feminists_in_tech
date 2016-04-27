@@ -270,6 +270,11 @@ header {
         font-size: 1.5em;
         text-align: center;
         letter-spacing: 0;
+        color: $black;
+
+        &:hover {
+            color: $black;
+        }
     }
 
     @include MQ(M) {
@@ -282,11 +287,6 @@ header {
         .title {
             line-height: 40px; /* Height of .logo */
             text-align: left;
-            color: $black;
-
-            &:hover {
-                color: $black;
-            }
         }
     }
 }
