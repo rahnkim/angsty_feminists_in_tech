@@ -92,7 +92,7 @@ module.exports = function(grunt) {
         'string-replace': {
             dist: {
                 files: {
-                    'dist/timeline.html': 'dist/timeline.html'
+                    'dist/index.html': 'dist/index.html'
                 },
                 options: {
                     replacements: [
