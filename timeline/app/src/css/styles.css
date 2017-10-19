@@ -729,8 +729,8 @@ h2 {
     animation-iteration-count: 1;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    -webkit-animation-delay: 0.1s;
-    animation-delay: 0.1s;
+    -webkit-animation-delay: .1s;
+    animation-delay: .1s;
     opacity: 0;
   }
 
@@ -741,8 +741,8 @@ h2 {
     animation-iteration-count: 1;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    -webkit-animation-delay: 0.2s;
-    animation-delay: 0.2s;
+    -webkit-animation-delay: .2s;
+    animation-delay: .2s;
     opacity: 0;
   }
 
@@ -753,8 +753,8 @@ h2 {
     animation-iteration-count: 1;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    -webkit-animation-delay: 0.3s;
-    animation-delay: 0.3s;
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
     opacity: 0;
   }
 
@@ -765,8 +765,8 @@ h2 {
     animation-iteration-count: 1;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    -webkit-animation-delay: 0.4s;
-    animation-delay: 0.4s;
+    -webkit-animation-delay: .4s;
+    animation-delay: .4s;
     opacity: 0;
   }
 
@@ -777,8 +777,8 @@ h2 {
     animation-iteration-count: 1;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    -webkit-animation-delay: 0.5s;
-    animation-delay: 0.5s;
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
     opacity: 0;
   }
 }
