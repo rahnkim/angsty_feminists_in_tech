@@ -253,12 +253,6 @@ h3+p {
   text-transform: uppercase;
 }
 
-@media only screen and (min-width: 500px) {
-  .button {
-    display: inline-block;
-  }
-}
-
 .button:hover {
   background-color: #CB2026;
   color: #FFF;
@@ -273,6 +267,12 @@ h3+p {
 .button.disabled:hover {
   background-color: transparent;
   color: #737373;
+}
+
+@media only screen and (min-width: 500px) {
+  .button {
+    display: inline-block;
+  }
 }
 
 .close {
@@ -292,12 +292,6 @@ h3+p {
 header {
   padding: 1em 0;
   background: #F5F5F6;
-}
-
-@media only screen and (min-width: 768px) {
-  header .title {
-    font-size: 2em;
-  }
 }
 
 header .logo {
@@ -325,6 +319,12 @@ header.fixed .logo {
 header.fixed .title {
   line-height: 40px;
   text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+  header .title {
+    font-size: 2em;
+  }
 }
 
 footer {
@@ -389,12 +389,6 @@ footer .copyright {
   text-align: center;
 }
 
-@media only screen and (min-width: 768px) {
-  [class*="project"] .container {
-    max-width: 768px;
-  }
-}
-
 [class*="project"] .container .project-title {
   margin: 12px;
   font-size: 3em;
@@ -402,6 +396,12 @@ footer .copyright {
 
 [class*="project"] .container p:last-of-type {
   margin-bottom: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  [class*="project"] .container {
+    max-width: 768px;
+  }
 }
 
 [class*="project"].project-timeline {
@@ -453,30 +453,6 @@ footer .copyright {
   background: #FFF;
 }
 
-@media only screen and (min-width: 768px) {
-  .resources {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    padding: 0;
-  }
-
-  .resources .resources-image,
-  .resources .resources-content {
-    width: 50%;
-  }
-
-  .resources .resources-content {
-    padding: 3em;
-  }
-
-  .resources .resources-image {
-    display: block;
-  }
-}
-
 .resources .resources-image,
 .resources .resources-content {
   width: 100%;
@@ -499,6 +475,30 @@ footer .copyright {
 
 .resources .resources-content p:last-of-type {
   margin-bottom: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .resources {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .resources .resources-image,
+  .resources .resources-content {
+    width: 50%;
+  }
+
+  .resources .resources-content {
+    padding: 3em;
+  }
+
+  .resources .resources-image {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
