@@ -384,7 +384,7 @@ footer .copyright {
 
 @media only screen and (min-width: 768px) {
   [class*="project"] .overlay {
-    padding: 3.9em 1.3em;
+    padding: 5em 1.3em;
   }
 }
 
@@ -396,14 +396,10 @@ footer .copyright {
   [class*="project"] .container {
     max-width: 768px;
   }
-
-  [class*="project"] .container .project-title {
-    font-size: 5em;
-  }
 }
 
 [class*="project"] .container .project-title {
-  margin: 0;
+  margin: 12px;
   font-size: 3em;
 }
 

@@ -346,21 +346,18 @@ Homepage
 [class*="project"] {
     .overlay {
         @include MQ(M) {
-            padding: 3.9em 1.3em;
+            padding: 5em 1.3em;
         }
         padding: 2.6em 1.3em;
     }
     .container {
         @include MQ(M) {
             max-width: $M;
-            .project-title {
-                font-size: 5em;
-            }
         }
         text-align: center;
         .project-title {
-            margin: 0;
-            font-size: 3em; 
+            margin: 12px;
+            font-size: 3em;
         }
         p:last-of-type {
             margin-bottom: 0;
