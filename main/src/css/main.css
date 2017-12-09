@@ -11,11 +11,11 @@ html * {
 }
 
 body {
+  background-color: #F5F5F6;
+  color: #404040;
+  line-height: 160%;
   font-size: 1em;
   font-family: "PT Sans",sans-serif;
-  line-height: 160%;
-  color: #404040;
-  background-color: #F5F5F6;
 }
 
 a {
@@ -36,21 +36,21 @@ img {
 }
 
 img.right {
-  float: right;
   width: 300px;
+  float: right;
 }
 
 img.left {
-  float: left;
   width: 300px;
+  float: left;
 }
 
 h1,
 h2 {
-  font-family: "Neucha",cursive;
-  font-weight: normal;
-  font-variant: small-caps;
   color: #222;
+  font-family: "Neucha",cursive;
+  font-variant: small-caps;
+  font-weight: normal;
 }
 
 h1 {
@@ -76,9 +76,9 @@ h2 {
 
 h3 {
   margin-bottom: 0;
+  color: #222;
   font-size: 1em;
   font-weight: bold;
-  color: #222;
 }
 
 h1+p,
@@ -94,10 +94,10 @@ h3+p {
 }
 
 .container {
+  position: relative;
   width: 90%;
   max-width: 1170px;
   margin: 0 auto;
-  position: relative;
 }
 
 .container::after {
@@ -121,8 +121,8 @@ h3+p {
 }
 
 [class^='block'] {
-  padding: 1.6em;
   margin-bottom: 3em;
+  padding: 1.6em;
 }
 
 .block-blue {
@@ -198,8 +198,8 @@ h3+p {
 
 .secondary-font {
   font-family: "Neucha",cursive;
-  font-weight: normal;
   font-variant: small-caps;
+  font-weight: normal;
   text-transform: none;
 }
 
@@ -244,29 +244,13 @@ h3+p {
 .button {
   display: block;
   padding: .75em 1.25em;
-  color: #CB2026;
-  font-weight: bold;
-  font-size: 80%;
-  line-height: 80%;
-  text-transform: uppercase;
-  text-align: center;
   border: 2px solid #CB2026;
-}
-
-.button:hover {
-  background-color: #CB2026;
-  color: #FFF;
-}
-
-.button.disabled {
-  color: #737373;
-  border-color: #737373;
-  cursor: default;
-}
-
-.button.disabled:hover {
-  background-color: transparent;
-  color: #737373;
+  color: #CB2026;
+  font-size: 80%;
+  font-weight: bold;
+  line-height: 80%;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 @media only screen and (min-width: 500px) {
@@ -275,23 +259,45 @@ h3+p {
   }
 }
 
+.button:hover {
+  background-color: #CB2026;
+  color: #FFF;
+}
+
+.button.disabled {
+  border-color: #737373;
+  color: #737373;
+  cursor: default;
+}
+
+.button.disabled:hover {
+  background-color: transparent;
+  color: #737373;
+}
+
 .close {
   position: absolute;
   top: 5px;
   right: 5px;
   width: 1.2em;
   height: 1.2em;
+  border: 2px solid #FFF;
+  border-radius: 50%;
   font-family: "Neucha",cursive;
   line-height: 1em;
   text-align: center;
-  border: 2px solid #FFF;
-  border-radius: 50%;
   cursor: pointer;
 }
 
 header {
-  background: #F5F5F6;
   padding: 1em 0;
+  background: #F5F5F6;
+}
+
+@media only screen and (min-width: 768px) {
+  header .title {
+    font-size: 2em;
+  }
 }
 
 header .logo {
@@ -312,8 +318,8 @@ header.fixed {
 
 header.fixed .logo {
   width: 2.5em;
-  float: left;
   margin-right: .5em;
+  float: left;
 }
 
 header.fixed .title {
@@ -321,15 +327,9 @@ header.fixed .title {
   text-align: left;
 }
 
-@media only screen and (min-width: 768px) {
-  header .title {
-    font-size: 2em;
-  }
-}
-
 footer {
-  background: #222;
   padding: 1.3em;
+  background: #222;
   color: #CCC;
 }
 
@@ -389,15 +389,6 @@ footer .copyright {
   text-align: center;
 }
 
-[class*="project"] .container .project-title {
-  margin: 0;
-  font-size: 3em;
-}
-
-[class*="project"] .container p:last-of-type {
-  margin-bottom: 0;
-}
-
 @media only screen and (min-width: 768px) {
   [class*="project"] .container {
     max-width: 768px;
@@ -406,6 +397,15 @@ footer .copyright {
   [class*="project"] .container .project-title {
     font-size: 5em;
   }
+}
+
+[class*="project"] .container .project-title {
+  margin: 0;
+  font-size: 3em;
+}
+
+[class*="project"] .container p:last-of-type {
+  margin-bottom: 0;
 }
 
 [class*="project"].project-timeline {
@@ -439,7 +439,6 @@ footer .copyright {
 }
 
 .resources {
-  background: #FFF;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -455,30 +454,7 @@ footer .copyright {
   align-items: stretch;
   margin: 0 auto;
   padding: 0 5%;
-}
-
-.resources .resources-image,
-.resources .resources-content {
-  width: 100%;
-}
-
-.resources .resources-image {
-  display: none;
-  background: url("../img/woman-at-computer.jpg") right top;
-  background-size: cover;
-}
-
-.resources .resources-content {
   background: #FFF;
-  padding: 2.6em 1.3em;
-}
-
-.resources .resources-content h2 {
-  margin-top: 0;
-}
-
-.resources .resources-content p:last-of-type {
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -503,6 +479,30 @@ footer .copyright {
   .resources .resources-image {
     display: block;
   }
+}
+
+.resources .resources-image,
+.resources .resources-content {
+  width: 100%;
+}
+
+.resources .resources-image {
+  display: none;
+  background: url("../img/woman-at-computer.jpg") right top;
+  background-size: cover;
+}
+
+.resources .resources-content {
+  padding: 2.6em 1.3em;
+  background: #FFF;
+}
+
+.resources .resources-content h2 {
+  margin-top: 0;
+}
+
+.resources .resources-content p:last-of-type {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

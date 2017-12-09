@@ -14,74 +14,69 @@ Base
 -------------------------------- */
 
 html * {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 *,
 *:after,
 *:before {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 body {
-	font: {
-		size: 1em;
-		family: $primary-font;
-	}
+    background-color: $background;
+    color: $text-colour;
     line-height: 160%;
-	color: $text-colour;
-	background-color: $background;
+    font: {
+        size: 1em;
+        family: $primary-font;
+    }
 }
 a {
-	color: $red;
-	text-decoration: none;
-
+    color: $red;
+    text-decoration: none;
     &:hover {
         color: darken($red, 10%);
     }
-
     &:focus {
         outline: none;
     }
 }
 img {
-	max-width: 100%;
-
+    max-width: 100%;
     &.right {
-        float: right;
         width: 300px;
+        float: right;
     }
     &.left {
-        float: left;
         width: 300px;
+        float: left;
     }
 }
 h1,
 h2 {
-	font-family: $secondary-font;
-    font-weight: normal;
-    font-variant: small-caps;
     color: $black;
+    font-family: $secondary-font;
+    font-variant: small-caps;
+    font-weight: normal;
 }
 h1 {
-    line-height: 1em;
-
     @include MQ(S2) {
         font-size: 3em;
     }
+    line-height: 1em;
 }
 h2 {
-    font-size: 1.625em;
-    line-height: 1em;
-
     @include MQ(S2) {
         font-size: 2em;
     }
+    font-size: 1.625em;
+    line-height: 1em;
 }
 h3 {
     margin-bottom: 0;
+    color: $black;
     font-size: 1em;
     font-weight: bold;
-    color: $black;
 }
 h1 + p,
 h2 + p,
@@ -95,55 +90,49 @@ Layout
 
 -------------------------------- */
 .clearfix {
-	@include clearfix;
+    @include clearfix;
 }
 .container {
-	width: 90%;
-	max-width: $L; // breakpoints inside partials > _layout.scss
-	margin: 0 auto;
     position: relative;
-
-	&::after {
+    width: 90%;
+    max-width: $L; // breakpoints inside partials > _layout.scss
+    margin: 0 auto;
+    &::after {
         @include clearfix;
-	}
+    }
 }
 .full-width {
     width: 100%;
-
     .grid-1-3 {
         max-width: calc(#{$L} / 3 - 2%);
     }
-
     .grid-2-3 {
         max-width: calc(#{$L} * 2 / 3 - 2%);
     }
 }
 [class^='block'] {
-    padding: 1.6em;
     margin-bottom: 3em;
+    padding: 1.6em;
 }
 .block-blue {
     background-color: $blue;
     color: #FFF;
 }
 [class*='grid'] {
-	@include MQ(S2) {
+    @include MQ(S2) {
         float: left;
-	}
+    }
 }
 .grid-1-3 {
     @include MQ(S2) {
         width: 49%;
-
         &:first-of-type {
             margin-right: 2%;
         }
     }
-
-	@include MQ(M) {
+    @include MQ(M) {
         width: 32%;
         margin-right: 2%;
-
         &:last-of-type {
             margin-right: auto;
             margin-left: auto;
@@ -153,16 +142,13 @@ Layout
 .grid-2-3 {
     @include MQ(S2) {
         width: 49%;
-
         &:first-of-type {
             margin-right: 2%;
         }
     }
-
     @include MQ(M) {
         width: 66%;
         margin-right: 2%;
-
         &:last-of-type {
             margin-right: auto;
             margin-left: auto;
@@ -191,8 +177,8 @@ Typography
 }
 .secondary-font {
     font-family: $secondary-font;
-    font-weight: normal;
     font-variant: small-caps;
+    font-weight: normal;
     text-transform: none;
 }
 .byline {
@@ -204,19 +190,17 @@ Typography
     margin-top: .25em;
 }
 .error {
-    position: absolute;
-    width: 100%;
-
     @include MQ(M) {
         text-align: center;
     }
+    position: absolute;
+    width: 100%;
 }
 .footnote {
     margin-top: 1em;
     padding-left: 1em;
     font-size: .8em;
     line-height: 1.4em;
-
     .asterisk {
         display: inline-block;
         width: 1em;
@@ -233,34 +217,30 @@ Forms & Buttons
     text-align: center;
 }
 .button {
+    @include MQ(S2) {
+        display: inline-block;
+    }
     display: block;
     padding: .75em 1.25em;
-    color: $red;
-    font-weight: bold;
-    font-size: 80%;
-    line-height: 80%;
-    text-transform: uppercase;
-    text-align: center;
     border: 2px solid $red;
-
+    color: $red;
+    font-size: 80%;
+    font-weight: bold;
+    line-height: 80%;
+    text-align: center;
+    text-transform: uppercase;
     &:hover {
         background-color: $red;
         color: #FFF;
     }
-
     &.disabled {
-        color: lighten($text-colour, 20%);
         border-color: lighten($text-colour, 20%);
+        color: lighten($text-colour, 20%);
         cursor: default;
-
         &:hover {
             background-color: transparent;
             color: lighten($text-colour, 20%);
         }
-    }
-
-    @include MQ(S2) {
-        display: inline-block;
     }
 }
 .close {
@@ -269,11 +249,11 @@ Forms & Buttons
     right: 5px;
     width: 1.2em;
     height: 1.2em;
+    border: 2px solid #FFF;
+    border-radius: 50%;
     font-family: $secondary-font;
     line-height: 1em;
     text-align: center;
-    border: 2px solid #FFF;
-    border-radius: 50%;
     cursor: pointer;
 }
 
@@ -283,39 +263,33 @@ Header
 
 -------------------------------- */
 header {
-    background: $background;
+    @include MQ(M) {
+        .title {
+            font-size: 2em;
+        }
+    }
     padding: 1em 0;
-
+    background: $background;
     .logo {
         display: block;
         width: 5.5em;
         margin: 0 auto;
     }
-
     .title {
         margin: 0;
         font-size: 1.5em;
         text-align: center;
     }
-
     &.fixed {
         background: rgba(255, 255, 255, 0.3);
-
         .logo {
             width: 2.5em;
-            float: left;
             margin-right: .5em;
+            float: left;
         }
-
         .title {
             line-height: 40px; /* Height of .logo */
             text-align: left;
-        }
-    }
-
-    @include MQ(M) {
-        .title {
-            font-size: 2em;
         }
     }
 }
@@ -326,10 +300,9 @@ Footer
 
 -------------------------------- */
 footer {
-    background: $black;
     padding: 1.3em;
+    background: $black;
     color: #CCC;
-
     .container {
         // background-image: linear-gradient(to left, #000 33%, rgba(255,255,255,0) 0%);
         // background-position: top;
@@ -337,31 +310,24 @@ footer {
         // background-repeat: repeat-x;
         // padding-top: 1em;
     }
-
     .footer-description {
-        margin: 0;
-
         @include MQ(S2) {
             width: 65%;
         }
+        margin: 0;
     }
-
     .button {
-        margin-bottom: 1.3em;
-
         @include MQ(S2) {
             float: right;
         }
+        margin-bottom: 1.3em;
     }
-
     .copyright {
-        font-size: 80%;
-
         @include MQ(M) {
             float: right;
         }
+        font-size: 80%;
     }
-
 }
 
 /* --------------------------------
@@ -370,124 +336,100 @@ Homepage
 
 -------------------------------- */
 .intro {
-    max-width: $M;
-    margin-bottom: 2.3em;
-    padding: 0 1.3em;
-    
     @include MQ(M) {
         padding: 0;
     }
+    max-width: $M;
+    margin-bottom: 2.3em;
+    padding: 0 1.3em;
 }
 [class*="project"] {
     .overlay {
-        padding: 2.6em 1.3em;
-
         @include MQ(M) {
             padding: 3.9em 1.3em;
         }
+        padding: 2.6em 1.3em;
     }
-
     .container {
-        text-align: center;
-
-        .project-title {
-            margin: 0;
-            font-size: 3em;
-        }
-
-        p:last-of-type {
-            margin-bottom: 0;
-        }
-
         @include MQ(M) {
             max-width: $M;
-
             .project-title {
                 font-size: 5em;
             }
         }
+        text-align: center;
+        .project-title {
+            margin: 0;
+            font-size: 3em; 
+        }
+        p:last-of-type {
+            margin-bottom: 0;
+        }
     }
-
     &.project-timeline {
         background: url('../img/timeline-background.jpg') no-repeat center center;
         color: #FFF;
-
         .overlay {
             background: rgba(0, 0, 0, 0.7);
         }
-
         .project-title {
             color: #FFF;
         }
-
         .button {
             background-color: rgba(0,0,0,.5);
-
             &:hover {
                 background-color: $red;
             }
         }
     }
-
     &.project-choose-tech {
     }
-
     &.coming-soon {
         background: #ccc;
         color: lighten($text-colour, 20%);
-
         .project-title {
             color: lighten($text-colour, 20%);
         }
     }
 }
 .resources {
-    background: #FFF;
+    @include MQ(M) {
+        flex-direction: row;
+        padding: 0;
+        .resources-image,
+        .resources-content {
+            width: 50%;
+        }
+        .resources-content {
+            padding: 3em;
+        }
+        .resources-image {
+            display: block;
+        }
+    }
     display: flex;
     flex-direction: column;
     align-items: stretch;
     margin: 0 auto;
     padding: 0 5%;
-
+    background: #FFF;
     .resources-image,
     .resources-content {
         width: 100%;
     }
-
     .resources-image {
         display: none;
         background: url('../img/woman-at-computer.jpg') right top;
         background-size: cover;
     }
-
     .resources-content {
-        background: #FFF;
         padding:  2.6em 1.3em;
-
+        background: #FFF;
         h2 {
             margin-top: 0;
         }
-
         p:last-of-type {
             margin-bottom: 0;
-        }
-    }
-
-    @include MQ(M) {
-        flex-direction: row;
-        padding: 0;
-
-        .resources-image,
-        .resources-content {
-            width: 50%;
-        }
-
-        .resources-content {
-            padding: 3em;
-        }
-
-        .resources-image {
-            display: block;
         }
     }
 }
